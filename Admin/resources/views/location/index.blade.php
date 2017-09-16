@@ -20,7 +20,7 @@
 </head>
 <body>
 	<a href="location/insert">Insert</a>
-	<div class="row">
+	<div class="container">
 		<table class="table table-dark table-hover">
 			<thead>
 			<tr>

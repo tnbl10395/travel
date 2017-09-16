@@ -50,6 +50,7 @@ class LocationController extends Controller
 //        $location->description =  $request->txtDescription;
 //        $location->map = $request->txtMap;
         $location->locationName = Input::get('locationName');
+        dd($location);
         $location->picture = Input::get('picture');
         $location->description = Input::get('description');
         $location->map = Input::get('map');
