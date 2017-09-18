@@ -1,11 +1,9 @@
 <?php 
 	$client = new GuzzleHttp\Client();
-	$request = $client->get('http://localhost:2000/api/location');
+	$request = $client->get('http://localhost:8000/api/location');
 	$response = $request->getBody();
 	$res = json_decode($response,true);
-//	for($i = 0;$i<count($res);$i++){
-//	    echo $res[$i]['locationID'];
-//	}
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -38,11 +36,11 @@
 				<tr>
 					<td>{{$obj['locationID']}}</td>
 					<td>{{$obj['locationName']}}</td>
-					<td>{{$obj['picture']}}</td>
+					<td><img src="{{$obj['picture']}}" alt=""></td>
 					<td>{{$obj['description']}}</td>
 					<td>{{$obj['map']}}</td>
 					<td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
-					<td><a href=""><i class="fa fa-times"></i></a></td>
+					<td><a href="location/delete/{{$obj['locationID']}}"><i class="fa fa-times"></i></a></td>
 				</tr>
 			@endforeach
 			</tbody>

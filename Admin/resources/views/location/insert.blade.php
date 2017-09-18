@@ -7,12 +7,12 @@
 </head>
 <body>
     <div class="container" style="margin-top: 50px;">
-        <form action="/location/insert/obj" method="POST">
+        <form action="/location/insert/obj" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="text" class="form-control" name="txtLocationName" placeholder="Location Name...">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="txtPicture" placeholder="Picture...">
+                <input type="file" class="form-control" name="filePicture" placeholder="Picture...">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="txtDescription" placeholder="Description...">

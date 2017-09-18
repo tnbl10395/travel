@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::resource('location','LocationController');
+Route::resource('location','LocationController',['except'=>['create','edit']]);
 // Route::get('location','LocationController@index');
 // Route::get('location/create','LocationController@create');
 // Route::post('location/store','LocationController@store');

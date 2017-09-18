@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Location;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Storage;
+
 
 class LocationController extends Controller
 {
@@ -39,22 +40,16 @@ class LocationController extends Controller
     public function store(Request $request)
     {
         //
+        $file = $request->picture;
+        $namePicture = $file->getClientOriginalName();
+        $file->move('upload',$namePicture);
         $location = new Location();
-//        $location->locationName = $request->txtLocationName;
-//        $picture = $request->photo;
-//        if($request->hasFile('photo')){
-//            $namePicture = $picture->getClientOriginalName();
-//            $picture->move('upload',$namePicture);
-//            $location->picture = $picture;
-//        }
-//        $location->description =  $request->txtDescription;
-//        $location->map = $request->txtMap;
-        $location->locationName = Input::get('locationName');
-        dd($location);
-        $location->picture = Input::get('picture');
-        $location->description = Input::get('description');
-        $location->map = Input::get('map');
+        $location->locationName = $request->locationName;
+        $location->picture = 'http://localhost:8000/upload/'.$namePicture;
+        $location->description = $request->description;
+        $location->map = $request->map;
         $location->save();
+        return response()->json($location,201);
     }
 
     /**
@@ -66,8 +61,7 @@ class LocationController extends Controller
     public function show(Location $location)
     {
         //
-        $objLocation = new Location();
-        return $objLocation::findOrFail($location);
+        return $location;
     }
 
     /**
@@ -91,17 +85,8 @@ class LocationController extends Controller
     public function update(Request $request, Location $location)
     {
         //
-        $objLocation = new Location();
-        $picture = $request->photo;
-        if($request->hasFile('photo')){
-            $namePicture = $picture->getClientOriginalName();
-            $picture->move('upload',$namePicture);
-        }
-        $objLocation->findOrFail($location)
-                                    ->update(['locationName'=>$request->txtLocationName,
-                                              'picture'=>$picture,
-                                              'description'=>$request->txtDescription,
-                                              'map'=>$request->txtMap]);
+        $location->update($request->all());
+        return response()->json($location,200);
     }
 
     /**
@@ -113,8 +98,11 @@ class LocationController extends Controller
     public function destroy(Location $location)
     {
         //
-        $objLocation = new Location();
-        $objDestroy = $objLocation::findOrFail($location);
-        $objDestroy->delete();
+        $picture = $location->picture;
+        $objDelete = strstr($picture,'pic-');
+        Storage::delete($objDelete);
+        $location->delete();
+
+        return response()->json(null,204);
     }
 }
