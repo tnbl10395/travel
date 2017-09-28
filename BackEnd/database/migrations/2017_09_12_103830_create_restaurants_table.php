@@ -18,7 +18,10 @@ class CreateRestaurantsTable extends Migration
             $table->string('restaurantName',50);
             $table->unsignedInteger('locationID');
             $table->text('description');
-            $table->text('picture');
+            $table->text('detail');
+            $table->text('address');
+            $table->string('phone',20);
+            $table->integer('rating');
             $table->timestamps();
         });
     }

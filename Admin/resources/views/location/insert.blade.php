@@ -12,7 +12,7 @@
                 <input type="text" class="form-control" name="txtLocationName" placeholder="Location Name...">
             </div>
             <div class="form-group">
-                <input type="file" class="form-control" name="filePicture" placeholder="Picture...">
+                <input type="file" class="form-control" name="filePicture" placeholder="Picture..." accept="image/*">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" name="txtDescription" placeholder="Description...">

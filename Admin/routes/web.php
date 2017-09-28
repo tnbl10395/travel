@@ -21,4 +21,6 @@ Route::get('location/insert',function (){
     return view('location.insert');
 });
 Route::post('location/insert/obj','LocationController@insert');
+Route::get('location/update/{locationID}','LocationController@update');
+Route::put('location/updated/{locationID}','LocationController@updated');
 Route::get('location/delete/{locationID}','LocationController@delete');

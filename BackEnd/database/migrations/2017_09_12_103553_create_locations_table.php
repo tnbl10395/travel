@@ -18,6 +18,7 @@ class CreateLocationsTable extends Migration
             $table->string('locationName');
             $table->text('picture');
             $table->text('description');
+            $table->text('detail');
             $table->text('map');
             $table->timestamps();
         });

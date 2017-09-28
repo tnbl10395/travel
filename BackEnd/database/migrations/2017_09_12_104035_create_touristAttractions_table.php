@@ -18,7 +18,9 @@ class CreateTouristAttractionsTable extends Migration
             $table->string('touristAttractionName',50);
             $table->unsignedInteger('locationID');
             $table->text('description');
-            $table->text('picture');
+            $table->text('detail');
+            $table->text('map');
+            $table->integer('rating');
             $table->timestamps();
         });
     }

@@ -16,6 +16,9 @@ class CreateAccountsTable extends Migration
         Schema::create('accounts', function (Blueprint $table) {
             $table->unsignedInteger('userID')->primary();
             $table->string('fullname',50);
+            $table->string('email',50);
+            $table->string('phone',20);
+            $table->text('avatar');
             $table->string('address',100);
             $table->integer('rate');
             $table->timestamps();

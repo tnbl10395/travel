@@ -14,7 +14,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comment = new Comment();
+        return response()->json($comment::all());
     }
 
     /**
@@ -35,7 +36,17 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comment = new Comment();
+        $comment->userID = $request->userID;
+        $comment->hotelID = $request->hotelID;
+        $comment->restaurantID = $request->restaurantID;
+        $comment->touristAttractionID = $request->touristAttractionID;
+        $comment->content = $request->content;
+        $comment->amountOfLike = $request->amountOfLike;
+        $comment->amountOfDisLike = $request->amountOfDisLike;
+        $comment->amountOfView = $request->amountOfView;
+        $comment->save();
+        return response()->json($comment,201);
     }
 
     /**
@@ -46,7 +57,7 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        //
+        return response()->json($comment,404);
     }
 
     /**
@@ -69,7 +80,16 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $comment->userID = $request->userID;
+        $comment->hotelID = $request->hotelID;
+        $comment->restaurantID = $request->restaurantID;
+        $comment->touristAttractionID = $request->touristAttractionID;
+        $comment->content = $request->content;
+        $comment->amountOfLike = $request->amountOfLike;
+        $comment->amountOfDisLike = $request->amountOfDisLike;
+        $comment->amountOfView = $request->amountOfView;
+        $comment->save();
+        return response()->json($comment,200);
     }
 
     /**
@@ -80,6 +100,7 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+        return response()->json($comment,404);
     }
 }

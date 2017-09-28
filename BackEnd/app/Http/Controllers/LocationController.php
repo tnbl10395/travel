@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Location;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
 
 class LocationController extends Controller
 {
@@ -18,7 +16,7 @@ class LocationController extends Controller
     {
         //
         $location = new Location();
-        return $location::all();
+        return response()->json($location::all());
     }
 
     /**
@@ -41,7 +39,7 @@ class LocationController extends Controller
     {
         //
         $file = $request->picture;
-        $namePicture = $file->getClientOriginalName();
+        $namePicture = 'pic-'.$file->getClientOriginalName();
         $file->move('upload',$namePicture);
         $location = new Location();
         $location->locationName = $request->locationName;
@@ -61,7 +59,7 @@ class LocationController extends Controller
     public function show(Location $location)
     {
         //
-        return $location;
+        return response()->json($location);
     }
 
     /**
@@ -84,8 +82,22 @@ class LocationController extends Controller
      */
     public function update(Request $request, Location $location)
     {
-        //
-        $location->update($request->all());
+        if($request->hasFile('picture')) {
+            $file = $request->picture;
+            $name = 'pic-'.$file->getClientOriginalName();
+            $nameOldPicture = strstr($request->oldPicture,'pic-');
+            unlink('upload/'.$nameOldPicture);
+            $file->move('upload',$name);
+            $namePicture = 'http://localhost:8000/upload/'.$name;
+        }
+        else{
+            $namePicture = $request->oldPicture;
+        }
+        $location->locationName = $request->locationName;
+        $location->picture = $namePicture;
+        $location->description = $request->description;
+        $location->map = $request->map;
+        $location->save();
         return response()->json($location,200);
     }
 
@@ -100,9 +112,9 @@ class LocationController extends Controller
         //
         $picture = $location->picture;
         $objDelete = strstr($picture,'pic-');
-        Storage::delete($objDelete);
+        unlink('upload/'.$objDelete);
         $location->delete();
 
-        return response()->json(null,204);
+        return response()->json('Successful!',204);
     }
 }

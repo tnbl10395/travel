@@ -14,7 +14,8 @@ class TouristAttractionlController extends Controller
      */
     public function index()
     {
-        //
+        $touristAttraction = new TouristAttraction();
+        return response()->json($touristAttraction::all());
     }
 
     /**
@@ -35,7 +36,15 @@ class TouristAttractionlController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $touristAttraction = new TouristAttraction();
+        $touristAttraction->touristAttractionName = $request->touristAttractionName;
+        $touristAttraction->locationName = $request->locationName;
+        $touristAttraction->description = $request->description;
+        $touristAttraction->detail = $request->detail;
+        $touristAttraction->map = $request->map;
+        $touristAttraction->rating = $request->rating;
+        $touristAttraction->save();
+        return response()->json($touristAttraction,201);
     }
 
     /**
@@ -46,7 +55,7 @@ class TouristAttractionlController extends Controller
      */
     public function show(TouristAttraction $touristAttraction)
     {
-        //
+        return response()->json($touristAttraction,404);
     }
 
     /**
@@ -69,7 +78,14 @@ class TouristAttractionlController extends Controller
      */
     public function update(Request $request, TouristAttraction $touristAttraction)
     {
-        //
+        $touristAttraction->touristAttractionName = $request->touristAttractionName;
+        $touristAttraction->locationName = $request->locationName;
+        $touristAttraction->description = $request->description;
+        $touristAttraction->detail = $request->detail;
+        $touristAttraction->map = $request->map;
+        $touristAttraction->rating = $request->rating;
+        $touristAttraction->save();
+        return response()->json($touristAttraction,200);
     }
 
     /**
@@ -80,6 +96,7 @@ class TouristAttractionlController extends Controller
      */
     public function destroy(TouristAttraction $touristAttraction)
     {
-        //
+        $touristAttraction->delete();
+        return response()->json(null,404);
     }
 }

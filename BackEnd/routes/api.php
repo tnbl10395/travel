@@ -17,10 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::resource('location','LocationController',['except'=>['create','edit']]);
-// Route::get('location','LocationController@index');
-// Route::get('location/create','LocationController@create');
-// Route::post('location/store','LocationController@store');
-// Route::get('location/{location}','LocationController@show');
-// Route::get('location/{location}/edit','LocationController@edit');
-// Route::put('location/{location}/update','LocationController@update');
-// Route::delete('location/delete/{location}','LocationController@destroy');
+Route::resource('hotel','HotelController',['except'=>['create','edit']]);
+Route::resource('restaurant','RestaurantController',['except'=>['create','edit']]);
+Route::resource('touristAttraction','TouristAttractionController',['except'=>['create','edit']]);
+Route::resource('comment','CommentController',['except'=>['create','edit']]);
+Route::resource('account','LocationController',['except'=>['create','edit']]);

@@ -14,7 +14,8 @@ class HotelController extends Controller
      */
     public function index()
     {
-        //
+        $hotel = new Hotel();
+        return response()->json($hotel::all());
     }
 
     /**
@@ -35,7 +36,18 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $hotel = new Hotel();
+        $hotel->hotelName = $request->hotelName;
+        $hotel->locationID = $request->locationID;
+        $hotel->cost = $request->cost;
+        $hotel->description = $request->description;
+        $hotel->detail = $request->detail;
+        $hotel->address = $request->address;
+        $hotel->phone = $request->phone;
+        $hotel->map = $request->map;
+        $hotel->rating = $request->rating;
+        $hotel->save();
+        return response()->json($hotel,200);
     }
 
     /**
@@ -46,7 +58,7 @@ class HotelController extends Controller
      */
     public function show(Hotel $hotel)
     {
-        //
+        return response()->json($hotel,404);
     }
 
     /**
@@ -69,7 +81,17 @@ class HotelController extends Controller
      */
     public function update(Request $request, Hotel $hotel)
     {
-        //
+        $hotel->hotelName = $request->hotelName;
+        $hotel->locationID = $request->locationID;
+        $hotel->cost = $request->cost;
+        $hotel->description = $request->description;
+        $hotel->detail = $request->detail;
+        $hotel->address = $request->address;
+        $hotel->phone = $request->phone;
+        $hotel->map = $request->map;
+        $hotel->rating = $request->rating;
+        $hotel->save();
+        return response()->json($hotel,200);
     }
 
     /**
@@ -80,6 +102,7 @@ class HotelController extends Controller
      */
     public function destroy(Hotel $hotel)
     {
-        //
+        $hotel->delete();
+        return response()->json('Successful!',204);
     }
 }

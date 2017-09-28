@@ -19,7 +19,11 @@ class CreateHotelsTable extends Migration
             $table->unsignedInteger('locationID');
             $table->unsignedInteger('cost');
             $table->text('description');
-            $table->text('picture');
+            $table->text('detail');
+            $table->text('address');
+            $table->string('phone',20);
+            $table->text('map');
+            $table->integer('rating');
             $table->timestamps();
         });
     }

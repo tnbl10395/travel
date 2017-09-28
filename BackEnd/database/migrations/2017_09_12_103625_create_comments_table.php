@@ -15,11 +15,13 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('commentID');
-            $table->unsignedInteger('locationID');
-            $table->text('description');
+            $table->unsignedInteger('userID');
+            $table->unsignedInteger('hotelID');
+            $table->unsignedInteger('restaurantID');
+            $table->unsignedInteger('tourAttractionID');
+            $table->text('content');
             $table->integer('amountOfLike');
             $table->integer('amountOfDisLike');
-            $table->integer('amountOfView');
             $table->timestamps();
         });
     }

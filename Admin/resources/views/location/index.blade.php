@@ -39,8 +39,8 @@
 					<td><img src="{{$obj['picture']}}" alt=""></td>
 					<td>{{$obj['description']}}</td>
 					<td>{{$obj['map']}}</td>
-					<td><a href=""><i class="fa fa-pencil-square-o"></i></a></td>
-					<td><a href="location/delete/{{$obj['locationID']}}"><i class="fa fa-times"></i></a></td>
+					<td><a href="/location/update/{{$obj['locationID']}}"><i class="fa fa-pencil-square-o"></i></a></td>
+					<td><a href="/location/delete/{{$obj['locationID']}}"><i class="fa fa-times"></i></a></td>
 				</tr>
 			@endforeach
 			</tbody>
