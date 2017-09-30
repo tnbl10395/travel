@@ -15,16 +15,12 @@
             <div class="slider-content">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                        <h2>property Searching Just Got So Easy</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam teneturo!</p>
+                        <h2>Searching Just Got So Easy</h2>
+                        <p></p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
                             <form action="" class=" form-inline">
                                 <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
-
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Key word">
-                                </div>
                                 <div class="form-group">                                   
                                     <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your location">
 
@@ -36,14 +32,8 @@
                                         <option>Thanh Khê</option>
                                     </select>
                                 </div>
-                                <div class="form-group">                                     
-                                    <select id="basic" class="selectpicker show-tick form-control">
-                                        <option> -Status- </option>
-                                        <option>Rent </option>
-                                        <option>Boy</option>
-                                        <option>used</option>  
-
-                                    </select>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="TouristAttractions">
                                 </div>
                                 <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
 
@@ -51,7 +41,7 @@
 
                                     <div class="search-row">   
 
-                                        <div class="form-group mar-r-20">
+                                        <div class="form-group mar-r-20 ">
                                             <label for="price-range">Price range ($):</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
@@ -203,8 +193,8 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
-                        <h2>Top submitted property</h2>
-                        <p>Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies . </p>
+                        <h2>Top Place</h2>
+                        <p> </p>
                     </div>
                 </div>
 
@@ -216,10 +206,15 @@
                                     <a href="property-1.html" ><img src="{{asset('img/demo/property-1.jpg')}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-1.html" >Furama Resort Da Nang </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">8 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -230,10 +225,14 @@
                                     <a href="property-2.html" ><img src="{{asset('img/demo/property-2.jpg')}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-2.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-2.html" >Sơn Tra Resort & Spa</a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">10 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -245,10 +244,17 @@
 
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-3.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-3.html" >MELIA Đa Nang </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">20 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -260,10 +266,16 @@
 
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-1.html" >NOVOTEL </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">10 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -275,10 +287,15 @@
                                     <a href="property-3.html" ><img src="{{asset('img/demo/property-2.jpg')}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-3.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-3.html" >My Quang Ech </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                   <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">15 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -289,10 +306,18 @@
                                     <a href="property-2.html" ><img src="{{asset('img/demo/property-4.jpg')}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-2.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-2.html" >Ba na Hill </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">30 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -303,10 +328,15 @@
                                     <a href="property-1.html" ><img src="{{asset('img/demo/property-3.jpg')}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Super nice villa </a></h5>
+                                    <h5><a href="property-1.html" >Asian Park </a></h5>
                                     <div class="dot-hr"></div>
-                                    <span class="pull-left"><b>Area :</b> 120m </span>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <span class="proerty-price pull-right">9 <i class="fa fa-weixin" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -318,8 +348,8 @@
                                 </div>
                                 <div class="more-entry overflow">
                                     <h5><a href="property-1.html" >CAN'T DECIDE ? </a></h5>
-                                    <h5 class="tree-sub-ttl">Show all properties</h5>
-                                    <button class="btn border-btn more-black" value="All properties">All properties</button>
+                                    <h5 class="tree-sub-ttl">Show all </h5>
+                                    <button class="btn border-btn more-black" value="All properties">All</button>
                                 </div>
                             </div>
                         </div>
@@ -353,7 +383,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
+                                        <p>"Cuộc sống vốn không công bằng. Hảy tập quen dần với điều đó"</p>
                                         <h4><strong>Hiếu Lê, </strong><i>Frontend</i></h4>
                                     </div>
                                     <div class="client-face">
@@ -362,7 +392,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="client-text">                                
-                                        <p>Nulla quis dapibus nisl. Suspendisse llam sed arcu ultried arcu ultricies !</p>
+                                        <p>"Thước đo của cuộc đời không phải thời gian mà là sự cống hiến"</p>
                                         <h4><strong>Long Trần, </strong><i>Backend</i></h4>
                                     </div>
                                     <div class="client-face">
