@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">FAQ PAge</h1>               
+                        <h1 class="page-title">ASIA PARK</h1>               
                     </div>
                 </div>
             </div>
@@ -21,35 +21,42 @@
 
                             <div class="post-header single">
                                 <div class="">
-                                    <h2 class="wow fadeInLeft animated">FASHIN NOW 2016</h2>
+                                    <h2 class="wow fadeInLeft animated">ASIA PARK</h2>
                                     <div class="title-line wow fadeInRight animated"></div>
                                 </div>
                                 <div class="row wow fadeInRight animated">
                                     <div class="col-sm-6">
-                                        <p class="author-category">
-                                            By <a href="#">John Snow</a>
-                                            in <a href="blog.html">Webdesign</a>
-                                        </p>
+                                        
                                     </div>
                                     <div class="col-sm-6 right" >
                                         <p class="date-comments">
-                                            <a href="single.html"><i class="fa fa-calendar-o"></i> June 20, 2013</a>
+                                            <a href="single.html"><i class="fa fa-calendar-o"></i> Sep 20, 2017</a>
                                             <a href="single.html"><i class="fa fa-comment-o"></i> 8 Comments</a>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="image wow fadeInRight animated"> 
-                                    <img src="{{asset('img/blog2.jpg')}}" class="img-responsive" alt="Example blog post alt">
+                                    <img src="{{asset('img/asia-park.jpg')}}" class="img-responsive" alt="Example blog post alt">
                                 </div>
                             </div> 
 
                             <div id="post-content" class="post-body single wow fadeInLeft animated">
                                 <p>
-                                    <strong>Pellentesque habitant morbi tristique</strong> 
-                                    senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                                    semper. <em>Aenean ultricies mi vitae est.</em> 
-                                    Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
-                                    fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                                    Asia Park bao gồm ba khu vực chính: công viên giải trí ngoài trời hiện đại, công viên văn hóa với các công trình kiến trúc và nghệ thuật thu nhỏ mang tính biểu trưng của 10 quốc gia châu Á, và khu Sun Wheel - nơi giao thoa giữa nét hiện đại và truyền thống.
+                            Công viên văn hóa tại Asia Park mở ra một không gian phương Đông kỳ thú qua từng nét văn hóa đa dạng, các công trình kiến trúc lịch sử và những hoạt động nghệ thuật, ẩm thực độc đáo của 10 quốc gia Châu Á: Nhật Bản, Indonesia, Singapore, Hàn Quốc, Ấn Độ, Nepal, Thái Lan, Campuchia, Trung Quốc và Việt Nam.<br>
+                            <br>
+
+                            Bên cạnh đó, hàng loạt công trình tuyệt tác như Cổng Thành, Tháp Đồng hồ, Sun Wheel, Thuyền rồng, Tượng Phật… cũng là những điểm đến không thể bỏ qua tại Khu trung tâm của Asia Park. Tại đây, vòng quay Sun Wheel với độ cao ấn tượng 115m, thuộc top 5 vòng quay lớn nhất thế giới, được ví như một biểu tượng mới của thành phố Đà Nẵng.<br>
+                            <br>
+                            Không chỉ có các trò chơi và công trình kiến trúc, Asia Park còn là điểm đến của những hoạt động văn hóa sôi nổi như biểu diễn nghệ thuật, làm thủ công, trò chơi dân gian, cùng các lễ hội văn hóa đặc sắc.<br>
+                            <br>
+
+                            Hiện tại vé vào cổng của khu vui chơi giải trí Sunwheel là 100.000 đồng :<br><br>
+
+                            - Miễn phí trẻ em cao dưới 1m.<br>
+                            <br>
+                            - Giá vé trên đã bao gồm tham quan công viên, đi vòng quay Sun Wheel và vui chơi không giới hạn tại khu vui chơi giải trí ngoài trời.<br><br>
+                            - Quý khách vui chơi tại khu vui chơi FEC, nằm tại tầng trệt Sun Wheel có thể mua vé cho mỗi trò chơi.<br><br>
                                 <p>
                                     <img src="{{asset('img/blog10.jpg')}}" class="img-responsive" alt="Example blog post alt">
                                 </p>
