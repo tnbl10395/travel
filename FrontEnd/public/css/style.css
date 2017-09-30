@@ -1576,6 +1576,7 @@ padding: 0 0 0.5em;
     border-bottom: 1px dotted #CECBC7;
     margin-bottom: 10px;
 }
+
 .slim-hr{
 
 }
@@ -3043,4 +3044,19 @@ padding: 10px;
 }
 #map {
     height: 300px;
+}
+.navbar .navbar-header .navbar-brand p{
+    font-size: 30px;
+}
+/*.slider-content .form-inline button {
+    margin-left: 80px;
+}
+.slider-content .form-group .selectpicker {
+   width:  250px;
+}*/
+.fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before{
+    color: #FFCC00;
+}
+.fa-star:before {
+    color: #FFCC00;
 }

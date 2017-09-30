@@ -215,7 +215,7 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="list_topic">View </a></h6>
+                                                <h6> <a href="blog">View </a></h6>
                                                 <div class="property-icon">
                                                     <img src="{{asset('img/icon/picine.png')}}">|
                                                     <img src="{{asset('img/icon/cars.png')}}">  
@@ -232,7 +232,7 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Restaurants </a></h6>
+                                                <h6> <a href="blog">Restaurants </a></h6>
                                                 <div class="property-icon">
                                                     <img src="{{asset('img/icon/picine.png')}}">|
                                                     <img src="{{asset('img/icon/cars.png')}}">  
@@ -248,7 +248,7 @@
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Hotels </a></h6>
+                                                <h6> <a href="blog">Hotels </a></h6>
                                                 <div class="property-icon">
                                                     <img src="{{asset('img/icon/picine.png')}}">|
                                                     <img src="{{asset('img/icon/cars.png')}}">  
@@ -278,7 +278,7 @@
 
                                     <fieldset>
                                         <div class="row">
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-12">
 
                                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your Location">
 
@@ -288,16 +288,6 @@
                                                     <option>Sơn Trà</option>
                                                     <option>Ngũ Hành Sơn</option>
                                                     <option>Hòa Vang</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xs-6">
-
-                                                <select id="basic" class="selectpicker show-tick form-control">
-                                                    <option> -Status- </option>
-                                                    <option>Rent </option>
-                                                    <option>Boy</option>
-                                                    <option>used</option>  
-
                                                 </select>
                                             </div>
                                         </div>

@@ -32,6 +32,35 @@ Route::get('grid_layout', function(){
 Route::get('detail_location', function(){
 	return view('detail_location');
 });
+Route::get('blog',function(){
+	return view('blog');
+});
 Route::get('list_topic', function(){
 	return view('list_topic');
 });
+Route::get('Admin',function(){
+	return view('admin.indexAdmin');
+});
+Route::get('locations_Admin',function(){
+	return view('admin.locations');
+});
+Route::get('hotels_Admin',function(){
+	return view('admin.hotels');
+});
+Route::get('restaurants_Admin',function(){
+	return view('admin.Restaurant');
+});
+Route::get('touristAttractions_Admin',function(){
+	return view('admin.TouristAttractions');
+});
+Route::get('comments_Admin',function(){
+	return view('admin.Comments');
+});
+Route::get('img_Admin',function(){
+	return view('admin.Img');
+});
+Route::get('accounts_Admin',function(){
+	return view('admin.accounts');
+});
+
+

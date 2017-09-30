@@ -36,7 +36,7 @@
 
                                     <fieldset>
                                         <div class="row">
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-12">
 
                                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your Location">
 
@@ -48,16 +48,7 @@
                                                     <option>Hòa Vang</option>
                                                 </select>
                                             </div>
-                                            <div class="col-xs-6">
-
-                                                <select id="basic" class="selectpicker show-tick form-control">
-                                                    <option> -Status- </option>
-                                                    <option>Rent </option>
-                                                    <option>Boy</option>
-                                                    <option>used</option>  
-
-                                                </select>
-                                            </div>
+                                            
                                         </div>
                                     </fieldset>
 
