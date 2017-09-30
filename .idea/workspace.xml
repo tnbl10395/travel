@@ -5,35 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92487a22-edc6-4d7d-a09b-0b6c32a57250" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackEnd/composer.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/RestaurantlController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/public/upload/pic-14639863_1207819065940904_2450643037715813316_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/public/upload/pic-unnamed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/welcome.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/app/Http/Controllers/LocationController.php" afterPath="$PROJECT_DIR$/Admin/app/Http/Controllers/LocationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/resources/views/location/edit.blade.php" afterPath="$PROJECT_DIR$/Admin/resources/views/location/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/resources/views/location/index.blade.php" afterPath="$PROJECT_DIR$/Admin/resources/views/location/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/resources/views/location/insert.blade.php" afterPath="$PROJECT_DIR$/Admin/resources/views/location/insert.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/routes/web.php" afterPath="$PROJECT_DIR$/Admin/routes/web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Comment.php" afterPath="$PROJECT_DIR$/BackEnd/app/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Hotel.php" afterPath="$PROJECT_DIR$/BackEnd/app/Hotel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/CommentController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/HotelController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/HotelController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/LocationController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/LocationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/TouristAttractionlController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/TouristAttractionlController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Location.php" afterPath="$PROJECT_DIR$/BackEnd/app/Location.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Restaurant.php" afterPath="$PROJECT_DIR$/BackEnd/app/Restaurant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/TouristAttraction.php" afterPath="$PROJECT_DIR$/BackEnd/app/TouristAttraction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103553_create_locations_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103553_create_locations_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103625_create_comments_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103625_create_comments_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103647_create_accounts_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103647_create_accounts_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103808_create_hotels_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103808_create_hotels_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103830_create_restaurants_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103830_create_restaurants_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_104035_create_touristAttractions_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_104035_create_touristAttractions_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/routes/api.php" afterPath="$PROJECT_DIR$/BackEnd/routes/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/routes/web.php" afterPath="$PROJECT_DIR$/FrontEnd/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,21 +19,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2017_09_12_103625_create_comments_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103625_create_comments_table.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state relative-caret-position="822">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2017_09_22_180407_create_images_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BackEnd/database/migrations/2017_09_22_180407_create_images_table.php">
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/resources/views/register.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="980">
+              <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackEnd/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -82,7 +64,6 @@
       <list>
         <option value="$PROJECT_DIR$/BackEnd/resources/views/location/index.blade.php" />
         <option value="$PROJECT_DIR$/BackEnd/routes/web.php" />
-        <option value="$PROJECT_DIR$/FrontEnd/routes/web.php" />
         <option value="$PROJECT_DIR$/FrontEnd/resources/views/location/index.blade.php" />
         <option value="$PROJECT_DIR$/Admin/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/Admin/resources/views/location/insert.blade.php" />
@@ -110,6 +91,7 @@
         <option value="$PROJECT_DIR$/BackEnd/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103625_create_comments_table.php" />
         <option value="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_22_180407_create_images_table.php" />
+        <option value="$PROJECT_DIR$/FrontEnd/routes/web.php" />
       </list>
     </option>
   </component>
@@ -147,6 +129,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -154,6 +137,38 @@
             <path>
               <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
               <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
@@ -180,6 +195,20 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Middleware" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
@@ -225,11 +254,50 @@
               <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Traveling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Traveling" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontEnd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,11 +360,12 @@
       <workItem from="1506270016109" duration="446000" />
       <workItem from="1506344229382" duration="9726000" />
       <workItem from="1506514768267" duration="2271000" />
+      <workItem from="1506757709307" duration="690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116571000" />
+    <option name="totallyTimeSpent" value="117361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -305,12 +374,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29001585" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43898574" sideWeight="0.49707174" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26281112" sideWeight="0.51129943" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26281112" sideWeight="0.51129943" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -358,8 +427,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="822">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -515,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -593,9 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="103" lean-forward="true" selection-start-line="11" selection-start-column="103" selection-end-line="11" selection-end-column="103" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,16 +683,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding>
-            <element signature="e#40#59#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BackEnd/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="380">
+          <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -665,9 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
