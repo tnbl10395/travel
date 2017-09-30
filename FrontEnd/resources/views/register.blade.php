@@ -47,14 +47,14 @@
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>Login : </h2> 
-                            <form action="/register" method="post">
+                            <form action="register/login" method="post">
                                 <div class="form-group">
-                                    <label for="email">Username</label>
-                                    <input type="text" class="form-control" id="email">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" name="username" id="username">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password">
+                                    <input type="password" class="form-control" name="password" id="password">
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-default"> Log in</button>
