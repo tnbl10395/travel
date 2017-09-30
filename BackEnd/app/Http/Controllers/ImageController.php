@@ -14,7 +14,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
+        $image = new Image();
+        return response()->json($image);
     }
 
     /**
@@ -35,7 +36,14 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = new Image();
+        $image->hotelID = $request->hotelID;
+        $image->restaurantID = $request->restaurantID;
+        $image->touristAttractionID = $request->touristAttractionID;
+        $image->commentID = $request->commentID;
+        $image->imageName = $request->imageName;
+        $image->save();
+        return response()->json($image,201);
     }
 
     /**
@@ -46,7 +54,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        //
+        return response()->json($image,404);
     }
 
     /**
@@ -69,7 +77,13 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        //
+        $image->hotelID = $request->hotelID;
+        $image->restaurantID = $request->restaurantID;
+        $image->touristAttractionID = $request->touristAttractionID;
+        $image->commentID = $request->commentID;
+        $image->imageName = $request->imageName;
+        $image->save();
+        return response()->json($image,201);
     }
 
     /**
@@ -80,6 +94,7 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        //
+        $image->delete();
+        return response()->json(null,204);
     }
 }

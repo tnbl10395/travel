@@ -35,3 +35,6 @@ Route::get('detail_location', function(){
 Route::get('list_topic', function(){
 	return view('list_topic');
 });
+// -------------------------------------------------------------
+// Resolve register and login controller
+Route::get('register', 'AuthController@login');

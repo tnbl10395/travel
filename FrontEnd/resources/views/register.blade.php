@@ -47,9 +47,9 @@
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>Login : </h2> 
-                            <form action="" method="post">
+                            <form action="/register" method="post">
                                 <div class="form-group">
-                                    <label for="email">Email</label>
+                                    <label for="email">Username</label>
                                     <input type="text" class="form-control" id="email">
                                 </div>
                                 <div class="form-group">
@@ -62,13 +62,13 @@
                             </form>
                             <br>
                             
-                            <h2>Social login :  </h2> 
+<!--                             <h2>Social login :  </h2> 
                             
                             <p>
                             <a class="login-social" href="#"><i class="fa fa-facebook"></i>&nbsp;Facebook</a> 
                             <a class="login-social" href="#"><i class="fa fa-google-plus"></i>&nbsp;Gmail</a> 
                             <a class="login-social" href="#"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>  
-                            </p> 
+                            </p>  -->
                         </div>
                         
                     </div>

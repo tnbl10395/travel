@@ -9,7 +9,7 @@ class Location extends Model
 {
     //
     protected $table = 'locations';
-    protected $fillable = ['locationName','picture','description','map'];
+    protected $fillable = ['locationName','picture','description','detail','map'];
     protected $primaryKey = 'locationID';
     // public $timestamps = false;
 }

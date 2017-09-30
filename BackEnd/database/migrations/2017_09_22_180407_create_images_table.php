@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->increments('imageID');
             $table->unsignedInteger('hotelID');
             $table->unsignedInteger('restaurantID');
-            $table->unsignedInteger('touristAttraction');
+            $table->unsignedInteger('touristAttractionID');
             $table->unsignedInteger('commentID');
             $table->text('imageName');
             $table->timestamps();

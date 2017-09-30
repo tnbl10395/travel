@@ -45,6 +45,7 @@ class LocationController extends Controller
         $location->locationName = $request->locationName;
         $location->picture = 'http://localhost:8000/upload/'.$namePicture;
         $location->description = $request->description;
+        $location->detail = $request->detail;
         $location->map = $request->map;
         $location->save();
         return response()->json($location,201);
@@ -96,6 +97,7 @@ class LocationController extends Controller
         $location->locationName = $request->locationName;
         $location->picture = $namePicture;
         $location->description = $request->description;
+        $location->detail = $request->detail;
         $location->map = $request->map;
         $location->save();
         return response()->json($location,200);

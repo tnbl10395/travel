@@ -79,7 +79,7 @@ class TouristAttractionlController extends Controller
     public function update(Request $request, TouristAttraction $touristAttraction)
     {
         $touristAttraction->touristAttractionName = $request->touristAttractionName;
-        $touristAttraction->locationName = $request->locationName;
+        $touristAttraction->locationID = $request->locationID;
         $touristAttraction->description = $request->description;
         $touristAttraction->detail = $request->detail;
         $touristAttraction->map = $request->map;
