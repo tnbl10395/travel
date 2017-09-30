@@ -214,7 +214,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">8 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">8 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">10 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">10 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">20 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">20 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +275,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">10 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">10 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +295,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">15 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">15 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">30 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">30 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -336,7 +336,7 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">9 <i class="fa fa-weixin" aria-hidden="true"></i></span>
+                                    <span class="proerty-price pull-right">9 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -396,7 +396,7 @@
                                         <h4><strong>Long Trần, </strong><i>Backend</i></h4>
                                     </div>
                                     <div class="client-face">
-                                        <img src="{{asset('img/client-face1.png')}}" alt="">
+                                        <img src="{{asset('img/client-faceLong.png')}}" alt="">
                                     </div>
                                 </div>
                                 <div class="item">

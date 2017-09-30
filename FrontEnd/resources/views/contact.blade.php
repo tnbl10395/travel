@@ -22,11 +22,11 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <h3><i class="fa fa-map-marker"></i> Address</h3>
-                                    <p>13/25 shibuia
-                                        <br>Tokyo 
-                                        <br>45Y 73J 
+                                    <p>54 Nguyễn Lương Bằng
+                                        <br>Da Nang
+                                        <br> 
                                         <br>
-                                        <strong>Japan</strong>
+                                        <strong>Viet Nam</strong>
                                     </p>
                                 </div>
                                 <!-- /.col-sm-4 -->

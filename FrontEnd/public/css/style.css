@@ -3060,3 +3060,7 @@ padding: 10px;
 .fa-star:before {
     color: #FFCC00;
 }
+.dealer-widget {
+    padding: 0px;
+    margin: 0px;
+}

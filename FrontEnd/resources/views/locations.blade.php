@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">List Layout With Sidebar</h1>               
+                        <h1 class="page-title">List Locations In Da Nang</h1>               
                     </div>
                 </div>
             </div>
@@ -48,63 +48,6 @@
                                                     <option>Hòa Vang</option>
                                                 </select>
                                             </div>
-                                            
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <label for="price-range">Area (m2):</label>
-                                                <input type="text" class="span2" value="" data-slider-min="0" 
-                                                       data-slider-max="1500" data-slider-step="5" 
-                                                       data-slider-value="[0,650]" id="price-range" ><br />
-                                                <b class="pull-left color">1000m2</b> 
-                                                <b class="pull-right color">10000m2</b>                                                
-                                            </div>
-                                                                               
-                                        </div>
-                                    </fieldset>                                
-
-                                   
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Picnic</label>
-                                                </div> 
-                                            </div>
-
-                                            <div class="col-xs-6">
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox"> Car</label>
-                                                </div>
-                                            </div>                                            
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Motorcycle</label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Cable car </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox"> Taxi -cab </label>
-                                                </div>
-                                            </div>  
                                             
                                         </div>
                                     </fieldset>
@@ -168,13 +111,13 @@
                             <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="detail_location" ><img src="{{asset('img/demo/property-3.jpg')}}"></a>
+                                            <a href="detail_location" ><img src="{{asset('img/demo/bap.jpg')}}"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
                                             <h5><a href="detail_location"> Hải Châu </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 1120m2 </span> 
+                                            <span class="pull-left"><b> Update :</b> 20/09/2017 </span> 
                                             <div class="property-icon">
                                                 <img src="{{asset('img/icon/picine.png')}}">|
                                                 <img src="{{asset('img/icon/cars.png')}}">  
@@ -191,7 +134,7 @@
                                         <div class="item-entry overflow">
                                             <h5><a href="property-1.html"> Thanh Khê </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 1120m2 </span>
+                                            <span class="pull-left"><b> Update :</b> 18/09/2017 </span>
                                             <div class="property-icon">
                                                 <img src="{{asset('img/icon/picine.png')}}">|
                                                 <img src="{{asset('img/icon/cars.png')}}"> 
@@ -209,7 +152,7 @@
                                         <div class="item-entry overflow">
                                             <h5><a href="property-1.html"> Sơn Trà </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 1120m2 </span> 
+                                            <span class="pull-left"><b> Update :</b> 17/09/2017 </span> 
                                             <div class="property-icon">
                                                 <img src="{{asset('img/icon/picine.png')}}">|
                                                 <img src="{{asset('img/icon/cars.png')}}">  
@@ -227,7 +170,7 @@
                                         <div class="item-entry overflow">
                                             <h5><a href="property-1.html"> Ngũ Hành Sơn </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 1120m2 </span>
+                                            <span class="pull-left"><b> Update: </b> 16/09/2017 </span>
                                             <div class="property-icon">
                                                 <img src="{{asset('img/icon/picine.png')}}">|
                                                 <img src="{{asset('img/icon/cars.png')}}">  
@@ -245,7 +188,7 @@
                                         <div class="item-entry overflow">
                                             <h5><a href="property-1.html"> Liên Chiểu </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 1120m2 </span>
+                                            <span class="pull-left"><b> Update :</b> 15/09/2017 </span>
                                             
                                             <div class="property-icon">
                                                 <img src="{{asset('img/icon/picine.png')}}">|
@@ -265,7 +208,7 @@
                                         <div class="item-entry overflow">
                                             <h5><a href="property-1.html"> Hòa Vang </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 1120m2 </span>
+                                            <span class="pull-left"><b> Update :</b> 11/09 </span>
                                             <div class="property-icon">
                                                 <img src="{{asset('img/icon/picine.png')}}">|
                                                 <img src="{{asset('img/icon/cars.png')}}">  
