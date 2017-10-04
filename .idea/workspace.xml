@@ -2,145 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="598b0113-58f9-4c54-b196-31b743355921" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/img/asia-park.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/img/client-faceLong.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/img/demo/bap.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/img/dragon-bridge.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/img/haichau.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BackEnd/app/libs/uploadFileLibrary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/css/sb-admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/css/sb-admin.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/js/sb-admin-charts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/js/sb-admin-charts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/js/sb-admin-datatables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/js/sb-admin-datatables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/js/sb-admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/js/sb-admin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_cards.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_footer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_login.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/navbar/_navbar_colors.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/navbar/_navbar_fixed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/navbar/_navbar_global.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/navbar/_navbar_static.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/navbar/_navbar_toggle.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/scss/sb-admin.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/chart.js/Chart.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/chart.js/Chart.bundle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/chart.js/Chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/chart.js/Chart.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/datatables/dataTables.bootstrap4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/datatables/dataTables.bootstrap4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/datatables/jquery.dataTables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/screen-reader.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_screen-reader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/jquery-easing/jquery.easing.compatibility.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/jquery-easing/jquery.easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/jquery-easing/jquery.easing.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/jquery/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/jquery/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/popper/popper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/public/vendor/popper/popper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/Comments.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/Hotels.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/Img.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/Restaurant.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/TouristAttractions.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/accounts.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/indexAdmin.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/locations.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/template/app.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/welcome.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Hotel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/AccountController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/HotelController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/LocationController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/RestaurantController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/TouristAttractionlController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/Restaurant.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/app/TouristAttraction.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103647_create_accounts_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103808_create_hotels_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103830_create_restaurants_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_104035_create_touristAttractions_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackEnd/public/upload/pic-ch06----laravel-DB-operations-01.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/public/img/client-face1.png" afterPath="$PROJECT_DIR$/FrontEnd/public/img/client-face1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/public/img/client-face2.png" afterPath="$PROJECT_DIR$/FrontEnd/public/img/client-face2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Traveling.iml" afterPath="$PROJECT_DIR$/.idea/Traveling.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Comment.php" afterPath="$PROJECT_DIR$/BackEnd/app/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/CommentController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/ImageController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/ImageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Image.php" afterPath="$PROJECT_DIR$/BackEnd/app/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Location.php" afterPath="$PROJECT_DIR$/BackEnd/app/Location.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/User.php" afterPath="$PROJECT_DIR$/BackEnd/app/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2014_10_12_000000_create_users_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103553_create_locations_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103553_create_locations_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103625_create_comments_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_12_103625_create_comments_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_22_180407_create_images_table.php" afterPath="$PROJECT_DIR$/BackEnd/database/migrations/2017_09_22_180407_create_images_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/routes/api.php" afterPath="$PROJECT_DIR$/BackEnd/routes/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/Auth/LoginController.php" afterPath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/Auth/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/FrontEnd/app/Http/Middleware/RedirectIfAuthenticated.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/public/css/style.css" afterPath="$PROJECT_DIR$/FrontEnd/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/contact.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/contact.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/detail_location.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/detail_location.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/list_topic.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/list_topic.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/locations.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/locations.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/register.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/register.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/template/header.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/template/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/routes/web.php" afterPath="$PROJECT_DIR$/FrontEnd/routes/web.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/blog.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/blog.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -262,7 +124,7 @@
     <handled-path value="$PROJECT_DIR$/Admin/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -457,16 +319,15 @@
       <workItem from="1507039613130" duration="623000" />
       <workItem from="1507108531340" duration="4734000" />
       <workItem from="1507118544337" duration="4520000" />
-      <workItem from="1507125656225" duration="14185000" />
+      <workItem from="1507125656225" duration="14429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60584000" />
+    <option name="totallyTimeSpent" value="60828000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -475,7 +336,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30269414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.9904913" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
