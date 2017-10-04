@@ -15,12 +15,12 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->increments('imageID');
-            $table->unsignedInteger('hotelID');
-            $table->unsignedInteger('restaurantID');
-            $table->unsignedInteger('touristAttractionID');
-            $table->unsignedInteger('commentID');
+            $table->unsignedInteger('placeID')->nullable();
+            $table->unsignedInteger('commentID')->nullable();
             $table->text('imageName');
             $table->timestamps();
+//            $table->foreign('placeID')->references('placeID')->on('place');
+//            $table->foreign('commentID')->references('commentID')->on('comments');
         });
     }
 

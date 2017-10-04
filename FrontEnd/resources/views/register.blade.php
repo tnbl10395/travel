@@ -47,21 +47,36 @@
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>Login : </h2> 
-                            <form action="register/login" method="post">
+                            <form action="login" method="post">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control" name="username" id="username">
+                                    <input type="text" class="form-control" name="username" id="username" required>
                                 </div>
+                                @if($errors->has('username'))
+                                    <div class="alert alert-dark">
+                                        <strong>Error: </strong>{{$errors->first('username')}}
+                                    </div>
+                                @endif
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" name="password" id="password">
+                                    <input type="password" class="form-control" name="password" id="password" required>
                                 </div>
+                                @if($errors->has('password'))
+                                    <div class="alert alert-dark">
+                                        <strong>Error: </strong>{{$errors->first('password')}}
+                                    </div>
+                                @endif
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-default"> Log in</button>
                                 </div>
                             </form>
                             <br>
-                            
+                            @if($errors->has('errorLogin'))
+                                <div class="alert alert-danger">
+                                    <strong>Error: </strong>{{$errors->first('errorLogin')}}
+                                </div>
+                            @endif
 <!--                             <h2>Social login :  </h2> 
                             
                             <p>

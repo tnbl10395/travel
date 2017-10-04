@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Image;
 use Illuminate\Http\Request;
+use App\libs\uploadFileLibrary;
 
 class ImageController extends Controller
 {
@@ -19,16 +20,6 @@ class ImageController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -37,11 +28,10 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         $image = new Image();
-        $image->hotelID = $request->hotelID;
-        $image->restaurantID = $request->restaurantID;
-        $image->touristAttractionID = $request->touristAttractionID;
+        $file = new uploadFileLibrary();
+        $image->placeID = $request->placeID;
         $image->commentID = $request->commentID;
-        $image->imageName = $request->imageName;
+        $image->imageName = $file->upload($request->imageName);
         $image->save();
         return response()->json($image,201);
     }
@@ -58,17 +48,6 @@ class ImageController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Image $image)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -77,11 +56,10 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        $image->hotelID = $request->hotelID;
-        $image->restaurantID = $request->restaurantID;
-        $image->touristAttractionID = $request->touristAttractionID;
+        $file = new uploadFileLibrary();
+        $image->placeID = $request->placeID;
         $image->commentID = $request->commentID;
-        $image->imageName = $request->imageName;
+        $image->imageName = $file->reload($request->imageName, $request->oldPicture);
         $image->save();
         return response()->json($image,201);
     }
@@ -94,6 +72,8 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
+        $file = new uploadFileLibrary();
+        $file->deleteFile($image->imageName);
         $image->delete();
         return response()->json(null,204);
     }

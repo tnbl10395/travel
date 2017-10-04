@@ -41,13 +41,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="{{asset('img/logo.png')}}" alt=""></a>
+                    <!-- <a class="navbar-brand" href="/"><img src="{{asset('img/logo.png')}}" alt=""></a> -->
+                    <a class="navbar-brand" href="/"><p>TRAVEL DA NANG</p></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     <div class="button navbar-right">
-                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register')" data-wow-delay="0.45s">Login</button>
+                 @if (!Session::has('user'))
+                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.location.href='/register'" data-wow-delay="0.45s">Login</button>
+                 @elseif (Session::has('user'))
+                        <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.45s">{{Session::get('user.username')}}</button>
+                        <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.location.href='/logout'" data-wow-delay="0.45s">Logout</button>
+                    @endif
 <!--                         <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit')" data-wow-delay="0.48s">Submit</button> -->
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">
@@ -72,35 +78,34 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                        <div class="col-md-4 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
                                 <h4>About us </h4>
                                 <div class="footer-title-line"></div>
 
-                                <img src="{{asset('img/footer-logo.png')}}" alt="" class="wow pulse" data-wow-delay="1s">
+                                <p>TRAVEL DA NANG</p></a>
                                 <p>Lorem ipsum dolor cum necessitatibus su quisquam molestias. Vel unde, blanditiis.</p>
                                 <ul class="footer-adress">
-                                    <li><i class="pe-7s-map-marker strong"> </i> 9089 your adress her</li>
-                                    <li><i class="pe-7s-mail strong"> </i> email@yourcompany.com</li>
+                                    <li><i class="pe-7s-map-marker strong"> </i> 54 Nguyen Luong Bang</li>
+                                    <li><i class="pe-7s-mail strong"> </i> hieule@gmail.com</li>
                                     <li><i class="pe-7s-call strong"> </i> +1 908 967 5906</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                        <div class="col-md-4 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
                                 <h4>Quick links </h4>
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-menu">
-                                    <li><a href="properties.html">Properties</a>  </li> 
-                                    <li><a href="#">Services</a>  </li> 
-                                    <li><a href="submit-property.html">Submit property </a></li> 
-                                    <li><a href="contact.html">Contact us</a></li> 
-                                    <li><a href="faq.html">fqa</a>  </li> 
-                                    <li><a href="faq.html">Terms </a>  </li> 
+                                    <li><a href="properties.html">Locations</a>  </li> 
+                                    <li><a href="#">TouristAttractions</a>  </li> 
+                                    <li><a href="submit-property.html">Restaurants </a></li> 
+                                    <li><a href="faq.html"></a>Hotels</li> 
+                                    <li><a href="contact.html">Contact us</a></li>  
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                        <!-- <div class="col-md-3 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer">
                                 <h4>Last News</h4>
                                 <div class="footer-title-line"></div>
@@ -150,8 +155,8 @@
 
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 wow fadeInRight animated">
+                        </div> -->
+                        <div class="col-md-4 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer news-letter">
                                 <h4>Stay in touch</h4>
                                 <div class="footer-title-line"></div>
@@ -187,13 +192,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="pull-left">
-                            <span> (C) <a href="http://www.KimaroTec.com">KimaroTheme</a> , All rights reserved 2016  </span> 
+                            <span> (C) <a href="http://www.KimaroTec.com">Hiếu Lê</a> , All rights reserved 2017  </span> 
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Property</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.4s">Faq</a></li>
+                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Location</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Contact</a></li>
                             </ul> 
                         </div>

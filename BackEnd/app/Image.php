@@ -9,5 +9,5 @@ class Image extends Model
 {
     protected $table = 'images';
     protected $primaryKey = 'imageID';
-    protected $fillable = ['hotelID','restaurantID','touristAttractionID','commentID','imageName'];
+    protected $fillable = ['placeID','commentID','imageName'];
 }

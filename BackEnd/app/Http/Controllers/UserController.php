@@ -31,7 +31,7 @@ class UserController extends Controller
             'username' => $request->get('username'),
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
-            'rank' => $request->get('rank'),
+            'role' => $request->get('role'),
         ]);
 
         return response()->json([
@@ -47,7 +47,6 @@ class UserController extends Controller
      */
     public function login(Request $request)
     {
-//        $request->validate(['username'=>'required',]);
         $credentials = $request->only('username','password');
         $token = null;
         $validator = \Validator::make($credentials,[
@@ -60,7 +59,7 @@ class UserController extends Controller
         try
         {
             if (!$token = \JWTAuth::attempt($credentials)) {
-                return response()->json(['invalid_username_or_password'], 422);
+                return response()->json('invalid_username_or_password');
             }
         } catch (JWTException $e){
             return response()->json(['failed_to_create_token'], 500);
