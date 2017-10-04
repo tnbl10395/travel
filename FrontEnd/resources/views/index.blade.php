@@ -206,7 +206,7 @@
                                     <a href="property-1.html" ><img src="{{asset('img/demo/property-1.jpg')}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Furama Resort Da Nang </a></h5>
+                                    <h5><a href="property-1.html" >Furama Resort DN </a></h5>
                                     <div class="dot-hr"></div>
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star" aria-hidden="true"></i>

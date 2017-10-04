@@ -15,14 +15,14 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('commentID');
-            $table->unsignedInteger('userID');
-            $table->unsignedInteger('hotelID');
-            $table->unsignedInteger('restaurantID');
-            $table->unsignedInteger('tourAttractionID');
+            $table->unsignedInteger('userID')->nullable();
+            $table->unsignedInteger('placeID')->nullable();
             $table->text('content');
             $table->integer('amountOfLike');
             $table->integer('amountOfDisLike');
             $table->timestamps();
+            $table->foreign('userID')->references('userID')->on('users');
+//            $table->foreign('placeID')->references('placeID')->on('place');
         });
     }
 

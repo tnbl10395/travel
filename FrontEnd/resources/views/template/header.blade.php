@@ -48,7 +48,12 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     <div class="button navbar-right">
-                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register')" data-wow-delay="0.45s">Login</button>
+                 @if (!Session::has('user'))
+                        <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.location.href='/register'" data-wow-delay="0.45s">Login</button>
+                 @elseif (Session::has('user'))
+                        <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.45s">{{Session::get('user.username')}}</button>
+                        <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.location.href='/logout'" data-wow-delay="0.45s">Logout</button>
+                    @endif
 <!--                         <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit')" data-wow-delay="0.48s">Submit</button> -->
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Tymon\JWTAuth\Exceptions\JWTException;
 
 class UserController extends Controller
 {
@@ -12,74 +14,61 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    private $user;
+
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function create()
+    public function register(Request $request)
     {
-        //
+        $user =  $this->user->create([
+            'username' => $request->get('username'),
+            'email' => $request->get('email'),
+            'password' => Hash::make($request->get('password')),
+            'role' => $request->get('role'),
+        ]);
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'User created successfully!',
+            'data' => $user
+        ]);
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function store(Request $request)
+    public function login(Request $request)
     {
-        //
+        $credentials = $request->only('username','password');
+        $token = null;
+        $validator = \Validator::make($credentials,[
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+        if ($validator->fails()){
+            return response()->json($validator->errors()->getMessages(),400);
+        }
+        try
+        {
+            if (!$token = \JWTAuth::attempt($credentials)) {
+                return response()->json('invalid_username_or_password');
+            }
+        } catch (JWTException $e){
+            return response()->json(['failed_to_create_token'], 500);
+        }
+        return  response()->json(compact('token'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, User $user)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(User $user)
-    {
-        //
+    public function getUserInfo(Request $request){
+        $user = \JWTAuth::toUser($request->token);
+        return response()->json(['result' => $user]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Image;
 use Illuminate\Http\Request;
+use App\libs\uploadFileLibrary;
 
 class ImageController extends Controller
 {
@@ -14,17 +15,8 @@ class ImageController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $image = new Image();
+        return response()->json($image);
     }
 
     /**
@@ -35,7 +27,13 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $image = new Image();
+        $file = new uploadFileLibrary();
+        $image->placeID = $request->placeID;
+        $image->commentID = $request->commentID;
+        $image->imageName = $file->upload($request->imageName);
+        $image->save();
+        return response()->json($image,201);
     }
 
     /**
@@ -46,18 +44,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Image  $image
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Image $image)
-    {
-        //
+        return response()->json($image,404);
     }
 
     /**
@@ -69,7 +56,12 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        //
+        $file = new uploadFileLibrary();
+        $image->placeID = $request->placeID;
+        $image->commentID = $request->commentID;
+        $image->imageName = $file->reload($request->imageName, $request->oldPicture);
+        $image->save();
+        return response()->json($image,201);
     }
 
     /**
@@ -80,6 +72,9 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        //
+        $file = new uploadFileLibrary();
+        $file->deleteFile($image->imageName);
+        $image->delete();
+        return response()->json(null,204);
     }
 }

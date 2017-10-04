@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Location;
 use Illuminate\Http\Request;
+use App\libs\uploadFileLibrary;
 
 class LocationController extends Controller
 {
@@ -14,19 +15,8 @@ class LocationController extends Controller
      */
     public function index()
     {
-        //
         $location = new Location();
-        return response()->json($location::all());
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return response()->json($location::all(),404);
     }
 
     /**
@@ -37,14 +27,13 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $file = $request->picture;
-        $namePicture = 'pic-'.$file->getClientOriginalName();
-        $file->move('upload',$namePicture);
         $location = new Location();
+        $file = new uploadFileLibrary();
+        $location->locationID = $request->locationID;
         $location->locationName = $request->locationName;
-        $location->picture = 'http://localhost:8000/upload/'.$namePicture;
+        $location->picture = 'http://localhost:8000/upload/'.$file->upload($request->picture);
         $location->description = $request->description;
+        $location->detail = $request->detail;
         $location->map = $request->map;
         $location->save();
         return response()->json($location,201);
@@ -58,19 +47,7 @@ class LocationController extends Controller
      */
     public function show(Location $location)
     {
-        //
-        return response()->json($location);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Location  $location
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Location $location)
-    {
-        //
+        return response()->json($location,404);
     }
 
     /**
@@ -82,20 +59,12 @@ class LocationController extends Controller
      */
     public function update(Request $request, Location $location)
     {
-        if($request->hasFile('picture')) {
-            $file = $request->picture;
-            $name = 'pic-'.$file->getClientOriginalName();
-            $nameOldPicture = strstr($request->oldPicture,'pic-');
-            unlink('upload/'.$nameOldPicture);
-            $file->move('upload',$name);
-            $namePicture = 'http://localhost:8000/upload/'.$name;
-        }
-        else{
-            $namePicture = $request->oldPicture;
-        }
+        $file = new uploadFileLibrary();
+        $location->locationID = $request->locationID;
         $location->locationName = $request->locationName;
-        $location->picture = $namePicture;
+        $location->picture = 'http://localhost:8000/upload/'.$file->reload($request->picture,$request->oldPicture);
         $location->description = $request->description;
+        $location->detail = $request->detail;
         $location->map = $request->map;
         $location->save();
         return response()->json($location,200);
@@ -109,12 +78,9 @@ class LocationController extends Controller
      */
     public function destroy(Location $location)
     {
-        //
-        $picture = $location->picture;
-        $objDelete = strstr($picture,'pic-');
-        unlink('upload/'.$objDelete);
+        $file = new uploadFileLibrary();
+        $file->deleteFile($location->picture);
         $location->delete();
-
-        return response()->json('Successful!',204);
+        return response()->json(null,404);
     }
 }

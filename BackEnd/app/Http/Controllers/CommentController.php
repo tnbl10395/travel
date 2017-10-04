@@ -19,16 +19,6 @@ class CommentController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -38,13 +28,10 @@ class CommentController extends Controller
     {
         $comment = new Comment();
         $comment->userID = $request->userID;
-        $comment->hotelID = $request->hotelID;
-        $comment->restaurantID = $request->restaurantID;
-        $comment->touristAttractionID = $request->touristAttractionID;
+        $comment->placeID = $request->placeID;
         $comment->content = $request->content;
         $comment->amountOfLike = $request->amountOfLike;
         $comment->amountOfDisLike = $request->amountOfDisLike;
-        $comment->amountOfView = $request->amountOfView;
         $comment->save();
         return response()->json($comment,201);
     }
@@ -61,17 +48,6 @@ class CommentController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Comment $comment)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -81,13 +57,10 @@ class CommentController extends Controller
     public function update(Request $request, Comment $comment)
     {
         $comment->userID = $request->userID;
-        $comment->hotelID = $request->hotelID;
-        $comment->restaurantID = $request->restaurantID;
-        $comment->touristAttractionID = $request->touristAttractionID;
+        $comment->placeID = $request->placeID;
         $comment->content = $request->content;
         $comment->amountOfLike = $request->amountOfLike;
         $comment->amountOfDisLike = $request->amountOfDisLike;
-        $comment->amountOfView = $request->amountOfView;
         $comment->save();
         return response()->json($comment,200);
     }

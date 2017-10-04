@@ -38,6 +38,14 @@ Route::get('blog',function(){
 Route::get('list_topic', function(){
 	return view('list_topic');
 });
+// ------------------------------------------------------------------------------------------------------------
+// Resolve register and login controller
+// ------------------------------------------------------------------------------------------------------------
+Route::post('login','AuthController@login');
+Route::get('logout','AuthController@logout');
+// ------------------------------------------------------------------------------------------------------------
+// Admin page
+// ------------------------------------------------------------------------------------------------------------
 Route::get('Admin',function(){
 	return view('admin.indexAdmin');
 });
@@ -62,5 +70,4 @@ Route::get('img_Admin',function(){
 Route::get('accounts_Admin',function(){
 	return view('admin.accounts');
 });
-
 
