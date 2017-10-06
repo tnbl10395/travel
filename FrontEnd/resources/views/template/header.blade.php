@@ -213,10 +213,10 @@
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-hover-dropdown.js')}}"></script>
-
+        <script src="{{asset('js/jquery.validate.min.js')}}"></script>
         <script src="{{asset('js/easypiechart.min.js')}}"></script>
         <script src="{{asset('js/jquery.easypiechart.min.js')}}"></script>
-
+        <script src="{{asset('js/jqueryValidate.js')}}"></script>
         <script src="{{asset('js/owl.carousel.min.js')}}"></script>
         <script src="{{asset('js/wow.js')}}"></script>
 
@@ -224,6 +224,7 @@
         <script src="{{asset('js/price-range.js')}}"></script>
 
         <script src="{{asset('js/main.js')}}"></script>
+
 
     </body>
 </html>
