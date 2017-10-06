@@ -70,10 +70,14 @@ Route::delete('profile/{profile}','ProfileController@destroy');
 //--------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------
-//image                                                                                        |
+//image                                                                                            |
 //--------------------------------------------------------------------------------------------------
 Route::get('image','ImageController@index');
 Route::get('image/{image}','ImageController@show');
 Route::post('image','ImageController@store');
 Route::put('image/{image}','ImageController@update');
 Route::delete('image/{image}','ImageController@destroy');
+//--------------------------------------------------------------------------------------------------
+//user                                                                                            |
+//--------------------------------------------------------------------------------------------------
+Route::get('infoUsers','UserController@getAllUser');

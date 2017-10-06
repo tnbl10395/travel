@@ -71,4 +71,9 @@ class UserController extends Controller
         $user = \JWTAuth::toUser($request->token);
         return response()->json(['result' => $user]);
     }
+    public function getAllUser(){
+        $user = new User();
+        $infoUser = $user->select('userID','username','email')->get();
+        return response()->json($infoUser);
+    }
 }

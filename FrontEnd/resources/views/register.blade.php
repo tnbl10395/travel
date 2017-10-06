@@ -22,18 +22,23 @@
                     <div class="box-for overflow">
                         <div class="col-md-12 col-xs-12 register-blocks">
                             <h2>New account : </h2> 
-                            <form action="" method="post">
+                            <form action="register" method="post" id="registerForm">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name">
+                                    <label for="name">Username</label>
+                                    <input type="text" class="form-control" name="username" id="username">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="text" class="form-control" id="email">
+                                    <input type="email" class="form-control" name="email" id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password">
+                                    <input type="password" class="form-control" name="password" id="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-default">Register</button>
@@ -47,7 +52,7 @@
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>Login : </h2> 
-                            <form action="login" method="post">
+                            <form action="login" method="post"  id="loginForm">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="username">Username</label>
