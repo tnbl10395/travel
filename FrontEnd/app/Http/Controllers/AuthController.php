@@ -23,8 +23,8 @@ class AuthController extends Controller
             ]
         ]);
         $response = $req->getBody();
-        if($response!='invalid_username_or_password'){
-            $res = json_decode($response);
+        $res = json_decode($response);
+        if($res!="invalid_username_or_password"){
             $token = $res->token;
             Session::put('user.username',$username);
             Session::put('user.token',$token);

@@ -29,7 +29,9 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.html">Hi Admin</a>
+    @if (Session::has('admin'))
+    <a class="navbar-brand" href="/admin">Hi, {{Session::get('admin.username')}}</a>
+    @endif
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -105,6 +107,23 @@
   <div class="content-wrapper" >     
     @yield('content')
     </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="logout-admin">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Bootstrap core JavaScript-->
     <script src="{{ URL::asset("vendor/jquery/jquery.min.js") }}"></script>
     <script src="{{ URL::asset("vendor/popper/popper.min.js") }}"></script>
@@ -123,7 +142,6 @@
     <script src="{{ URL::asset("js/sb-admin.min.js") }}"></script>
     <script src="{{ URL::asset("js/sb-admin-datatables.min.js") }}"></script>
     <script src="{{ URL::asset("js/sb-admin-charts.min.js") }}"></script>
-  </div>
 </body>
 
 </html>
