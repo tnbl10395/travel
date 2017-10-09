@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">Home New account / Sign in </h1>               
+                        <h1 class="page-title">New account / Sign in </h1>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>Login : </h2> 
-                            <form action="login" method="post"  id="loginForm">
+                            <form action="login-user" method="post"  id="loginForm">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="username">Username</label>

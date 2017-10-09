@@ -41,20 +41,31 @@ Route::get('list_topic', function(){
 // ------------------------------------------------------------------------------------------------------------
 // Resolve register and login controller
 // ------------------------------------------------------------------------------------------------------------
-Route::post('login','AuthController@login');
+Route::post('login-user','AuthController@login');
 Route::get('logout','AuthController@logout');
 Route::post('register','AuthController@register');
+Route::get('get-info','InfoUserController@getInfo');
 // ------------------------------------------------------------------------------------------------------------
 // Controller check email
 // ------------------------------------------------------------------------------------------------------------
 Route::get('checkMail','CheckController@checkMail');
 Route::get('checkUser','CheckController@checkUser');
 // ------------------------------------------------------------------------------------------------------------
+// Resolve register and login Admin controller
+// ------------------------------------------------------------------------------------------------------------
+//Auth::routes();
+Route::get('admin-login','Auth\AuthAdminController@showLoginForm');
+Route::post('login','Auth\AuthAdminController@login');
+Route::get('logout-admin','Auth\AuthAdminController@logout');
+// ------------------------------------------------------------------------------------------------------------
 // Admin page
 // ------------------------------------------------------------------------------------------------------------
-Route::get('Admin',function(){
-	return view('admin.indexAdmin');
-});
+//Route::group(['middleware'=>'auth'], function (){
+//    Route::get('admin',function(){
+//        return view('admin.indexAdmin');
+//    });
+//});
+Route::get('/admin','AdminController@index');
 Route::get('locations_Admin',function(){
 	return view('admin.locations');
 });
@@ -76,4 +87,3 @@ Route::get('img_Admin',function(){
 Route::get('accounts_Admin',function(){
 	return view('admin.accounts');
 });
-

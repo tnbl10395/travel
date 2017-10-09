@@ -102,9 +102,7 @@
                     <div class="col-md-4 p0">
                         <aside class="sidebar sidebar-property blog-asside-right">
                             <div class="dealer-widget">
-                                <div class="dealer-content">
-                                    <img src="{{asset('img/haichau.jpg')}}">
-                                </div>
+                                <iframe width="350" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJxb5s9rYZQjER3pLhr7FXD7w&key=AIzaSyApsIS5WZA_vfjQLENB4Lb-KA-QJIMofgA" allowfullscreen></iframe>
                             </div>
 
                             <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">

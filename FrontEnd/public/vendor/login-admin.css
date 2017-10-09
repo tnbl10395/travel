@@ -1,0 +1,36 @@
+ .Absolute-Center {
+        margin-right:auto;
+        margin-left:auto;
+        margin-bottom:auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+}
+
+ .Absolute-Center.is-Responsive {
+     width: 50%;
+     height: 50%;
+     min-width: 200px;
+     max-width: 450px;
+     padding: 40px;
+ }
+ #login-Label{
+     color: #FF4141;
+     font-weight: bold;
+     font-size: 20px;
+ }
+ #logo{
+     margin-left: -15px;
+     width:400px;
+     height:230px;
+ }
+ #checkbox{
+     color: #FFFFFF;
+ }
+ #forget-password{
+     color: #FF4141;
+     margin-left: 85px;
+
+ }
+ .error{
+     color: #ffd11a;
+ }
