@@ -20,7 +20,7 @@
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
                             <form action="" class="form-inline">
-                                <div class="form-group col-sm-12">                                   
+                                <div class="form-group">                                   
                                     <select id="lunchBegins" class="selectpicker" title="Select your location">
 
                                         <option>Ngũ Hành Sơn</option>
@@ -73,6 +73,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <div></div> -->
 
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-two proerty-item">
