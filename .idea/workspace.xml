@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="598b0113-58f9-4c54-b196-31b743355921" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="598b0113-58f9-4c54-b196-31b743355921" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/BackEnd/database/migrations/2017_10_11_075413_create_city_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -438,12 +436,12 @@
       <workItem from="1507527977200" duration="5943000" />
       <workItem from="1507554782436" duration="7007000" />
       <workItem from="1507621653055" duration="4611000" />
-      <workItem from="1507706502152" duration="2864000" />
+      <workItem from="1507706502152" duration="3050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158512000" />
+    <option name="totallyTimeSpent" value="158698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -790,7 +788,7 @@
     <entry file="file://$PROJECT_DIR$/BackEnd/database/migrations/2017_10_11_075413_create_city_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
         </state>
       </provider>
