@@ -443,7 +443,7 @@ input[type="search"]::-webkit-search-decoration {
     color: #333;
     font-size: 16px;
     border: 1px solid #EAE9E9;
-    width: 40px;
+    width: 100px;
     height: 40px;
     color: #FFF;
     transition: all 0.3s ease 0s; 
@@ -2485,9 +2485,10 @@ count-area
     padding: 15px;
 }
 .search-form .form-inline .form-group { 
-    width: 235px;
+    width: 320px;
     text-align: left;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-left: 35px;
 }
 .slider-selection { 
     background: #FDC600;
@@ -3048,12 +3049,7 @@ padding: 10px;
 .navbar .navbar-header .navbar-brand p{
     font-size: 30px;
 }
-/*.slider-content .form-inline button {
-    margin-left: 80px;
-}
-.slider-content .form-group .selectpicker {
-   width:  250px;
-}*/
+
 .fa-star-half-empty:before, .fa-star-half-full:before, .fa-star-half-o:before{
     color: #FFCC00;
 }
@@ -3064,3 +3060,92 @@ padding: 10px;
     padding: 0px;
     margin: 0px;
 }
+@media (width: 360px){
+    .search-form .form-inline .form-group {
+    margin-left: 0px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }    
+}
+@media (width: 412px){
+    .search-form .form-inline .form-group {
+    margin-left: 4px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }
+}
+@media (width: 320px){
+    .search-form .form-inline .form-group {
+    margin-left: 3px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }
+}
+@media (width: 375px){
+    .search-form .form-inline .form-group {
+    margin-left: 2px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }
+}
+@media (width: 414px){
+    .search-form .form-inline .form-group {
+    margin-left: 2px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }
+}
+@media (width: 1024px){
+    .search-form .form-inline .form-group {
+    margin-left: 70px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }
+}
+/*.search-btn {
+    width: 120px;
+}
+
+.search-form .form-inline .form-group  {
+    width: 300px;
+}
+.btn-group>.btn:first-child {
+    margin-left: 55px;
+}
+.form-inline .form-control, .form-inline .form-control {
+    margin-left: 55px;
+}
+.search-form .dropdown-menu{
+    margin-left: 55px;
+}
+@media (width: 412px) and (max-width: 412px){ 
+    .search-form .form-inline .form-group  {
+        width: 10px;
+        }
+    .btn-group>.btn:first-child {
+    margin-left: 5px;
+        }
+    .form-inline .form-control, .form-inline .form-control {
+    margin-left: 5px;
+    }
+    .search-form .dropdown-menu{
+    margin-left: 5px;
+    }
+    .slider-content .search-form .form-inline .btn {
+        margin-bottom: 0px;
+    }
+    
+}
+*/
+/*.slider-content .form-inline button {
+    margin-left: 80px;
+}
+.slider-content .form-group .selectpicker {
+   width:  250px;
+}*/

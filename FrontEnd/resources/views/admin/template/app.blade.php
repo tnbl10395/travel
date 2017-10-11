@@ -142,6 +142,7 @@
     <script src="{{ URL::asset("js/sb-admin.min.js") }}"></script>
     <script src="{{ URL::asset("js/sb-admin-datatables.min.js") }}"></script>
     <script src="{{ URL::asset("js/sb-admin-charts.min.js") }}"></script>
+    @yield('script')
 </body>
 
 </html>
