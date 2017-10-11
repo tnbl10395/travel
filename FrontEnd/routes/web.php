@@ -63,11 +63,6 @@ Route::get('logout-admin','Auth\AuthAdminController@logout');
 // ------------------------------------------------------------------------------------------------------------
 // Admin page
 // ------------------------------------------------------------------------------------------------------------
-//Route::group(['middleware'=>'auth'], function (){
-//    Route::get('admin',function(){
-//        return view('admin.indexAdmin');
-//    });
-//});
 Route::get('/admin','AdminController@index');
 Route::get('locations_Admin',function(){
 	return view('admin.locations');
