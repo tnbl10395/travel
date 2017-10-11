@@ -20,6 +20,7 @@ class AuthController extends Controller
             'json' => [
                 'username' => $username,
                 'password' => $password,
+                'role' => 0
             ]
         ]);
         $response = $req->getBody();
@@ -28,6 +29,8 @@ class AuthController extends Controller
             $token = $res->token;
             Session::put('user.username',$username);
             Session::put('user.token',$token);
+            Session::save();
+            \Cookie::queue('username',$username);
             return redirect('/');
         }else{
             $errors = new MessageBag(['errorLogin'=>'Username or Password is uncorrect!']);

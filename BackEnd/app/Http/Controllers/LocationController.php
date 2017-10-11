@@ -47,7 +47,7 @@ class LocationController extends Controller
      */
     public function show(Location $location)
     {
-        return response()->json($location,404);
+        return response()->json($location);
     }
 
     /**

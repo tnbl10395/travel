@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\MessageBag;
 
@@ -30,17 +32,18 @@ class AuthAdminController extends Controller
         $req = $client->post("http://localhost:8000/api/auth/login",[
             "json"=>[
                 'username'=>$username,
-                'password'=>$password
+                'password'=>$password,
+                'role'=>1
             ]
         ]);
         $response = $req->getBody();
         $res = json_decode($response);
         if($res!='invalid_username_or_password'){
-//            \Auth::attempt(['username'=>$username,'password'=>$password]);
             $token = $res->token;
             Session::put('admin.username',$username);
             Session::put('admin.token',$token);
             Session::save();
+            \Cookie::queue('username',$username);
             return redirect()->intended('/admin');
         }else{
             $errors = new MessageBag(['errorLogin'=>'Username or Password is uncorrect!']);

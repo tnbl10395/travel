@@ -47,11 +47,12 @@ class UserController extends Controller
      */
     public function login(Request $request)
     {
-        $credentials = $request->only('username','password');
+        $credentials = $request->only('username','password','role');
         $token = null;
         $validator = \Validator::make($credentials,[
             'username' => 'required',
             'password' => 'required',
+            'role' => 'required'
         ]);
         if ($validator->fails()){
             return response()->json($validator->errors()->getMessages(),400);
