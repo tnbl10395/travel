@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="598b0113-58f9-4c54-b196-31b743355921" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/LocationController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/LocationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEnd/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/BackEnd/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/Auth/AuthAdminController.php" afterPath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/Auth/AuthAdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/FrontEnd/app/Http/Controllers/AuthController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/resources/views/admin/template/app.blade.php" afterPath="$PROJECT_DIR$/FrontEnd/resources/views/admin/template/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/routes/web.php" afterPath="$PROJECT_DIR$/FrontEnd/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -445,12 +438,12 @@
       <workItem from="1507527977200" duration="5943000" />
       <workItem from="1507554782436" duration="7007000" />
       <workItem from="1507621653055" duration="4611000" />
-      <workItem from="1507706502152" duration="2686000" />
+      <workItem from="1507706502152" duration="2864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158334000" />
+    <option name="totallyTimeSpent" value="158512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
