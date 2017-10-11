@@ -19,10 +19,7 @@ class CreatePlaceTable extends Migration
             $table->string('placeName',100);
             $table->text('description');
             $table->text('detail');
-            $table->text('address')->nullable();
-            $table->integer('cost')->nullable();
             $table->text('map');
-            $table->string('phone',20)->nullable();
             $table->integer('rating');
             $table->timestamps();
             $table->foreign('categoryID')->references('categoryID')->on('category');
