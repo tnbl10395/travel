@@ -30,7 +30,8 @@ class AuthAdminController extends Controller
         $req = $client->post("http://localhost:8000/api/auth/login",[
             "json"=>[
                 'username'=>$username,
-                'password'=>$password
+                'password'=>$password,
+                'role'=>1
             ]
         ]);
         $response = $req->getBody();

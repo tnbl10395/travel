@@ -38,6 +38,9 @@ Route::get('blog',function(){
 Route::get('list_topic', function(){
 	return view('list_topic');
 });
+Route::get('user_profile',function(){
+	return view ('user-profile');
+});
 // ------------------------------------------------------------------------------------------------------------
 // Resolve register and login controller
 // ------------------------------------------------------------------------------------------------------------
