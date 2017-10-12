@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div></div> -->
+                    
 
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-two proerty-item">
