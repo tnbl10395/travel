@@ -1,15 +1,16 @@
 @extends('admin.template.app')
 @section('title')
-<title>TouristAttractions Admin page</title>
+<title>Place Admin page</title>
 @endsection
 @section('content')
+
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="#">Managements</a>
         </li>
-        <li class="breadcrumb-item active">TouristAttractions</li>
+        <li class="breadcrumb-item active">Cmt</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
@@ -20,36 +21,58 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>IDCategoty</th>
-                  <th>Name</th>
-                  
-                  <th>Actions</th>
+                  <th>PlaceID</th>
+                  <th>Catelory</th>
+                  <th>Locations</th>
+                  <th>PlaceName</th>
+                  <th>Description</th>
+                  <th>Detail</th>
+                  <th>Address</th>
+                  <th>Rating</th>
+                  <th>CountOfRating</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>IDCategory</th>
-                  <th>Name</th>
-                  <th>Actions</th>
+                  <th>PlaceID</th>
+                  <th>Catelory</th>
+                   <th>Locations</th>
+                  <th>PlaceName</th>
+                  <th>Description</th>
+                  <th>Detail</th>
+                  <th>Address</th>
+                  <th>Rating</th>
+                  <th>CountOfRating</th>
+                  <th>Action</th>
                 </tr>
               </tfoot>
               <tbody>
                 <tr>
-                  <td>0001</td>
-                  <td>Nhà Hàng</td>
-                  
+                  <td>00001</td>
+                  <td>Hotels</td>
+                  <td><a href="#">LienCHieu</a></td>
+                  <td>novotel</td>
+                  <td>đẹp</td>
+                  <td>Chỗ này đẹp nè</td>
+                  <td>58 nguyen Luong Bằng</td>
+                  <td>5</td>
+                  <td>2</td>
                   <td>
-                  	
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
                 <tr>
-                  <td>0002</td>
-                  <td>Asian Park</td>
-                  
+                  <td>00002</td>
+                  <td>002</td>
+                  <td>001</td>
+                  <td>001</td>
+                  <td>002</td>
+                  <td>Chỗ này mát nì</td>
+                  <td>10</td>
+                  <td>1</td>
                   <td>
-                  	
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
                   </td>
@@ -91,4 +114,4 @@
           </div>
         </div>
       </div>
-@endsection
+   @endsection

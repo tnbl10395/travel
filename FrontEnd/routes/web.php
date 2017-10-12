@@ -85,3 +85,6 @@ Route::get('img_Admin',function(){
 Route::get('accounts_Admin',function(){
 	return view('admin.accounts');
 });
+Route::get('place_Admin',function(){
+	return view('admin.place');
+});

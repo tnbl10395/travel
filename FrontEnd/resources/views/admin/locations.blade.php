@@ -18,13 +18,18 @@
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            
+                <button type="button" class="btn btn-success">Thêm</button>
+                 
               <thead>
+                
+
                 <tr>
                   <th>LocationID</th>
                   <th>LocationName</th>
                   <th>Picture</th>
                   <th>Description</th>
-                  <th>Map</th>
+                  
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -34,31 +39,30 @@
                   <th>LocationName</th>
                   <th>Picture</th>
                   <th>Description</th>
-                  <th>Map</th>
+                  
                   <th>Actions</th>
                 </tr>
               </tfoot>
               <tbody>
                 <tr>
-                  <td>01</td>
-                  <td>Liên Chiểu</td>
+                  <td>0401</td>
+                  <td><a href="#">Liên Chiểu</a></td>
                   <td>lienchieu.jpg</td>
                   <td>Khu vực gần Hải Vân</td>
-                  <td>Map-lien-chieu</td>
+                 
                   <td>
-                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeResultOfStudent'><b><i class="fa fa-list"></i></b></button>
+                
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
                 <tr>
-                  <td>02</td>
+                  <td>0401</td>
                   <td>Hải Châu</td>
                   <td>haichau.jpg</td>
                   <td>Khu vực trung tâm thành phố</td>
-                  <td>map-hai-chau</td>
+                 
                   <td>
-                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeLocation'><b><i class="fa fa-list"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
                   </td>

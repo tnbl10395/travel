@@ -48,15 +48,15 @@
               <a href="locations_Admin">Locations</a>
             </li>
             <li>
-              <a href="touristAttractions_Admin">TouristAttractions</a>
-            </li>
-            <li>
-              <a href="restaurants_Admin">Restaurants</a>
-            </li>
-            <li>
-              <a href="hotels_Admin">Hotels</a>
+              <a href="touristAttractions_Admin">Category</a>
             </li>
           </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="place_Admin">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Place Management</span>
+          </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="accounts_Admin">
