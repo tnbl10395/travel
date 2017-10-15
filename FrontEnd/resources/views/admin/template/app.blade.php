@@ -48,16 +48,16 @@
               <a href="locations_Admin">Locations</a>
             </li>
             <li>
-              <a href="touristAttractions_Admin">Category</a>
+              <a href="Category_Admin">Category</a>
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="place_Admin">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Place Management</span>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="accounts_Admin">
             <i class="fa fa-fw fa-table"></i>
@@ -85,7 +85,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search for...">
@@ -96,7 +96,7 @@
               </span>
             </div>
           </form>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
