@@ -73,8 +73,8 @@ Route::get('hotels_Admin',function(){
 Route::get('restaurants_Admin',function(){
 	return view('admin.Restaurant');
 });
-Route::get('touristAttractions_Admin',function(){
-	return view('admin.TouristAttractions');
+Route::get('Category_Admin',function(){
+	return view('admin.Category');
 });
 Route::get('comments_Admin',function(){
 	return view('admin.Comments');
