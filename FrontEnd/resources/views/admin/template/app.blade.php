@@ -73,7 +73,7 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="img_Admin">
             <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Img Management</span>
+            <span class="nav-link-text">Image Management</span>
           </a>
         </li>
       </ul>

@@ -15,7 +15,7 @@ class CreateCategoryTable extends Migration
     {
         Schema::create('category', function (Blueprint $table) {
             $table->increments('categoryID');
-            $table->string('locationID',10);
+//            $table->string('locationID',10);
             $table->string('categoryName',50);
             $table->timestamps();
             $table->foreign('locationID')->references('locationID')->on('locations');

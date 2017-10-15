@@ -20,7 +20,7 @@ class CreatePlaceTable extends Migration
             $table->text('description');
             $table->text('detail');
             $table->text('map');
-            $table->integer('rating');
+            $table->float('rating')->nullable();
             $table->timestamps();
             $table->foreign('categoryID')->references('categoryID')->on('category');
         });

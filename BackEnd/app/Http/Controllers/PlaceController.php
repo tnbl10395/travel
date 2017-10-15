@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Evaluate;
 use App\Place;
 use Illuminate\Http\Request;
 
@@ -31,10 +32,7 @@ class PlaceController extends Controller
         $place->placeName = $request->placeName;
         $place->description = $request->description;
         $place->detail = $request->detail;
-        $place->address = $request->address;
-        $place->cost = $request->cost;
         $place->map = $request->map;
-        $place->phone = $request->phone;
         $place->rating = $request->rating;
         $place->save();
         return response()->json($place,201);
@@ -64,10 +62,7 @@ class PlaceController extends Controller
         $place->placeName = $request->placeName;
         $place->description = $request->description;
         $place->detail = $request->detail;
-        $place->address = $request->address;
-        $place->cost = $request->cost;
         $place->map = $request->map;
-        $place->phone = $request->phone;
         $place->rating = $request->rating;
         $place->save();
         return response()->json($place,200);
@@ -84,4 +79,5 @@ class PlaceController extends Controller
         $place->delete();
         return response()->json(null,404);
     }
+
 }

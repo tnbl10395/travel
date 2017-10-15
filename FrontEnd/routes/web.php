@@ -57,25 +57,18 @@ Route::get('checkUser','CheckController@checkUser');
 // Resolve register and login Admin controller
 // ------------------------------------------------------------------------------------------------------------
 //Auth::routes();
-Route::get('admin-login','Auth\AuthAdminController@showLoginForm');
-Route::post('login','Auth\AuthAdminController@login');
-Route::get('logout-admin','Auth\AuthAdminController@logout');
+Route::get('admin-login','Admin\AuthAdminController@showLoginForm');
+Route::post('login','Admin\AuthAdminController@login');
+Route::get('logout-admin','Admin\AuthAdminController@logout');
 // ------------------------------------------------------------------------------------------------------------
 // Admin page
 // ------------------------------------------------------------------------------------------------------------
-Route::get('/admin','AdminController@index');
+Route::get('admin','Admin\AdminController@index');
+Route::post('admin/create-category','Admin\CreateCategoryAdminController@createTable');
 Route::get('locations_Admin',function(){
 	return view('admin.locations');
 });
-Route::get('hotels_Admin',function(){
-	return view('admin.hotels');
-});
-Route::get('restaurants_Admin',function(){
-	return view('admin.Restaurant');
-});
-Route::get('touristAttractions_Admin',function(){
-	return view('admin.TouristAttractions');
-});
+Route::get('admin/categoryIndex','Admin\CategoryController@index');
 Route::get('comments_Admin',function(){
 	return view('admin.Comments');
 });

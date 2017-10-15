@@ -70,6 +70,7 @@
                   <td>001</td>
                   <td>002</td>
                   <td>Chỗ này mát nì</td>
+                  <td>58 nguyen Luong Bằng</td>
                   <td>10</td>
                   <td>1</td>
                   <td>

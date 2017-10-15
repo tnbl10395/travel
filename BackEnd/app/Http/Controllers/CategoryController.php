@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
 
 class CategoryController extends Controller
 {
@@ -27,8 +28,11 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = new Category();
-        $category->locationID = $request->locationID;
-        $category->categoryName = $request->categoryName;
+//        $req = json_decode($request->list);
+//        $locationID = $req['locationID'];
+//        $categoryName = $req['categoryName'];
+//        $category->locationID = $locationID;
+//        $category->categoryName = $categoryName;
         $category->save();
         return response()->json($category,201);
     }
@@ -69,5 +73,9 @@ class CategoryController extends Controller
     {
         $category->delete();
         return response()->json(null,404);
+    }
+
+    public function createCategoryTable($list){
+
     }
 }
