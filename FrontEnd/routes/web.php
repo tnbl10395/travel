@@ -68,7 +68,9 @@ Route::post('admin/create-category','Admin\CreateCategoryAdminController@createT
 Route::get('locations_Admin',function(){
 	return view('admin.locations');
 });
-Route::get('admin/categoryIndex','Admin\CategoryController@index');
+
+Route::get('admin/category-index','Admin\CategoryController@index');
+
 Route::get('comments_Admin',function(){
 	return view('admin.Comments');
 });
