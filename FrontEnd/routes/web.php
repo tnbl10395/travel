@@ -70,6 +70,7 @@ Route::get('locations_Admin',function(){
 });
 
 Route::get('admin/category-index','Admin\CategoryController@index');
+Route::post('admin/category-add','Admin\CategoryController@addCategory');
 
 Route::get('comments_Admin',function(){
 	return view('admin.Comments');

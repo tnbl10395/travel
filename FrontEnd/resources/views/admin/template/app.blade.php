@@ -52,12 +52,12 @@
             </li>
           </ul>
         </li>
-        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="place_Admin">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Place Management</span>
           </a>
-        </li> -->
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="accounts_Admin">
             <i class="fa fa-fw fa-table"></i>
@@ -119,7 +119,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="logout-admin">Logout</a>
+          <a class="btn btn-primary" href="{{url('logout-admin')}}">Logout</a>
         </div>
       </div>
     </div>
