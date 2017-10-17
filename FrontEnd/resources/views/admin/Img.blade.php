@@ -13,17 +13,13 @@
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>ImgID</th>
-                  <th>HotelID</th>
-                  <th>RestaurantID</th>
-                  <th>TouristAttractions</th>
+                  <th>PlaceID</th>
                   <th>commentID</th>
                   <th>ImgName</th>
                   <th>Actions</th>
@@ -32,9 +28,7 @@
               <tfoot>
                 <tr>
                   <th>ImgID</th>
-                  <th>HotelID</th>
-                  <th>RestaurantID</th>
-                  <th>TouristAttractions</th>
+                  <th>PlaceID</th>
                   <th>commentID</th>
                   <th>ImgName</th>
                   <th>Actions</th>
@@ -43,35 +37,18 @@
               <tbody>
                 <tr>
                   <td>00001</td>
+                  <td>001</td> 
                   <td>001</td>
-                  <td>001</td>
-                  <td>001</td>
-                  <td>001</td>
-                  <td>bân.jpg</td>
+                  <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQld8t5ksATUxIFemQMJQg3U4GGPG7Gq4jv-CUM9vhEhZYrqef5qw"></td>
                   <td>
-                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeResultOfStudent'><b><i class="fa fa-list"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>00002</td>
-                  <td>002</td>
-                  <td>002</td>
-                  <td>002</td>
-                  <td>002</td>
-                  <td>banco.jpg</td>
-                  <td>
-                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeLocation'><b><i class="fa fa-list"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#deleteImg'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
     <!-- /.container-fluid-->
@@ -104,4 +81,30 @@
           </div>
         </div>
       </div>
+    </div>
+</div>
+
+     <!-- DELETE IMG -->
+<div class="modal fade" id="deleteImg" role="dialog">
+      <div class="modal-dialog modal-lg" style="width:500px;">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <form id="formDeleteCategory" method="" class="form-horizontal" >
+              <div class="modal-header">
+                <!-- <i class="fa fa-trash"> --></i>
+                  <h4 class="modal-tittle">DELETE IMAGE</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="margin: 10px;">
+                   <p>Are you sure you want to Delete ?</p>
+              </div>
+           
+              <div class="modal-footer">
+                <input type="submit" id="btnDeleteCategory" class="btn btn-success btnUpdate" value='Delete'>
+                <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
  @endsection

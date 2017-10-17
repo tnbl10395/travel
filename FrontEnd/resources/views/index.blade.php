@@ -200,10 +200,11 @@
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-tree more-proerty text-center">
                                 <div class="item-tree-icon">
-                                    <i class="fa fa-th"></i>
+                                    <a href="locations" ><i class="fa fa-th"></i></a>
+                                    
                                 </div>
                                 <div class="more-entry overflow">
-                                    <h5><a href="property-1.html" >CAN'T DECIDE ? </a></h5>
+                                    <h5><a href="locations" >CAN'T DECIDE ? </a></h5>
                                     <h5 class="tree-sub-ttl">Show all </h5>
                                     <button class="btn border-btn more-black" value="All properties">All</button>
                                 </div>
