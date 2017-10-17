@@ -14,8 +14,6 @@
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -23,9 +21,7 @@
                 <tr>
                   <th>CmtID</th>
                   <th>UserID</th>
-                  <th>HotelID</th>
-                  <th>RestaurantID</th>
-                  <th>TouristAttractions</th>
+                  <th>PlaceID</th>
                   <th>content</th>
                   <th>Like</th>
                   <th>Dislike</th>
@@ -36,9 +32,7 @@
                 <tr>
                   <th>CmtID</th>
                   <th>UserID</th>
-                  <th>HotelID</th>
-                  <th>RestaurantID</th>
-                  <th>TouristAttractions</th>
+                  <th>PlaceID</th>
                   <th>content</th>
                   <th>Like</th>
                   <th>Dislike</th>
@@ -50,40 +44,21 @@
                   <td>00001</td>
                   <td>001</td>
                   <td>001</td>
-                  <td>001</td>
-                  <td>001</td>
                   <td>Chỗ này đẹp nè</td>
                   <td>5</td>
                   <td>2</td>
                   <td>
-                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeResultOfStudent'><b><i class="fa fa-list"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
+                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See' data-target='#see'><b><i class="fa fa-list"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Check Comment' data-target='#update'><b><i class="fa fa-check"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#deleteCmt'><b><i class="fa fa-trash"></i></b></button>
                   </td>
-                </tr>
-                <tr>
-                  <td>00002</td>
-                  <td>002</td>
-                  <td>001</td>
-                  <td>001</td>
-                  <td>002</td>
-                  <td>Chỗ này mát nì</td>
-                  <td>10</td>
-                  <td>1</td>
-                  <td>
-                  	<button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeLocation'><b><i class="fa fa-list"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
-                  </td>
-                </tr>
+                </tr> 
               </tbody>
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
-    <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
       <div class="container">
@@ -113,4 +88,28 @@
           </div>
         </div>
       </div>
+
+<!-- DELETE CMT -->
+<div class="modal fade" id="deleteCmt" role="dialog">
+      <div class="modal-dialog modal-lg" style="width:500px;">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <form id="formDeleteCategory" method="" class="form-horizontal" >
+              <div class="modal-header">
+                <!-- <i class="fa fa-trash"> --></i>
+                  <h4 class="modal-tittle">DELETE LOCATION</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="margin: 10px;">
+                   <p>Are you sure you want to Delete ?</p>
+              </div>
+           
+              <div class="modal-footer">
+                <input type="submit" id="btnDeleteCategory" class="btn btn-success btnUpdate" value='Delete'>
+                <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
    @endsection

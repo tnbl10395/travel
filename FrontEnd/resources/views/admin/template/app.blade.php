@@ -8,10 +8,12 @@
   <meta name="author" content="">
   @yield('title')
 
+
     <!-- Bootstrap core CSS -->
     <link href="{{ URL::asset("vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Custom fonts for this template -->
     <link href="{{ URL::asset("vendor/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css">
+    <link href="{{ URL::asset("css/jquery.pagedown-bootstrap.css") }} rel="stylesheet">
 
     <!-- Plugin CSS -->
     <link href="{{ URL::asset("vendor/datatables/dataTables.bootstrap4.css") }}" rel="stylesheet">
@@ -38,9 +40,9 @@
 
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Locations">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-file"></i>
+            <i class="fa fa-fw fa-compass"></i>
             <span class="nav-link-text">Locations Managements</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
@@ -52,28 +54,28 @@
             </li>
           </ul>
         </li>
-        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Place">
           <a class="nav-link" href="place_Admin">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-external-link-square"></i>
             <span class="nav-link-text">Place Management</span>
           </a>
-        </li> -->
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
           <a class="nav-link" href="accounts_Admin">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">Users Management</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Comments">
           <a class="nav-link" href="comments_Admin">
-            <i class="fa fa-fw fa-table"></i>
+            <i class="fa fa-fw fa-commenting-o"></i>
             <span class="nav-link-text">Comments Management</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Images">
           <a class="nav-link" href="img_Admin">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Img Management</span>
+            <i class="fa fa-fw fa-picture-o"></i>
+            <span class="nav-link-text">Images Management</span>
           </a>
         </li>
       </ul>
@@ -140,6 +142,7 @@
     <script src="{{ URL::asset("loading/dist/jquery.loading.min.js") }}"></script> -->
     <!-- Custom scripts for all pages-->
     <script src="{{ URL::asset("js/sb-admin.min.js") }}"></script>
+    <script  src="{{URL::asset("js/jquery.pagedown-bootstrap.combined.min.js")}}"></script>
     <script src="{{ URL::asset("js/sb-admin-datatables.min.js") }}"></script>
     <script src="{{ URL::asset("js/sb-admin-charts.min.js") }}"></script>
     @yield('script')

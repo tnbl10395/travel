@@ -10,12 +10,11 @@
         <li class="breadcrumb-item">
           <a href="#">Managements</a>
         </li>
-        <li class="breadcrumb-item active">Cmt</li>
+        <li class="breadcrumb-item active">Place</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+        
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -25,11 +24,9 @@
                   <th>Catelory</th>
                   <th>Locations</th>
                   <th>PlaceName</th>
-                  <th>Description</th>
                   <th>Detail</th>
                   <th>Address</th>
-                  <th>Rating</th>
-                  <th>CountOfRating</th>
+                  <th>Rating</th>  
                   <th>Action</th>
                 </tr>
               </thead>
@@ -39,11 +36,9 @@
                   <th>Catelory</th>
                    <th>Locations</th>
                   <th>PlaceName</th>
-                  <th>Description</th>
                   <th>Detail</th>
                   <th>Address</th>
                   <th>Rating</th>
-                  <th>CountOfRating</th>
                   <th>Action</th>
                 </tr>
               </tfoot>
@@ -53,25 +48,9 @@
                   <td>Hotels</td>
                   <td><a href="#">LienCHieu</a></td>
                   <td>novotel</td>
-                  <td>đẹp</td>
                   <td>Chỗ này đẹp nè</td>
                   <td>58 nguyen Luong Bằng</td>
                   <td>5</td>
-                  <td>2</td>
-                  <td>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>00002</td>
-                  <td>002</td>
-                  <td>001</td>
-                  <td>001</td>
-                  <td>002</td>
-                  <td>Chỗ này mát nì</td>
-                  <td>10</td>
-                  <td>1</td>
                   <td>
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
@@ -81,7 +60,6 @@
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
     <!-- /.container-fluid-->

@@ -13,8 +13,6 @@
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -24,6 +22,7 @@
                   <th>FullName</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>Age</th>
                   <th>Avatar</th>
                   <th width="20%">Address</th>
                   <th>rating</th>
@@ -36,6 +35,7 @@
                   <th>FullName</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>Age</th>
                   <th>Avatar</th>
                   <th>Address</th>
                   <th>rating</th>
@@ -45,31 +45,18 @@
               <tbody>
                 <tr>
                   <td>0001</td>
-                  <td>Hiếu Lê Thị</td>
+                  <td><a href="" data-target='#profileUser' data-toggle='modal' >Hiếu Lê Thị</a></td>
                   <td>hieut@gmail.com</td>
                   <td>0973006112</td>
+                  <td>22</td>
                   <td>hieule.jpg</td>
                   <td>60 - Ngô Sỹ Liên - Đà Nẵng</td>
                   <td>1</td>
                   
                   <td>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeResultOfStudent'><b><i class="fa fa-list"></i></b></button>
-                  <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#updateLocation'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                      <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete' ><b><i class="fa fa-trash"></i></b></button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>0002</td>
-                  <td>Lê Hoài Diễm</td>
-                  <td>diem@gmail.com</td>
-                  <td>01206054976</td>
-                  <td>hoadiem.jpg</td>
-                  <td>82 - Nguyễn Du - TP Hồ Chí Minh</td>
-                  <td>1</td>
-                  <td>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='See Location' data-target='#seeLocation'><b><i class="fa fa-list"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#updateLocation'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
+                  <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#blockUser'><b><i class="fa fa-ban" aria-hidden="true"></i></b></button>
+                  <!-- <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#blockUser'><b><i <i class="fa fa-lock" aria-hidden="true"></i>></i></b></button> -->
+                  <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#DeleteUser'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
                 </tbody>
@@ -102,16 +89,16 @@
     </div>
 
     <!--UPDATE ACCOUNTS-->
-   <div class="modal fade" id="updateLocation" role="dialog">
-      <div class="modal-dialog modal-lg" style="width:600px;">
+   <div class="modal fade" id="profileUser" role="dialog">
+      <div class="modal-dialog modal-lg"  style="width:800px;">
          <!-- Modal content-->
          <div class="modal-content">
             <form id="formupdateLocation" method="" class="form-horizontal" >
                <div class="modal-header">
-                <h4 class="modal-tittle">CẬP NHẬT TÀI KHOẢN</h4>
+                <h4 class="modal-tittle">PROFILE USERS</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                </div>
-               <div class="modal-body" style="margin: 10px;">
+               <div class="modal-body" style="margin: 10px;height: 470px;overflow-y:auto;">
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="row">
@@ -168,7 +155,6 @@
                  <div class="form-group">
                     <label for="updateLocation"><b>Upload Avartar</b></label>
                  </div>
-                 
                  <div class="row" style="margin-left:5px;">
                   <input type="file" name="file" id="updateLocationFile">
                 </div>
@@ -183,6 +169,57 @@
       </div>
   </div>
 
+  <!-- BLOCK USER.Lamf them unblock -->
+
+    <div class="modal fade" id="blockUser" role="dialog">
+      <div class="modal-dialog modal-lg" style="width:500px;">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <form id="formDeleteCategory" method="" class="form-horizontal" >
+              <div class="modal-header">
+                <!-- <i class="fa fa-trash"> --></i>
+                  <h4 class="modal-tittle">BLOCK USER</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="margin: 10px;">
+                   <p>Are you sure you want to block ?</p>
+              </div>
+           
+              <div class="modal-footer">
+                <input type="submit" id="btnDeleteCategory" class="btn btn-success btnUpdate" value='OK'>
+                <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+
+
+
+<!-- DELETE USER -->
+
+<div class="modal fade" id="DeleteUser" role="dialog">
+      <div class="modal-dialog modal-lg" style="width:500px;">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <form id="formDeleteCategory" method="" class="form-horizontal" >
+              <div class="modal-header">
+                <!-- <i class="fa fa-trash"> --></i>
+                  <h4 class="modal-tittle">DELETE USER</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="margin: 10px;">
+                   <p>Are you sure you want to Delete ?</p>
+              </div>
+           
+              <div class="modal-footer">
+                <input type="submit" id="btnDeleteCategory" class="btn btn-success btnUpdate" value='Delete'>
+                <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
 
  @endsection
  <!-- @section('script')
