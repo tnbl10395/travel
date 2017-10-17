@@ -50,17 +50,19 @@
               <a href="locations_Admin">Locations</a>
             </li>
             <li>
-              <a href="Category_Admin">Category</a>
+              <a href="admin/category-index">Category</a>
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Place">
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="place_Admin">
             <i class="fa fa-external-link-square"></i>
             <span class="nav-link-text">Place Management</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
+
           <a class="nav-link" href="accounts_Admin">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">Users Management</span>
@@ -76,6 +78,7 @@
           <a class="nav-link" href="img_Admin">
             <i class="fa fa-fw fa-picture-o"></i>
             <span class="nav-link-text">Images Management</span>
+
           </a>
         </li>
       </ul>
@@ -121,7 +124,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="logout-admin">Logout</a>
+          <a class="btn btn-primary" href="{{url('logout-admin')}}">Logout</a>
         </div>
       </div>
     </div>

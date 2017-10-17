@@ -82,7 +82,7 @@
         </div>
       </div>
     </div>
-
+</div>
 
      <!-- DELETE IMG -->
 <div class="modal fade" id="deleteImg" role="dialog">

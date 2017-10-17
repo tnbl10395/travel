@@ -47,32 +47,14 @@
           </div>
         </div>
       </div>
-    <!-- Logout Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-          <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="./Admin/Login">Logout</a>
-          </div>
-        </div>
-      </div>
-</div>
+
     <!--ADD Categoy-->
    <div class="modal fade" id="AddCategory" role="dialog">
       <div class="modal-dialog modal-lg" style="width:500px;">
          <!-- Modal content-->
          <div class="modal-content">
-            <form id="formAddCategory" method="" class="form-horizontal" >
+            <form id="formAddCategory" action="{{url('admin/category-add')}}" method="POST" class="form-horizontal" >
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="modal-header">
                   <h4 class="modal-tittle">ADD CATEGORY</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -85,7 +67,7 @@
                             <h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>
                           </div>
                           <div class="col-sm-8">
-                            <input name="" type="text" class="form-control">
+                            <input name="categoryName" type="text" class="form-control">
                           </div>
                         </div>
                     </div>
@@ -95,36 +77,23 @@
                       <div class="col-sm-12"> 
                         <div class="row">
                           <div class="control-label col-sm-8">
-                            <h7 style="font-size:16px; margin-top:5px;"><b>Please check items:</b></h7>
+                            <h7 style="font-size:16px; margin-top:5px;"><b>Do you want to add fields in table?</b></h7>
                           </div>
                         </div>
                       </div>
                     </div>
                     <br>
-
                     <div class=" row">
-                      <div class=" col-sm-8"> 
-                        
-                        <div class="form-group ">
-                          <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">item 1</span>
-                          </label>
-                        </div>
-                        <div class="form-group ">
-                          <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">item 2</span>
-                          </label>
-                        </div>
-                        <div class="form-group">
-                          <label class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">Item 3</span>
-                          </label>
+                      <div class=" col-sm-12" id="divColumn">
+                        <div class="form-group" id='form-column'>
+                            <input type="text" name="field[]" class="col-sm-5" placeholder="Input field...">
+                            <select name="dataType[]" id='selectDataType' class="custom-select-sm col-sm-3">
+                                <option value="varchar">Varchar</option>
+                                <option value="text">Text</option>
+                                <option value="integer">Integer</option>
+                                <option value="float">Float</option>
+                            </select>
+                            <input type="text" name="length[]" class="col-sm-3" placeholder="Length...">
                         </div>
                       </div>
                     </div> 
@@ -132,7 +101,7 @@
                       <div class="col-sm-12"> 
                         <div class="row">
                           <div class="control-label col-sm-1">
-                            <button style="color: red; border: 0; background:none;font-size:20px;"  title='Add' onclick='fun()' ><b><i class="fa fa-plus"></i></b></button>
+                            <a style="color: red; border: 0; background:none;font-size:20px;"  title='Add' id="addColumn" href="javascript:void(0);"><b><i class="fa fa-plus"></i></b></a>
                           </div>
                           <div class="col-sm-8">
                             <h7 style="font-size:16px; margin-top:5px;"><b>Add New items</b></h7>
@@ -176,46 +145,31 @@
                     </div>
                   </div>
                   <br>
-                  <div class="row">
-                    <div class="col-sm-12"> 
-                        <div class="row">
-                          <div class="control-label col-sm-8">
-                            <h7 style="font-size:16px; margin-top:5px;"><b>Please check items:</b></h7>
-                          </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="control-label col-sm-8">
+                                    <h7 style="font-size:16px; margin-top:5px;"><b>Do you want to add fields in table?</b></h7>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                  </div>
-                  <br>
-                  <div class=" row">
-                    <div class=" col-sm-8"> 
-                      <div class="form-group ">
-                        <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">item 1</span>
-                        </label>
-                      </div>
-                      <div class="form-group ">
-                        <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">item 2</span>
-                        </label>
-                      </div>
-                      <div class="form-group">
-                        <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Item 3</span>
-                        </label>
-                      </div>
                     </div>
-                  </div> 
+                    <br>
+                    <div class="row">
+                        <div class=" col-sm-8">
+                            <div class="form-group ">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="text" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                   <div class="row">
                     <div class="col-sm-12"> 
                       <div class="row">
                         <div class="control-label col-sm-1">
-                          <button style="color: red; border: 0; background:none;font-size:20px;"  title='Add' onclick='fun()' ><b><i class="fa fa-plus"></i></b></button>
+                          <button style="color: red; border: 0; background:none;font-size:20px;"  title='Add'><b><i class="fa fa-plus"></i></b></button>
                         </div>
                         <div class="col-sm-8">
                             <h7 style="font-size:16px; margin-top:5px;"><b>Add New items</b></h7>
@@ -260,8 +214,26 @@
  @endsection
  @section('script')
     <script>
-      function fun(){
-        document.write("<input type='text' name='text'> <button type='button' onclick='fun()'>Add</button>");
-      }
+        $(document).ready(function(){
+//           $('#form-column').on('load',function () {
+//               var dataType = $('#selectDataType').val();
+//               if(dataType === 'varchar'){
+//                   $('#form-column').append("<input type='text' name='length[]' class='col-sm-3' placeholder='Length...'>");
+//               }
+//           });
+           $('#addColumn').on('click',function () {
+                var html  = "<div class='form-group' id='form-column'>";
+                    html += "<input type='text' name='field[]' class='col-sm-5' placeholder='Input field...'>";
+                    html += " <select name='dataType[]' id='selectDataType' class='custom-select-sm col-sm-3'>";
+                    html += "<option value='varchar'>Varchar</option>";
+                    html += "<option value='text'>Text</option>";
+                    html += "<option value='integer'>Integer</option>";
+                    html += "<option value='float'>Float</option>";
+                    html += "</select>";
+                    html += "<input type='text' name='length[]' class='col-sm-3' placeholder='Length...'>";
+                    html += "</div>";
+                 $('#divColumn').append(html);
+           });
+        });
     </script>
 @endsection

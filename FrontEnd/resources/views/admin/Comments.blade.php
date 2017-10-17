@@ -88,7 +88,7 @@
           </div>
         </div>
       </div>
-
+</div>
 <!-- DELETE CMT -->
 <div class="modal fade" id="deleteCmt" role="dialog">
       <div class="modal-dialog modal-lg" style="width:500px;">

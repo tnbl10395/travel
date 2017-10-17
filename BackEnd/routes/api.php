@@ -78,6 +78,11 @@ Route::post('image','ImageController@store');
 Route::put('image/{image}','ImageController@update');
 Route::delete('image/{image}','ImageController@destroy');
 //--------------------------------------------------------------------------------------------------
-//user                                                                                            |
+//user                                                                                             |
 //--------------------------------------------------------------------------------------------------
 Route::get('infoUsers','UserController@getAllUser');
+//--------------------------------------------------------------------------------------------------
+//city-district                                                                                    |
+//--------------------------------------------------------------------------------------------------
+Route::resource('city','CityController',['except'=>['create','edit']]);
+Route::resource('district','DistrictController',['except'=>['create','edit']]);

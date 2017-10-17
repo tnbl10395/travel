@@ -21,7 +21,7 @@
               <thead>
                 <tr>
                   <th>PlaceID</th>
-                  <th>Catelory</th>
+                  <th>Category</th>
                   <th>Locations</th>
                   <th>PlaceName</th>
                   <th>Detail</th>
@@ -33,7 +33,7 @@
               <tfoot>
                 <tr>
                   <th>PlaceID</th>
-                  <th>Catelory</th>
+                  <th>Category</th>
                    <th>Locations</th>
                   <th>PlaceName</th>
                   <th>Detail</th>
@@ -46,14 +46,14 @@
                 <tr>
                   <td>00001</td>
                   <td>Hotels</td>
-                  <td><a href="#">LienCHieu</a></td>
+                  <td><a href="#">LienChieu</a></td>
                   <td>novotel</td>
                   <td>Chỗ này đẹp nè</td>
                   <td>58 nguyen Luong Bằng</td>
                   <td>5</td>
                   <td>
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='confirmation' title='Delete Location' ><b><i class="fa fa-trash"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#deletePlace'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
               </tbody>
@@ -92,4 +92,31 @@
           </div>
         </div>
       </div>
+
+</div>
+
+
+        <!-- DELETE Place -->
+<div class="modal fade" id="deletePlace" role="dialog">
+      <div class="modal-dialog modal-lg" style="width:500px;">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <form id="formDeleteCategory" method="" class="form-horizontal" >
+              <div class="modal-header">
+                <!-- <i class="fa fa-trash"> --></i>
+                  <h4 class="modal-tittle">DELETE IMAGE</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body" style="margin: 10px;">
+                   <p>Are you sure you want to Delete ?</p>
+              </div>
+           
+              <div class="modal-footer">
+                <input type="submit" id="btnDeleteCategory" class="btn btn-success btnUpdate" value='Delete'>
+                <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
    @endsection

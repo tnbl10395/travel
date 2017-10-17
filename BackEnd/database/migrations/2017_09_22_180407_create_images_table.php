@@ -19,8 +19,8 @@ class CreateImagesTable extends Migration
             $table->unsignedInteger('commentID')->nullable();
             $table->text('imageName');
             $table->timestamps();
-//            $table->foreign('placeID')->references('placeID')->on('place');
-//            $table->foreign('commentID')->references('commentID')->on('comments');
+//            $table->foreign('placeID')->references('placeID')->on('place')->onDelete('cascade');
+            $table->foreign('commentID')->references('commentID')->on('comments')->onDelete('cascade');
         });
     }
 

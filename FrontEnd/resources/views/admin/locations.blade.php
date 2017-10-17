@@ -39,7 +39,7 @@
               <tbody>
                 <tr>
                   <td>0401</td>
-                  <td><a href="#">Liên Chiểu</a></td>
+                  <td><a href="" data-target='#updateLocation' data-toggle='modal' >Liên Chiểu</a></td>
                   <td>lienchieu.jpg</td>
                   <td>Khu vực gần Hải Vân</td>
                   <td>
@@ -72,7 +72,7 @@
       <div class="modal-dialog modal-lg" style="width:800px;">
          <!-- Modal content-->
          <div class="modal-content">
-            <form id="formAddCategory" method="" class="form-horizontal" >
+            <form id="formAddLocation" method="#" class="form-horizontal" >
                 <div class="modal-header">
                   <h4 class="modal-tittle">ADD LOCATION</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -102,7 +102,7 @@
                           <h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>
                         </div>
                         <div class="col-sm-8">
-                          <input name="fullname" type="text" class="form-control">
+                          <input name="nameLocation" type="text" class="form-control">
                         </div>
                       </div>
                       <br>
@@ -136,24 +136,15 @@
                           <br>
                         </div>
                       </div> 
-                      <!-- <div class="row">
-                        <div class="control-label col-sm-4">
-                        <h7 style="margin-left:20px; font-size:16px; margin-top:5px;"><b>Address</b></h7>
-                        </div>
-                        <div class="col-sm-8">
-                          <input name="fullname" type="text" class="form-control">
-                          <br>
-                        </div>
-                      </div>  -->
                     </div>
                 </div>
                 <br>
                  <div class="form-group">
-                    <label for="updateLocation"><b>Upload Picture</b></label>
+                    <label for="addLocation"><b>Upload Picture</b></label>
                  </div>
                  
                  <div class="row" style="margin-left:5px;">
-                  <input type="file" name="file" id="updateLocationFile">
+                  <input type="file" name="file" id="addLocationFile">
                 </div>
              </div>
               <div class="modal-footer">
@@ -185,7 +176,6 @@
                         </div>
                         <div class="col-sm-8">
                           <div class="form-group">
-                           
                             <select class="form-control" id="sel1">
                               <option>Hải Châu</option>
                               <option>i</option>
