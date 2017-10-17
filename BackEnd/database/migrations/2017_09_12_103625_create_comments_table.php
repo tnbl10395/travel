@@ -15,14 +15,16 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('commentID');
-            $table->unsignedInteger('userID')->nullable();
-            $table->unsignedInteger('placeID')->nullable();
+            $table->unsignedInteger('userID');
+            $table->unsignedInteger('placeID');
             $table->text('content');
             $table->integer('amountOfLike');
             $table->integer('amountOfDisLike');
             $table->timestamps();
-            $table->foreign('userID')->references('userID')->on('users');
-//            $table->foreign('placeID')->references('placeID')->on('place');
+
+//            $table->foreign('placeID')->references('placeID')->on('place')->onDelete('cascade');
+            $table->foreign('userID')->references('userID')->on('users')->onDelete('cascade');
+
         });
     }
 
@@ -33,6 +35,8 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignkeyConstraints();
         Schema::dropIfExists('comments');
+        Schema::enableForeignkeyConstraints();
     }
 }

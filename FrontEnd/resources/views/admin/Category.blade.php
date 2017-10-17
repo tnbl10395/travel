@@ -180,7 +180,7 @@
                     <div class="col-sm-12"> 
                         <div class="row">
                           <div class="control-label col-sm-8">
-                            <h7 style="font-size:16px; margin-top:5px;"><b>Please check items:</b></h7>
+                            <h7 style="font-size:16px; margin-top:5px;"><b>Do you want to add fields in table?</b></h7>
                           </div>
                         </div>
                       </div>
@@ -190,23 +190,8 @@
                     <div class=" col-sm-8"> 
                       <div class="form-group ">
                         <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
+                          <input type="text" class="custom-control-input">
                           <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">item 1</span>
-                        </label>
-                      </div>
-                      <div class="form-group ">
-                        <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">item 2</span>
-                        </label>
-                      </div>
-                      <div class="form-group">
-                        <label class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input">
-                          <span class="custom-control-indicator"></span>
-                          <span class="custom-control-description">Item 3</span>
                         </label>
                       </div>
                     </div>

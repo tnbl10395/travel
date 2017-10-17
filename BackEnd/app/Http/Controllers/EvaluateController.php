@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Evaluate;
+use App\Place;
 use Illuminate\Http\Request;
+use Mockery\Exception;
 
 class EvaluateController extends Controller
 {
@@ -31,6 +33,7 @@ class EvaluateController extends Controller
         $evaluate->placeID = $request->placeID;
         $evaluate->rating = $request->rating;
         $evaluate->save();
+        $this->calculatorRating($request->placeID);
         return response()->json($evaluate,201);
     }
 
@@ -58,7 +61,25 @@ class EvaluateController extends Controller
         $evaluate->placeID = $request->placeID;
         $evaluate->rating = $request->rating;
         $evaluate->save();
+        $this->calculatorRating($request->placeID);
         return response()->json($evaluate,200);
     }
-
+    /**
+     * Calculator of Rating and save place table
+     */
+    public function calculatorRating($placeID){
+        $evaluate = new Evaluate();
+        $place = new Place();
+        $total = $evaluate->where('placeID',$placeID)
+                          ->sum('rating');
+        $count = $evaluate->where('placeID',$placeID)
+                          ->count('rating');
+        if($count!=0){
+            $average = $total/$count;
+        }elseif($count==0){
+            $average = 0;
+        }
+        $place->where('placeID',$placeID)
+              ->update(['rating'=>$average]);
+    }
 }
