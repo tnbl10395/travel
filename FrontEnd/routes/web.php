@@ -65,9 +65,7 @@ Route::get('logout-admin','Admin\AuthAdminController@logout');
 // ------------------------------------------------------------------------------------------------------------
 Route::get('admin','Admin\AdminController@index');
 Route::post('admin/create-category','Admin\CreateCategoryAdminController@createTable');
-Route::get('locations_Admin',function(){
-	return view('admin.locations');
-});
+Route::get('admin/location-index','Admin\LocationController@index');
 
 Route::get('admin/category-index','Admin\CategoryController@index');
 Route::post('admin/category-add','Admin\CategoryController@addCategory');

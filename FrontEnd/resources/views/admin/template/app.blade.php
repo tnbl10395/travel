@@ -45,10 +45,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="locations_Admin">Locations</a>
+              <a href="/admin/location-index">Locations</a>
             </li>
             <li>
-              <a href="admin/category-index">Category</a>
+              <a href="/admin/category-index">Category</a>
             </li>
           </ul>
         </li>
