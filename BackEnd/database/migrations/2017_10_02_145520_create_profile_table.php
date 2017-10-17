@@ -23,7 +23,7 @@ class CreateProfileTable extends Migration
             $table->unsignedInteger('phone')->nullable();
             $table->integer('rating')->nullable();
             $table->timestamps();
-            $table->foreign('userID')->references('userID')->on('users');
+            $table->foreign('userID')->references('userID')->on('users')->onDelete('cascade');
         });
     }
 

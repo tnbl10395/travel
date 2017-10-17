@@ -16,7 +16,7 @@ class PlaceController extends Controller
     public function index()
     {
         $place = new Place();
-        return response()->json($place::all(),404);
+        return response()->json($place::all());
     }
 
     /**
@@ -77,7 +77,7 @@ class PlaceController extends Controller
     public function destroy(Place $place)
     {
         $place->delete();
-        return response()->json(null,404);
+        return response()->json(null);
     }
 
 }

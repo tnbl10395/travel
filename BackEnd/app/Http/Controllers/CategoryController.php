@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use function foo\func;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 
@@ -27,12 +29,31 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $array = $request->all();
+        $categoryName = $array['categoryName'];
+        $column = $array['column'];
+        Schema::create($categoryName, function (Blueprint $table) use($categoryName,$column){
+           $table->unsignedInteger(strtolower($categoryName).'ID');
+           for($i=0;$i<count($column);$i++){
+                if($column[$i][1]=='varchar'){
+                    $table->string($column[$i][0],$column[$i][2]);
+                }
+                elseif($column[$i][1]=='integer'){
+                    $table->integer($column[$i][0]);
+                }
+                elseif($column[$i][1]=='text'){
+                    $table->text($column[$i][0]);
+                }
+                elseif($column[$i][1]=='float'){
+                    $table->float($column[$i][0]);
+                }
+           }
+//           $table->timestamps();
+
+            $table->foreign(strtolower($categoryName).'ID')->references('placeID')->on('place');
+        });
         $category = new Category();
-//        $req = json_decode($request->list);
-//        $locationID = $req['locationID'];
-//        $categoryName = $req['categoryName'];
-//        $category->locationID = $locationID;
-//        $category->categoryName = $categoryName;
+        $category->categoryName = $categoryName;
         $category->save();
         return response()->json($category,201);
     }

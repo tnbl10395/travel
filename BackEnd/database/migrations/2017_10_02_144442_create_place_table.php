@@ -22,7 +22,7 @@ class CreatePlaceTable extends Migration
             $table->text('map');
             $table->float('rating')->nullable();
             $table->timestamps();
-            $table->foreign('categoryID')->references('categoryID')->on('category');
+            $table->foreign('categoryID')->references('categoryID')->on('category')->onDelete('cascade');
         });
     }
 
@@ -33,6 +33,8 @@ class CreatePlaceTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignkeyConstraints();
         Schema::dropIfExists('place');
+        Schema::enableForeignkeyConstraints();
     }
 }

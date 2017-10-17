@@ -19,8 +19,8 @@ class CreateEvaluateTable extends Migration
             $table->unsignedInteger('placeID');
             $table->unsignedInteger('rating');
             $table->timestamps();
-            $table->foreign('userID')->references('userID')->on('users');
-            $table->foreign('placeID')->references('placeID')->on('place');
+            $table->foreign('userID')->references('userID')->on('users')->onDelete('cascade');
+            $table->foreign('placeID')->references('placeID')->on('place')->onDelete('cascade');
         });
     }
 
