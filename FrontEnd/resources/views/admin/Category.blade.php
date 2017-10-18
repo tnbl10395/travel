@@ -21,7 +21,6 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  
                   <th>Name</th>
                   <th>Actions</th>
                 </tr>
@@ -34,14 +33,16 @@
                 </tr>
               </tfoot>
               <tbody>
+                @foreach($list as $objectCategory)
                 <tr>
-                  <td>0001</td>
-                  <td>Hotel</td>
+                  <td>{{$objectCategory->categoryID}}</td>
+                  <td>{{$objectCategory->categoryName}}</td>
                   <td> 
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='update' data-target='#UpdateCategory'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#DeleteCategory'><b><i class="fa fa-trash"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-id="{{$objectCategory->categoryID}}" data-toggle='modal' title='delete' data-target='#DeleteCategory'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
@@ -67,7 +68,7 @@
                             <h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>
                           </div>
                           <div class="col-sm-8">
-                            <input name="categoryName" type="text" class="form-control">
+                            <input name="categoryName" type="text" class="form-control" required>
                           </div>
                         </div>
                     </div>
@@ -86,14 +87,14 @@
                     <div class=" row">
                       <div class=" col-sm-12" id="divColumn">
                         <div class="form-group" id="form-column">
-                            <input type="text" name="field[]" class="col-sm-5" placeholder="Input field...">
+                            <input type="text" name="field[]" class="col-sm-5" placeholder="Input field..." required>
                             <select name="dataType[]" id='selectDataType' class="custom-select-sm col-sm-3">
                                 <option value="varchar">Varchar</option>
                                 <option value="text">Text</option>
                                 <option value="integer">Integer</option>
                                 <option value="float">Float</option>
                             </select>
-                            <input type="text" name="length[]" class="col-sm-3" placeholder="Length...">
+                            <input type="text" name="length[]" class="col-sm-3" placeholder="Length..." required>
                         </div>
                       </div>
                     </div> 
@@ -195,7 +196,7 @@
          <div class="modal-content">
             <form id="formDeleteCategory" method="" class="form-horizontal" >
               <div class="modal-header">
-                <!-- <i class="fa fa-trash"> --></i>
+                <!-- <i class="fa fa-trash"> </i>-->
                   <h4 class="modal-tittle">DELETE CATEGORY</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
@@ -226,7 +227,7 @@
                     html += "<option value='float'>Float</option>";
                     html += "</select>";
                     html += "  ";
-                    html += "<input type='text' name='length[]' id='length' class='col-sm-3' placeholder='Length...'>";
+                    html += "<input type='text' name='length[]' id='length' class='col-sm-3' placeholder='Length...' required>";
                     html += " ";
                     html += "<a href='javascript:void(0);' id='deleteRow'><i class='fa fa-times'></i></a>";
                     html += "</div>";

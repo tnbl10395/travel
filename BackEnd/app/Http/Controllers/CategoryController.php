@@ -18,7 +18,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = new Category();
-        return response()->json($category::all(),404);
+        return response()->json($category::all());
     }
 
     /**
@@ -50,7 +50,7 @@ class CategoryController extends Controller
            }
 //           $table->timestamps();
 
-            $table->foreign(strtolower($categoryName).'ID')->references('placeID')->on('place');
+            $table->foreign(strtolower($categoryName).'ID')->references('placeID')->on('place')->onDelete('cascade');
         });
         $category = new Category();
         $category->categoryName = $categoryName;

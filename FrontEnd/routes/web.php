@@ -64,21 +64,29 @@ Route::get('logout-admin','Admin\AuthAdminController@logout');
 // Admin page
 // ------------------------------------------------------------------------------------------------------------
 Route::get('admin','Admin\AdminController@index');
-Route::post('admin/create-category','Admin\CreateCategoryAdminController@createTable');
+/**
+ * Location
+ * */
 Route::get('admin/location-index','Admin\LocationController@index');
-
+/**
+ * Category
+**/
 Route::get('admin/category-index','Admin\CategoryController@index');
 Route::post('admin/category-add','Admin\CategoryController@addCategory');
-
-Route::get('comments_Admin',function(){
-	return view('admin.Comments');
-});
-Route::get('img_Admin',function(){
-	return view('admin.Img');
-});
-Route::get('accounts_Admin',function(){
-	return view('admin.accounts');
-});
-Route::get('place_Admin',function(){
-	return view('admin.place');
-});
+Route::post('admin/create-category','Admin\CreateCategoryAdminController@createTable');
+/**
+ * Place
+ **/
+Route::get('admin/place-index','Admin\PlaceController@index');
+/**
+ * Comment
+ **/
+Route::get('admin/comment-index','Admin\CommentController@index');
+/**
+ * Image
+ **/
+Route::get('admin/image-index','Admin\ImageController@index');
+/**
+ * Comment
+ **/
+Route::get('admin/user-index','Admin\UserController@index');
