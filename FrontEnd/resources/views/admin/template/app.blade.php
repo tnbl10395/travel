@@ -47,38 +47,35 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="locations_Admin">Locations</a>
+              <a href="/admin/location-index">Locations</a>
             </li>
             <li>
-              <a href="admin/category-index">Category</a>
+              <a href="/admin/category-index">Category</a>
             </li>
           </ul>
         </li>
-
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="place_Admin">
+          <a class="nav-link" href="/admin/place-index">
             <i class="fa fa-external-link-square"></i>
             <span class="nav-link-text">Place Management</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
-
-          <a class="nav-link" href="accounts_Admin">
+          <a class="nav-link" href="/admin/user-index">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">Users Management</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Comments">
-          <a class="nav-link" href="comments_Admin">
+          <a class="nav-link" href="/admin/comment-index">
             <i class="fa fa-fw fa-commenting-o"></i>
             <span class="nav-link-text">Comments Management</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Images">
-          <a class="nav-link" href="img_Admin">
+          <a class="nav-link" href="/admin/image-index">
             <i class="fa fa-fw fa-picture-o"></i>
             <span class="nav-link-text">Images Management</span>
-
           </a>
         </li>
       </ul>
