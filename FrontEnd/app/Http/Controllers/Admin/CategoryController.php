@@ -15,7 +15,10 @@ class CategoryController extends Controller
 
     public function index()
     {
-        return view('admin.Category');
+        $client = new Client();
+        $req = $client->get('http://localhost:8000/api/category');
+        $category = json_decode($req->getBody());
+        return view('admin.Category')->with(['list'=>$category]);
     }
 
     public function addCategory(Request $request)
@@ -37,8 +40,12 @@ class CategoryController extends Controller
             ]
         ]);
         $response = $req->getBody();
-        dd(json_decode($response));
-//        return redirect('admin/category-index');
+//        dd(json_decode($response));
+        return redirect('admin/category-index');
+    }
+
+    public function destroy(){
+
     }
 
 }
