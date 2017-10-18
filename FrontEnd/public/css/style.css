@@ -327,7 +327,7 @@ input[type="search"]::-webkit-search-decoration {
 .form-inline .form-control, .form-inline .form-control {
     background: rgba(252, 252, 252, 0.35);
     border-radius: 1px;
-    color: #ADADAD;
+    color: #555;
     height: 40px;
     margin-right: 10px;
     width: 195px;
@@ -364,7 +364,7 @@ input[type="search"]::-webkit-search-decoration {
     background: #00A2DE
 }
 .form-control::-moz-placeholder{
-    color: #DDDDDD;
+    color: #555;
     opacity: 1;
 }
 .form-control:-moz-placeholder{
@@ -372,7 +372,7 @@ input[type="search"]::-webkit-search-decoration {
     opacity: 1;  
 }  
 .form-control::-webkit-input-placeholder{
-    color: #DDDDDD;
+    color: #555;
     opacity: 1; 
 } 
 .form-control:-ms-input-placeholder{
@@ -548,7 +548,7 @@ label small{
     display: block;
     font-size: 13px;
     line-height: 1.42857;
-    color: #ADADAD;
+    color: #555;
     background-color: #FFF;
     background-image: none;
     border: 1px solid #EAE9E9;

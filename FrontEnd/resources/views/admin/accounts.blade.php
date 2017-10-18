@@ -55,7 +55,6 @@
                   
                   <td>
                   <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#blockUser'><b><i class="fa fa-ban" aria-hidden="true"></i></b></button>
-                  <!-- <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#blockUser'><b><i <i class="fa fa-lock" aria-hidden="true"></i>></i></b></button> -->
                   <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#DeleteUser'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
