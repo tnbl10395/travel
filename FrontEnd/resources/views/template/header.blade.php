@@ -7,13 +7,10 @@
         <meta name="author" content="Kimarotec">
         <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme , bootstrap template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
-
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-
         <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
         <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/fontello.css')}}">
@@ -41,10 +38,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- <a class="navbar-brand" href="/"><img src="{{asset('img/logo.png')}}" alt=""></a> -->
                     <a class="navbar-brand" href="/"><p>TRAVEL DA NANG</p></a>
                 </div>
-
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse yamm" id="navigation">
                     <div class="button navbar-right">
@@ -54,15 +49,11 @@
                         <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.45s">{{Session::get('user.username')}}</button>
                         <button class="navbar-btn nav-button wow bounceInRight login" onclick="window.location.href='/logout'" data-wow-delay="0.45s">Logout</button>
                     @endif
-<!--                         <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit')" data-wow-delay="0.48s">Submit</button> -->
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">
                         <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="/" class="">Home</a></li>
-
                         <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="locations">Location</a></li>
                         
-
-                        <li class="wow fadeInDown" data-wow-delay="0.3s"><a href="contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,11 +75,11 @@
                                 <div class="footer-title-line"></div>
 
                                 <p>TRAVEL DA NANG</p></a>
-                                <p>Lorem ipsum dolor cum necessitatibus su quisquam molestias. Vel unde, blanditiis.</p>
+                                <p><i class="fa fa-copyright"></i> Copyright By Da Nang HLP Team</p>
                                 <ul class="footer-adress">
                                     <li><i class="pe-7s-map-marker strong"> </i> 54 Nguyen Luong Bang</li>
                                     <li><i class="pe-7s-mail strong"> </i> hieule@gmail.com</li>
-                                    <li><i class="pe-7s-call strong"> </i> +1 908 967 5906</li>
+                                    <li><i class="pe-7s-call strong"> </i> +1 206 054 975</li>
                                 </ul>
                             </div>
                         </div>
@@ -97,70 +88,19 @@
                                 <h4>Quick links </h4>
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-menu">
-                                    <li><a href="properties.html">Locations</a>  </li> 
-                                    <li><a href="#">TouristAttractions</a>  </li> 
-                                    <li><a href="submit-property.html">Restaurants </a></li> 
-                                    <li><a href="faq.html"></a>Hotels</li> 
-                                    <li><a href="contact.html">Contact us</a></li>  
+                                    <li><a href="https://tourism.danang.vn/en/">Tourism_DaNang</a></li> 
+                                    <li><a href="http://www.dulichdanang.biz.vn/">Khánh Hưng Travel</a>  </li> 
+                                    <li><a href="https://travel.com.vn/du-lich-da-nang.aspx">VietTravel</a></li> 
+                                    <li><a href="http://safitour.com/">safitour</a></li>
+                                    <li><a href="https://www.instagram.com/danang_fantasticity/">danang_fantasticity</a></li>                                     
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="col-md-3 col-sm-6 wow fadeInRight animated">
-                            <div class="single-footer">
-                                <h4>Last News</h4>
-                                <div class="footer-title-line"></div>
-                                <ul class="footer-blog">
-                                    <li>
-                                        <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
-                                            <a href="single.html">
-                                                <img src="{{asset('img/demo/small-proerty-2.jpg')}}">
-                                            </a>
-                                            <span class="blg-date">12-12-2016</span>
-
-                                        </div>
-                                        <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
-                                            <h6> <a href="single.html">Add news functions </a></h6> 
-                                            <p style="line-height: 17px; padding: 8px 2px;">Lorem ipsum dolor sit amet, nulla ...</p>
-                                        </div>
-                                    </li> 
-
-                                    <li>
-                                        <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
-                                            <a href="single.html">
-                                                <img src="{{asset('img/demo/small-proerty-2.jpg')}}">
-                                            </a>
-                                            <span class="blg-date">12-12-2016</span>
-
-                                        </div>
-                                        <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
-                                            <h6> <a href="single.html">Add news functions </a></h6> 
-                                            <p style="line-height: 17px; padding: 8px 2px;">Lorem ipsum dolor sit amet, nulla ...</p>
-                                        </div>
-                                    </li> 
-
-                                    <li>
-                                        <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
-                                            <a href="single.html">
-                                                <img src="{{asset('img/demo/small-proerty-2.jpg')}}">
-                                            </a>
-                                            <span class="blg-date">12-12-2016</span>
-
-                                        </div>
-                                        <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
-                                            <h6> <a href="single.html">Add news functions </a></h6> 
-                                            <p style="line-height: 17px; padding: 8px 2px;">Lorem ipsum dolor sit amet, nulla ...</p>
-                                        </div>
-                                    </li> 
-
-
-                                </ul>
-                            </div>
-                        </div> -->
                         <div class="col-md-4 col-sm-6 wow fadeInRight animated">
                             <div class="single-footer news-letter">
                                 <h4>Stay in touch</h4>
                                 <div class="footer-title-line"></div>
-                                <p>Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis.</p>
+                                <p>Đà Nẵng là một thành phố tuyệt đẹp và văn minh - Một thành phố trẻ rất năng động và phát triển từng ngày, các dịch vụ du lịch Đà Nẵng và hạ tầng du lịch Đà Nẵng phát triển mạnh mẽ đang thu hút khách du lịch đến ngày một đông hơn</p>
 
                                 <form>
                                     <div class="input-group">
@@ -174,11 +114,11 @@
 
                                 <div class="social pull-right"> 
                                     <ul>
-                                        <li><a class="wow fadeInUp animated" href="https://twitter.com/kimarotec"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
                                     </ul> 
                                 </div>
                             </div>
@@ -198,7 +138,7 @@
                             <ul> 
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Location</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Contact</a></li>
+                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Login</a></li>
                             </ul> 
                         </div>
                     </div>
