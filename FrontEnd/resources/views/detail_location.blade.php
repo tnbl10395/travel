@@ -23,8 +23,6 @@
                         <div class="row">
                             <div class="light-slide-item">            
                                 <div class="clearfix">
-                                    
-
                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                         
                                         <li data-thumb="{{asset('img/property-1/property2.jpg')}}"> 
@@ -37,26 +35,6 @@
                         </div>
 
                         <div class="single-property-wrapper">
-                            <!-- <div class="single-property-header">                                          
-                                <h1 class="property-title pull-left">Villa in Coral Gables</h1>
-                                
-                            </div>
-
-                            <div class="property-meta entry-meta clearfix ">    
-
-                                <div class="col-xs-6 col-sm-3 col-md-3 p-b-15">
-                                    <span class="property-info-icon icon-bed">
-                                        <img src="{{asset('img/icon/cars-orange.png')}}">
-                                    </span>
-                                    <span class="property-info-entry">
-                                        <span class="property-info-label">Car garages</span>
-                                        <span class="property-info-value">1</span>
-                                    </span>
-                                </div>
-
-                            </div> -->
-                            <!-- .property-meta -->
-
                             <div class="section">
                                 <br>
                                 <h4 class="s-property-title">Description</h4>
@@ -67,17 +45,37 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="section property-video"> 
-                                <h4 class="s-property-title">Location Video</h4> 
-                                <div class="video-thumb">
-                                    <a class="video-popup" href="yout" title="Virtual Tour">
-                                        <img src="{{asset('img/property-video.jpg')}}" class="img-responsive wp-post-image" alt="Exterior">            
-                                    </a>
+
+                            <div class="col-md-12 clear"> 
+                                <br>
+                                <h4 class="s-property-title">Location Details</h4>
+                        <div id="list-type" class="proerty-th">
+                            <div class="col-sm-6 col-md-4 p0">
+
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="detail_location" ><img src="{{asset('img/demo/bap.jpg')}}"></a>
+                                        </div>
+
+                                        <div class="item-entry overflow">
+                                            <h5><a href="detail_location"> Place </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Update :</b> 20/09/2017 </span> 
+                                            
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div> 
+                        </div>
+                    </div>
+
+                            <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
+                                
+                                <div class="panel-body recent-property-widget">
+                                        
                                 </div>
-                            </div>
-                            <!-- End video area  -->
-                            
-                            
+                                                     
+
 
                             <div class="section property-share"> 
                                 <h4 class="s-property-title">Share width your friends </h4> 
@@ -94,18 +92,7 @@
                                 </div>
                             </div>
                             <!-- End video area  -->
-                            
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4 p0">
-                        <aside class="sidebar sidebar-property blog-asside-right">
-                            <div class="dealer-widget">
-                                <iframe width="350" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJxb5s9rYZQjER3pLhr7FXD7w&key=AIzaSyApsIS5WZA_vfjQLENB4Lb-KA-QJIMofgA" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
+                         <!--    <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">Detail Location</h3>
                                 </div>
@@ -163,7 +150,76 @@
 
                                     </ul>
                                 </div>
-                            </div>                          
+                            </div> -->
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 p0">
+                        <aside class="sidebar sidebar-property blog-asside-right">
+                            <div class="dealer-widget">
+                                <iframe width="350" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJxb5s9rYZQjER3pLhr7FXD7w&key=AIzaSyApsIS5WZA_vfjQLENB4Lb-KA-QJIMofgA" allowfullscreen></iframe>
+                            </div>
+
+                            <!-- <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Detail Location</h3>
+                                </div>
+                                <div class="panel-body recent-property-widget">
+                                        <ul>
+                                        <li>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="{{asset('img/demo/small-property-2.jpg')}}"></a>
+                                                <span class="property-seeker">
+                                                    <b class="b-1">A</b>
+                                                    <b class="b-2">S</b>
+                                                </span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="blog">TouristAttractions </a></h6>
+                                                <div class="property-icon">
+                                                    <img src="{{asset('img/icon/picine.png')}}">|
+                                                    <img src="{{asset('img/icon/cars.png')}}">  
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="{{asset('img/demo/small-property-1.jpg')}}"></a>
+                                                <span class="property-seeker">
+                                                    <b class="b-1">A</b>
+                                                    <b class="b-2">S</b>
+                                                </span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="blog">Restaurants </a></h6>
+                                                <div class="property-icon">
+                                                    <img src="{{asset('img/icon/picine.png')}}">|
+                                                    <img src="{{asset('img/icon/cars.png')}}">  
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="{{asset('img/demo/small-property-3.jpg')}}"></a>
+                                                <span class="property-seeker">
+                                                    <b class="b-1">A</b>
+                                                    <b class="b-2">S</b>
+                                                </span>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="blog">Hotels </a></h6>
+                                                <div class="property-icon">
+                                                    <img src="{{asset('img/icon/picine.png')}}">|
+                                                    <img src="{{asset('img/icon/cars.png')}}">  
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div> -->                          
 
                           
 

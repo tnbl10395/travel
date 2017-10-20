@@ -16,7 +16,7 @@ class ProfileController extends Controller
     public function index()
     {
         $profile = new Profile();
-        return response()->json($profile::all(),404);
+        return response()->json($profile::all());
     }
 
     /**
@@ -83,6 +83,6 @@ class ProfileController extends Controller
         $file = new uploadFileLibrary();
         $file->deleteFile($profile->avatar);
         $profile->delete();
-        return response()->json(null,404);
+        return response()->json(null);
     }
 }

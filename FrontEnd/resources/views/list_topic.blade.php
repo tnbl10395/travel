@@ -2,17 +2,6 @@
 
 @section('content')
 
-        <div class="page-head"> 
-            <div class="container">
-                <div class="row">
-                    <div class="page-head-content">
-                        <h1 class="page-title">ASIA PARK</h1>               
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End page header -->
-
         <div class="content-area blog-page padding-top-40" style="background-color: #FCFCFC; padding-bottom: 55px;">
             <div class="container">
                 <div class="row">
@@ -24,9 +13,19 @@
                                     <h2 class="wow fadeInLeft animated">ASIA PARK</h2>
                                     <div class="title-line wow fadeInRight animated"></div>
                                 </div>
+                                <br>
                                 <div class="row wow fadeInRight animated">
                                     <div class="col-sm-6">
-                                        
+                                        <p class="author-category">
+                                            Rating: 
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </p>
                                     </div>
                                     <div class="col-sm-6 right" >
                                         <p class="date-comments">
@@ -35,11 +34,36 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="image wow fadeInRight animated"> 
-                                    <img src="{{asset('img/asia-park.jpg')}}" class="img-responsive" alt="Example blog post alt">
-                                </div>
                             </div> 
+                            <br>
+                            <div>
+                                <div class="single-property-content prp-style-2">
+                                <div class="row">
+                                    <div class="light-slide-item">            
+                                        <div class="clearfix">
 
+                                            <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                                <li data-thumb="{{asset('img/property-1/property1.jpg')}}"> 
+
+                                                    <img src="{{asset('img/property-1/property1.jpg')}}" />
+                                                </li>
+                                                <li data-thumb="{{asset('img/property-1/property2.jpg')}}"> 
+                                                    <img src="{{asset('img/property-1/property3.jpg')}}" />
+                                                </li>
+                                                <li data-thumb="{{asset('img/property-1/property3.jpg')}}"> 
+                                                    <img src="{{asset('img/property-1/property3.jpg')}}" />
+                                                </li>
+                                                <li data-thumb="{{asset('img/property-1/property4.jpg')}}"> 
+                                                    <img src="{{asset('img/property-1/property4.jpg')}}" />
+                                                </li>                                         
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            </div>
                             <div id="post-content" class="post-body single wow fadeInLeft animated">
                                 <p>
                                     Asia Park bao gồm ba khu vực chính: công viên giải trí ngoài trời hiện đại, công viên văn hóa với các công trình kiến trúc và nghệ thuật thu nhỏ mang tính biểu trưng của 10 quốc gia châu Á, và khu Sun Wheel - nơi giao thoa giữa nét hiện đại và truyền thống.
@@ -74,41 +98,20 @@
                                     </p>
                                 </blockquote>
 
-                                <h3>Header Level 3</h3>
+                                <h3>Please vote now</h3>
 
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                    ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                    <li>Aliquam tincidunt mauris eu risus.</li>
-                                </ul>
-                                <p>
-                                    <img src="{{asset('img/blog.jpg')}}" class="img-responsive" alt="Example blog post alt">
-                                </p>
-                                <p>
-                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                    condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                    eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
-                                </p>
+                                <p class="author-category">
+                                        Rating: 
+                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>   
+                                    </p>
 
                             </div>
-                            <div class="post-footer single wow fadeInBottum animated">
-                                <ul class="pager">
-                                    <li class="previous"><a href="#"><i class=""></i>← Older </a></li>
-                                    <li class="next disabled"><a href="#">Newer →<i class=""></i> </a></li>
-                                </ul> 
-                            </div>    
-
                         </section> 
-
-                        <section class="about-autor">
-
-                        </section>
-
                         <section id="comments" class="comments wow fadeInRight animated"> 
                             <h4 class="text-uppercase wow fadeInLeft animated">3 comments</h4>
-
-
                             <div class="row comment">
                                 <div class="col-sm-3 col-md-2 text-center-xs">
                                     <p>
@@ -120,77 +123,62 @@
                                     <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2011 at 12:00 am</p>
                                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
                                         Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                                    <p class="reply"><a href="#"><i class="fa fa-reply"></i> Reply</a>
-                                    </p>
+                                    <div class="col-sm-6"> 
+                                        <div class="col-sm-4">
+                                            <span class="col-sm-1">5</span>
+                                            <a href="#"><i class="fa fa-thumbs-up"></i> Like</a>
+                                        </div> 
+                                        <div class="col-sm-4">
+                                             <span class="col-sm-1">9</span>
+                                           <a href="#"><i class="fa fa-thumbs-down"></i> Dislike</a>
+                                        </div>         
+                                           
+                                           
+                                    </div>
+                                    
                                 </div>
                             </div>
-                            <!-- /.comment -->
-
-
-                            <div class="row comment last">
-
-                                <div class="col-sm-3 col-md-2 text-center-xs">
-                                    <p>
-                                        <img src="{{asset('img/client-face2.png')}}" class="img-responsive img-circle" alt="">
-                                    </p>
-                                </div>
-
-                                <div class="col-sm-9 col-md-10">
-                                    <h5 class="text-uppercase">Louise Armero</h5>
-                                    <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2012 at 12:00 am</p>
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                                        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                                    <p class="reply"><a href="#"><i class="fa fa-reply"></i> Reply</a>
-                                    </p>
-                                </div>
-
-                            </div>
-                            <!-- /.comment -->
-                        </section>
-
+                           
+                        </section>         
                         <section id="comment-form" class="add-comments">
                             <h4 class="text-uppercase wow fadeInLeft animated">Leave comment</h4>
-                            <form>
-                                <div class="row wow fadeInLeft animated">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="name">Name <span class="required">*</span>
-                                            </label>
-                                            <input class="form-control" id="name" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row wow fadeInLeft animated">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="email">Email <span class="required">*</span>
-                                            </label>
-                                            <input class="form-control" id="email" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row wow fadeInLeft animated">
-                                    <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <label for="comment">Comment <span class="required">*</span>
-                                            </label>
-                                            <textarea class="form-control" id="comment" rows="4"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <textarea placeholder="What do you think ?" id="txtedit"></textarea>
+                                <br>
                                 <div class="row wow fadeInLeft animated">
                                     <div class="col-sm-12 text-right">
                                         <button class="btn btn-primary"><i class="fa fa-comment-o"></i> Post comment</button>
                                     </div>
                                 </div>
-                            </form>
+                            <!-- </form> -->
                         </section>
+
                     </div>                                 
                 </div>
 
             </div>
         </div>
+
+        
+@endsection
+@section('script')
+<script>
+            $(document).ready(function () {
+
+
+                $('#image-gallery').lightSlider({
+                    gallery: true,
+                    item: 1,
+                    thumbItem: 9,
+                    slideMargin: 0,
+                    speed: 500,
+                    auto: true,
+                    loop: true,
+                    onSliderLoad: function () {
+                        $('#image-gallery').removeClass('cS-hidden');
+                    }
+                });
+                $('#txtedit').Editor();
+            });
+</script>
+
 @endsection

@@ -35,16 +35,18 @@
                 </tr>
               </tfoot>
               <tbody>
+                @foreach ($data as $objectImg)
                 <tr>
-                  <td>00001</td>
-                  <td>001</td> 
-                  <td>001</td>
-                  <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQld8t5ksATUxIFemQMJQg3U4GGPG7Gq4jv-CUM9vhEhZYrqef5qw"></td>
+                  <td>{{ $objectImg->imageID}}</td>
+                  <td>{{$objectImg->placeID}}</td> 
+                  <td>{{$objectImg->commentID}}</td>
+                  <td>{{$objectImg->imageName}}</td>
                   <td>
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                     <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#deleteImg'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
