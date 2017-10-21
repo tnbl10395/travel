@@ -15,7 +15,7 @@ class DistrictController extends Controller
     public function index()
     {
         $district = new District();
-        return response()->json($district::all(),404);
+        return response()->json($district::all());
     }
 
     /**
@@ -37,6 +37,8 @@ class DistrictController extends Controller
     public function store(Request $request)
     {
         $district = new District();
+        $district->districtID = $request->districtID;
+        $district->cityID = $request->cityID;
         $district->districtName = new $request->districtName;
         $district->save();
         return response()->json($district,201);
@@ -50,7 +52,7 @@ class DistrictController extends Controller
      */
     public function show(District $district)
     {
-        return response()->json($district,404);
+        return response()->json($district);
     }
 
     /**
@@ -73,6 +75,8 @@ class DistrictController extends Controller
      */
     public function update(Request $request, District $district)
     {
+        $district->districtID = $request->districtID;
+        $district->cityID = $request->cityID;
         $district->districtName = $request->districtName;
         $district->save();
         return response()->json($district,200);
@@ -87,6 +91,6 @@ class DistrictController extends Controller
     public function destroy(District $district)
     {
         $district->delete();
-        return response()->json(null,404);
+        return response()->json(null);
     }
 }

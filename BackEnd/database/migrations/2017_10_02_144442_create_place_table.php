@@ -15,6 +15,7 @@ class CreatePlaceTable extends Migration
     {
         Schema::create('place', function (Blueprint $table) {
             $table->increments('placeID');
+            $table->string('locationID');
             $table->unsignedInteger('categoryID');
             $table->string('placeName',100);
             $table->text('description');
@@ -22,6 +23,7 @@ class CreatePlaceTable extends Migration
             $table->text('map');
             $table->float('rating')->nullable();
             $table->timestamps();
+            $table->foreign('locationID')->references('locationID')->on('locations')->onDelete('casecade');
             $table->foreign('categoryID')->references('categoryID')->on('category')->onDelete('cascade');
         });
     }

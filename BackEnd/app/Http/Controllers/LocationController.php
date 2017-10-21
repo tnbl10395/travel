@@ -15,8 +15,11 @@ class LocationController extends Controller
      */
     public function index()
     {
-        $location = new Location();
-        return response()->json($location::all(),404);
+        $object = new Location();
+        $location = $object->join('district','locations.districtID','=','district.districtID')
+                           ->select(['locationID','district.districtName','picture','description','map'])
+                           ->get();
+        return response()->json($location);
     }
 
     /**
@@ -30,10 +33,9 @@ class LocationController extends Controller
         $location = new Location();
         $file = new uploadFileLibrary();
         $location->locationID = $request->locationID;
-        $location->locationName = $request->locationName;
+        $location->districtID = $request->districtID;
         $location->picture = 'http://localhost:8000/upload/'.$file->upload($request->picture);
         $location->description = $request->description;
-        $location->detail = $request->detail;
         $location->map = $request->map;
         $location->save();
         return response()->json($location,201);
@@ -61,10 +63,9 @@ class LocationController extends Controller
     {
         $file = new uploadFileLibrary();
         $location->locationID = $request->locationID;
-        $location->locationName = $request->locationName;
+        $location->districtID = $request->districtID;
         $location->picture = 'http://localhost:8000/upload/'.$file->reload($request->picture,$request->oldPicture);
         $location->description = $request->description;
-        $location->detail = $request->detail;
         $location->map = $request->map;
         $location->save();
         return response()->json($location,200);
@@ -81,6 +82,6 @@ class LocationController extends Controller
         $file = new uploadFileLibrary();
         $file->deleteFile($location->picture);
         $location->delete();
-        return response()->json(null,404);
+        return response()->json(null);
     }
 }

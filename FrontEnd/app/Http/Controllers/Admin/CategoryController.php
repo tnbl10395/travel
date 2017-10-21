@@ -44,8 +44,11 @@ class CategoryController extends Controller
         return redirect('admin/category-index');
     }
 
-    public function destroy(){
-
+    public function destroy($id){
+        $client = new Client();
+        $req = $client->delete('http://localhost:8000/api/category/'.$id);
+        $responese = json_decode($req->getBody());
+        return redirect()->back();
     }
 
 }

@@ -37,16 +37,20 @@
                 </tr>
               </tfoot>
               <tbody>
+              @if($listLocation!=null)
+                  @foreach($listLocation as $objectLocation)
                 <tr>
-                  <td>0401</td>
-                  <td><a href="" data-target='#updateLocation' data-toggle='modal' >Liên Chiểu</a></td>
-                  <td>lienchieu.jpg</td>
-                  <td>Khu vực gần Hải Vân</td>
+                  <td>0{{$objectLocation->locationID}}</td>
+                  <td><a href="" data-target='#updateLocation' data-toggle='modal' >{{$objectLocation->districtName}}</a></td>
+                  <td>{{$objectLocation->picture}}</td>
+                  <td>{{$objectLocation->description}}</td>
                   <td>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update Location' data-target='#updateLocation'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#DeleteLocation'><b><i class="fa fa-trash"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-id="{{$objectLocation->locationID}}" data-toggle='modal' title='Update Location' data-target='#updateLocation'><b><i class="fa fa-pencil-square-o"></i></b></button>
+                    <button style="color: red; border: 0; background:none;" data-id="{{$objectLocation->locationID}}" data-toggle='modal' title='delete' data-target='#DeleteLocation'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
+                  @endforeach
+               @endif
               </tbody>
             </table>
           </div>
@@ -72,7 +76,8 @@
       <div class="modal-dialog modal-lg" style="width:800px;">
          <!-- Modal content-->
          <div class="modal-content">
-            <form id="formAddLocation" method="#" class="form-horizontal" >
+            <form id="formAddLocation" method="post" action="/admin/location-add" class="form-horizontal" enctype="multipart/form-data">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <div class="modal-header">
                   <h4 class="modal-tittle">ADD LOCATION</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -87,35 +92,35 @@
                         <div class="col-sm-8">
                           <div class="form-group">
                            
-                            <select class="form-control" id="sel1">
-                              <option>Hải Châu</option>
-                              <option>i</option>
-                              <option>i</option>
-                              <option>i</option>
+                            <select class="form-control" id="sel1" name="cityID">
+                              @if($listCity!=null)
+                                  @foreach($listCity as $objectCity)
+                                    <option value="{{$objectCity->cityID}}">{{$objectCity->cityName}}</option>
+                                  @endforeach
+                              @endif
                             </select>
                           </div>
                         </div>
                       </div>
                       <br>
-                      <div class="row">
-                        <div class="control-label col-sm-4">
-                          <h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>
-                        </div>
-                        <div class="col-sm-8">
-                          <input name="nameLocation" type="text" class="form-control">
-                        </div>
-                      </div>
+                      {{--<div class="row">--}}
+                        {{--<div class="control-label col-sm-4">--}}
+                          {{--<h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-sm-8">--}}
+                          {{--<input name="locationName" type="text" class="form-control">--}}
+                        {{--</div>--}}
+                      {{--</div>--}}
                       <br>
-                      <div class="row">
-                        <div class="control-label col-sm-4">
-                          <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
-                          </div>
-                          <div class="col-sm-8">
-                            <textarea id="pagedownMe"  class="form-control" rows="5">
+                        <div class="row">
+                            <div class="control-label col-sm-4">
+                                <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
+                            </div>
+                            <div class="col-sm-8">
+                            <textarea name="description" id="pagedownMe"  class="form-control" rows="5">
                             </textarea>
-                          </div>
+                            </div>
                         </div>
-
                       </div>
 
                     <div class="col-sm-6">
@@ -126,11 +131,12 @@
                         <div class="col-sm-8">
                           <div class="form-group">
                            
-                            <select class="form-control" id="sel1">
-                              <option>Hải Châu</option>
-                              <option>i</option>
-                              <option>i</option>
-                              <option>i</option>
+                            <select class="form-control" id="sel1" name="districtID">
+                                @if($listDistrict!=null)
+                                    @foreach($listDistrict as $objectDistrict)
+                                    <option value="{{$objectDistrict->districtID}}">{{$objectDistrict->districtName}}</option>
+                                    @endforeach
+                                @endif
                             </select>
                           </div>
                           <br>
@@ -144,7 +150,7 @@
                  </div>
                  
                  <div class="row" style="margin-left:5px;">
-                  <input type="file" name="file" id="addLocationFile">
+                  <input type="file" name="picture" id="addLocationFile">
                 </div>
              </div>
               <div class="modal-footer">
@@ -162,8 +168,9 @@
       <div class="modal-dialog modal-lg" style="width:750px;">
          <!-- Modal content-->
          <div class="modal-content">
-            <form id="formupdateLocation" method="" class="form-horizontal" >
-               <div class="modal-header">
+            <form id="formupdateLocation" method="get" action="" class="form-horizontal" >
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <div class="modal-header">
                 <h4 class="modal-tittle">UPDATE LOCATION</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                </div>
@@ -259,7 +266,8 @@
       <div class="modal-dialog modal-lg" style="width:500px;">
          <!-- Modal content-->
          <div class="modal-content">
-            <form id="formDeleteCategory" method="" class="form-horizontal" >
+            <form id="formDeleteCategory" method="get" action="/admin/location-delete/@if($listLocation!=null)0{{$objectLocation->locationID}}@endif" class="form-horizontal" >
+              <input type="hidden" name="_token" value="{{csrf_token()}}">
               <div class="modal-header">
                 <!-- <i class="fa fa-trash"> --></i>
                   <h4 class="modal-tittle">DELETE LOCATION</h4>

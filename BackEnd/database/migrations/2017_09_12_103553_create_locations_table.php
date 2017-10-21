@@ -15,12 +15,13 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->string('locationID',10)->primary();
-            $table->string('locationName');
+            $table->string('districtID',10)->unique();
             $table->text('picture');
             $table->text('description');
-            $table->text('detail');
             $table->text('map');
             $table->timestamps();
+
+//            $table->foreign('districtID')->references('districtID')->on('district')->onDelete('cascade');
         });
     }
 
@@ -31,6 +32,8 @@ class CreateLocationsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignkeyConstraints();
         Schema::dropIfExists('locations');
+        Schema::enableForeignkeyConstraints();
     }
 }
