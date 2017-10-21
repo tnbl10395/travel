@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -32,6 +33,7 @@ class UserController extends Controller
             'email' => $request->get('email'),
             'password' => Hash::make($request->get('password')),
             'role' => $request->get('role'),
+            'status' => 1
         ]);
 
         return response()->json([
@@ -73,8 +75,18 @@ class UserController extends Controller
         return response()->json(['result' => $user]);
     }
     public function getAllUser(){
+        $object = new User();
+        $user = $object->leftJoin('profile','users.userID','=','profile.userID')
+                       ->select(['users.userID','users.username','users.status','fullname',
+                                 'email','phone', 'avatar','rating'])
+                       ->get();
+        return response()->json($user);
+    }
+
+    public function lockOrUnLock(Request $request,$id){
         $user = new User();
-        $infoUser = $user->select('userID','username','email')->get();
-        return response()->json($infoUser);
+        $user->where('userID','=',$id)
+             ->update(['status'=>$request->status]);
+        return response()->json($user);
     }
 }

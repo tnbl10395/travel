@@ -68,11 +68,14 @@ Route::get('admin','Admin\AdminController@index');
  * Location
  * */
 Route::get('admin/location-index','Admin\LocationController@index');
+Route::post('admin/location-add','Admin\LocationController@store');
+Route::get('admin/location-delete/{id}','Admin\LocationController@delete');
 /**
  * Category
 **/
 Route::get('admin/category-index','Admin\CategoryController@index');
 Route::post('admin/category-add','Admin\CategoryController@addCategory');
+Route::post('admin/category-delete/{id}','Admin\CategoryController@destroy');
 Route::post('admin/create-category','Admin\CreateCategoryAdminController@createTable');
 /**
  * Place
@@ -87,6 +90,9 @@ Route::get('admin/comment-index','Admin\CommentController@index');
  **/
 Route::get('admin/image-index','Admin\ImageController@index');
 /**
- * Comment
+ * User
  **/
 Route::get('admin/user-index','Admin\UserController@index');
+Route::post('admin/user-un-lock/{attr}','Admin\UserController@lockOrUnLock');
+
+

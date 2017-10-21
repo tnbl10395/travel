@@ -66,7 +66,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return response()->json($category,404);
+        return response()->json($category);
     }
 
     /**
@@ -93,7 +93,10 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return response()->json(null,404);
+        Schema::disableForeignkeyConstraints();
+        Schema::dropIfExists($category->categoryName);
+        Schema::enableForeignkeyConstraints();
+        return response()->json(null);
     }
 
     public function createCategoryTable($list){

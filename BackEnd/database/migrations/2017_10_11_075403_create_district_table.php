@@ -15,8 +15,10 @@ class CreateDistrictTable extends Migration
     {
         Schema::create('district', function (Blueprint $table) {
             $table->string('districtID',10)->primary();
+            $table->string('cityID',10);
             $table->string('districtName',50);
-            $table->timestamps();
+
+//            $table->foreign('cityID')->references('cityID')->on('city')->onDelete('cascade');
         });
     }
 
@@ -27,6 +29,8 @@ class CreateDistrictTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignkeyConstraints();
         Schema::dropIfExists('district');
+        Schema::enableForeignkeyConstraints();
     }
 }

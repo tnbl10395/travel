@@ -10,4 +10,5 @@ class District extends Model
     protected $table = "district";
     protected $fillable = ["districtID","districtName"];
     protected $primaryKey = "districtID";
+    public $timestamps = false;
 }

@@ -15,7 +15,7 @@ class CityController extends Controller
     public function index()
     {
         $city = new City();
-        return response()->json($city::all(),404);
+        return response()->json($city::all());
     }
 
     /**
@@ -50,7 +50,7 @@ class CityController extends Controller
      */
     public function show(city $city)
     {
-        return response()->json($city,404);
+        return response()->json($city);
     }
 
     /**
@@ -87,6 +87,6 @@ class CityController extends Controller
     public function destroy(city $city)
     {
         $city->delete();
-        return response()->json(null,404);
+        return response()->json(null);
     }
 }
