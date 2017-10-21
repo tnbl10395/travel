@@ -18,20 +18,22 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>UserID</th>
+                  <th>ID</th>
+                  <!-- <th>Username</th> -->
                   <th>FullName</th>
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Age</th>
                   <th>Avatar</th>
-                  <th width="20%">Address</th>
+                  <th>Address</th>
                   <th>rating</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>UserID</th>
+                  <th>ID</th>
+                  <!-- <th>Username</th> -->
                   <th>FullName</th>
                   <th>Email</th>
                   <th>Phone</th>
@@ -43,22 +45,24 @@
                 </tr>
               </tfoot>
               <tbody>
+                @foreach($data as $objectUser)
                 <tr>
-                  <td>0001</td>
-                  <td><a href="" data-target='#profileUser' data-toggle='modal' >Hiếu Lê Thị</a></td>
-                  <td>hieut@gmail.com</td>
-                  <td>0973006112</td>
-                  <td>22</td>
-                  <td>hieule.jpg</td>
-                  <td>60 - Ngô Sỹ Liên - Đà Nẵng</td>
-                  <td>1</td>
+                  <td>{{$objectUser->userID}}</td>
+                  <!-- <td>{{$objectUser->username}}</td> -->
+                  <td><a href="" data-target='#profileUser' data-toggle='modal' ></a>{{ $objectUser->firstName}}</td>
+                  <td>{{ $objectUser->lastName}}</td>
+                  <td>{{ $objectUser->phone}}</td>
+                  <td>{{ $objectUser->age}}</td>
+                  <td>{{ $objectUser->avatar}}</td>
+                  <td>{{ $objectUser->address }}</td>
+                  <td>{{ $objectUser->rating}}</td>
                   
                   <td>
                   <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#blockUser'><b><i class="fa fa-ban" aria-hidden="true"></i></b></button>
-                  <!-- <button style="color: red; border: 0; background:none;" data-toggle='modal' title='Update' data-target='#blockUser'><b><i <i class="fa fa-lock" aria-hidden="true"></i>></i></b></button> -->
                   <button style="color: red; border: 0; background:none;" data-toggle='modal' title='delete' data-target='#DeleteUser'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
+                @endforeach
                 </tbody>
               </table>
             </div>

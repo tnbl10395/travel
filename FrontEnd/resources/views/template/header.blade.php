@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="{{asset('css/owl.transitions.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+        <link rel="stylesheet" href="{{asset('css/lightslider.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/editor.css')}}">
     </head>
     <body>
           <nav class="navbar navbar-default ">
@@ -53,7 +55,7 @@
                     <ul class="main-nav nav navbar-nav navbar-right">
                         <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="/" class="">Home</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="locations">Location</a></li>
-                        
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="place">Place</a></li>
                     </ul>
                 </div>
             </div>
@@ -138,6 +140,7 @@
                             <ul> 
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Location</a></li>
+                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Place</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Login</a></li>
                             </ul> 
                         </div>
@@ -164,7 +167,9 @@
         <script src="{{asset('js/price-range.js')}}"></script>
 
         <script src="{{asset('js/main.js')}}"></script>
+        <script src="{{asset('js/editor.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/lightslider.min.js')}}"></script>
 
-
+        @yield('script')
     </body>
 </html>

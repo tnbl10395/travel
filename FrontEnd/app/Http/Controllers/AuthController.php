@@ -36,7 +36,6 @@ class AuthController extends Controller
             $errors = new MessageBag(['errorLogin'=>'Username or Password is uncorrect!']);
             return back()->withInput()->withErrors($errors);
         }
-
     }
     public function logout(){
         Session::forget('user');

@@ -16,6 +16,22 @@
       <div class="card mb-3">
         
         <div class="card-body">
+          <div class="row" style="margin: auto;">
+            <div class="col-sm-3">
+              <label>Please select category:</label>
+            </div>
+            <div class="col-sm-3">
+            <div class="form-group">
+              <select class="form-control" id="sel1">
+              <option>Hotel</option>
+              <option>i</option>
+              <option>i</option>
+              <option>i</option>
+              </select>
+              </div>
+              <br>
+            </div>
+          </div>
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
