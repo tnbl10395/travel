@@ -115,68 +115,12 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-1.html" ><img src="{{asset('img/demo/property-4.jpg')}}"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >NOVOTEL </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">10 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
+                        
 
 
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-3.html" ><img src="{{asset('img/demo/property-2.jpg')}}"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-3.html" >My Quang Ech </a></h5>
-                                    <div class="dot-hr"></div>
-                                   <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">15 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
+                        
 
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-2.html" ><img src="{{asset('img/demo/property-4.jpg')}}"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-2.html" >Ba na Hill </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">30 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-two proerty-item">
@@ -196,21 +140,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-tree more-proerty text-center">
-                                <div class="item-tree-icon">
-                                    <a href="locations" ><i class="fa fa-th"></i></a>
-                                    
-                                </div>
-                                <div class="more-entry overflow">
-                                    <h5><a href="locations" >CAN'T DECIDE ? </a></h5>
-                                    <h5 class="tree-sub-ttl">Show all </h5>
-                                    <button class="btn border-btn more-black" value="All properties">All</button>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -234,7 +163,7 @@
                                         <p>"Kiên nhẫn là yếu tố quan trọng của thành công"</p>
                                         <h4><strong>Phong Lê, </strong><i>Project Manager</i></h4>
                                     </div>
-                                    <div class="client-face wow fadeInRight" data-wow-delay=".9s"> 
+                                    <div class="client-face wow fadeInRight"> 
                                         <img src="{{asset('img/client-face1.png')}}" alt="">
                                     </div>
                                 </div>

@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('locations', function(){
 	return view('locations');
 });
+Route::get('place', function(){
+	return view('place');
+});
 Route::get('contact', function(){
 	return view('contact');
 });

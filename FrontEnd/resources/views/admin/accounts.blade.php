@@ -30,6 +30,7 @@
               </thead>
               <tfoot>
                 <tr>
+
                     <th>ID</th>
                     <th>Username</th>
                     <th>Fullname</th>

@@ -83,6 +83,6 @@ class ProfileController extends Controller
         $file = new uploadFileLibrary();
         $file->deleteFile($profile->avatar);
         $profile->delete();
-        return response()->json(null,404);
+        return response()->json(null);
     }
 }

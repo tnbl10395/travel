@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
-{
+{	
+	public function __construct()
+    {
+        $this->middleware('admin');
+    }
+   
     public function index(){
+
         $client = new Client();
         $req = $client->get('http://localhost:8000/api/allUsers');
         $response = json_decode($req->getBody());
@@ -30,5 +36,23 @@ class UserController extends Controller
             ]
         ]);
         return redirect()->back();
+
     }
+    // public function deleteUser(Request $request){
+    // 	$userID = $request->userID;
+    // 	$client = new Client();
+    // 	$req =$client->delete('http://localhost:8000/api/XXXX',[
+    //         'json'=>[
+    //             'userID' => $userID;
+    //         ]);
+    // 	 $response = $req->getBody();
+    //     return redirect('admin/user-index');
+
+    // }
+    // public function blockUser(Request $request){
+    // 	$userID = $request->userID;
+    // 	$client = new Client();
+    // 	$req = $client->
+
+    // }
 }

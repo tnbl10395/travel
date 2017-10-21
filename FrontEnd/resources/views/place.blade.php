@@ -1,18 +1,16 @@
 @extends('template.header')
 
 @section('content')
-
         <div class="page-head"> 
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">List Locations In Da Nang</h1>               
+                        <h1 class="page-title">List Places In Da Nang</h1>               
                     </div>
                 </div>
             </div>
         </div>
         <!-- End page header -->
-
         <!-- property area -->
         <div class="properties-area recent-property" style="background-color: #FFF;">
             <div class="container">  
@@ -61,13 +59,12 @@
                                 </form>
                             </div>
                         </div>
-
-                        <div class="panel panel-default sidebar-menu wow fadeInRight animated">
+                        <!-- <div class="panel panel-default sidebar-menu wow fadeInRight animated">
                             
                             <div class="panel-body recent-property-widget">
                                        
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -79,8 +76,10 @@
                                     <a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC">
                                         Location Date <i class="fa fa-sort-amount-asc"></i>					
                                     </a>
-                                </li>     
+                                </li>
+                                
                             </ul><!--/ .sort-by-list-->
+
                         </div>
 
                         <div class="col-xs-2 layout-switcher">
@@ -91,20 +90,42 @@
 
                     <div class="col-md-12 clear"> 
                         <div id="list-type" class="proerty-th">
-
+                            <!-- foreach -->
                             <div class="col-sm-6 col-md-4 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="detail_location" ><img src="{{asset('img/demo/bap.jpg')}}"></a>
-                                        </div>
+                                <div class="box-two proerty-item">
+                                    <div class="item-thumb">
+                                        <a href="blog" ><img src="{{asset('img/demo/bap.jpg')}}"></a>
+                                    </div>
 
-                                        <div class="item-entry overflow">
-                                            <h5><a href="detail_location"> Hải Châu </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Update :</b> 20/09/2017 </span>
+                                    <div class="item-entry overflow">
+                                        <h5><a href="blog"> place 1 </a></h5>
+                                        <div class="dot-hr"></div>
+                                        <span class="pull-left"><b> Update :</b> 20/09/2017 </span> 
+                                        <div class="property-icon">
+                                            <img src="{{asset('img/icon/picine.png')}}">|
+                                            <img src="{{asset('img/icon/cars.png')}}">  
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
+                            </div> 
+
+                            <div class="col-sm-6 col-md-4 p0">
+                                <div class="box-two proerty-item">
+                                    <div class="item-thumb">
+                                        <a href="property-1.html" ><img src="{{asset('img/demo/property-2.jpg')}}"></a>
+                                    </div>
+                                    <div class="item-entry overflow">
+                                        <h5><a href="property-1.html"> Place 2 </a></h5>
+                                        <div class="dot-hr"></div>
+                                        <span class="pull-left"><b> Update :</b> 18/09/2017 </span>
+                                        <div class="property-icon">
+                                            <img src="{{asset('img/icon/picine.png')}}">|
+                                            <img src="{{asset('img/icon/cars.png')}}"> 
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div> 
+                            <!-- end -->
                         </div>
                     </div>
                     
