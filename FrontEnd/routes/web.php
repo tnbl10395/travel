@@ -84,14 +84,23 @@ Route::post('admin/create-category','Admin\CreateCategoryAdminController@createT
  * Place
  **/
 Route::get('admin/place-index','Admin\PlaceController@index');
+Route::get('admin/place-add','Admin\PlaceController@showPage');
+Route::get('admin/place-index/{name}','Admin\PlaceController@createPlaceTable');
+Route::get('admin/place-get/{name}','Admin\PlaceController@getPlaceBasedOnCategory');
+Route::post('admin/place-delete/{id}','Admin\PlaceController@delete');
+Route::post('admin/place-added/','Admin\PlaceController@store');
+
 /**
  * Comment
  **/
 Route::get('admin/comment-index','Admin\CommentController@index');
+Route::post('admin/comment-delete/{id}','Admin\CommentController@destroy');
+Route::post('admin/comment-accept/{id}','Admin\CommentController@accept');
 /**
  * Image
  **/
 Route::get('admin/image-index','Admin\ImageController@index');
+Route::post('admin/image-add','Admin\ImageController@store');
 /**
  * User
  **/

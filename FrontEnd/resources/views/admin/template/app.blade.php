@@ -72,12 +72,12 @@
             <span class="nav-link-text">Comments Management</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Images">
-          <a class="nav-link" href="/admin/image-index">
-            <i class="fa fa-fw fa-picture-o"></i>
-            <span class="nav-link-text">Images Management</span>
-          </a>
-        </li>
+        {{--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Images">--}}
+          {{--<a class="nav-link" href="/admin/image-index">--}}
+            {{--<i class="fa fa-fw fa-picture-o"></i>--}}
+            {{--<span class="nav-link-text">Images Management</span>--}}
+          {{--</a>--}}
+        {{--</li>--}}
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -133,7 +133,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="{{ URL::asset("vendor/jquery-easing/jquery.easing.min.js") }}"></script>
-    <script src="{{ URL::asset("vendor/chart.js/Chart.min.js") }}"></script>
+{{--    <script src="{{ URL::asset("vendor/chart.js/Chart.min.js") }}"></script>--}}
     <script src="{{ URL::asset("vendor/datatables/jquery.dataTables.js") }}"></script>
     <script src="{{ URL::asset("vendor/datatables/dataTables.bootstrap4.js") }}"></script>
     <!-- <script src="{{ URL::asset("admin/js/sb-admin.min.js") }}"></script> -->
@@ -142,9 +142,9 @@
     <script src="{{ URL::asset("loading/dist/jquery.loading.min.js") }}"></script> -->
     <!-- Custom scripts for all pages-->
     <script src="{{ URL::asset("js/sb-admin.min.js") }}"></script>
-    <script  src="{{URL::asset("js/jquery.pagedown-bootstrap.combined.min.js")}}"></script>
+{{--    <script  src="{{URL::asset("js/jquery.pagedown-bootstrap.combined.min.js")}}"></script>--}}
     <script src="{{ URL::asset("js/sb-admin-datatables.min.js") }}"></script>
-    <script src="{{ URL::asset("js/sb-admin-charts.min.js") }}"></script>
+{{--    <script src="{{ URL::asset("js/sb-admin-charts.min.js") }}"></script>--}}
     @yield('script')
 </body>
 

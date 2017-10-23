@@ -84,4 +84,12 @@ class LocationController extends Controller
         $location->delete();
         return response()->json(null);
     }
+
+    public function getNameLocation(){
+        $location = new Location();
+        $list = $location->join('district','locations.districtID','=','district.districtID')
+                         ->select(['locationID','districtName'])
+                         ->get();
+        return response()->json($list);
+    }
 }

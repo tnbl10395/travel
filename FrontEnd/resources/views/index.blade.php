@@ -34,7 +34,7 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="TouristAttractions">
                                 </div>
-                                <button class="btn search-btn" type="submit"><i class="fa fa-search"></i>
+                                <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>

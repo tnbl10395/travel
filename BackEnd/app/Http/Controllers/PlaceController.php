@@ -28,12 +28,15 @@ class PlaceController extends Controller
     public function store(Request $request)
     {
         $place = new Place();
+        $place->locationID = $request->locationID;
         $place->categoryID = $request->categoryID;
         $place->placeName = $request->placeName;
         $place->description = $request->description;
         $place->detail = $request->detail;
+        $place->address = $request->address;
         $place->map = $request->map;
-        $place->rating = $request->rating;
+        $place->waypoint = '102,100';
+        $place->rating = 0;
         $place->save();
         return response()->json($place,201);
     }
@@ -80,4 +83,51 @@ class PlaceController extends Controller
         return response()->json(null);
     }
 
+    public function createPlaceTable($cat)
+    {
+        $category = explode('%',$cat);
+//        return response()->json($cat);
+        $place = new Place();
+        $listPlace = $place->join($category[1],'place.placeID','=',$category[1].'.'.$category[1].'ID')
+                           ->select(['place.placeID','locationID','placeName','description',$category[1].'.*','rating'])
+                            ->get();
+        return response()->json($listPlace);
+    }
+
+    public function getPlaceBasedOnCategory($cat)
+    {
+        $category = explode('%',$cat);
+        $listPlace = \DB::getSchemaBuilder()->getColumnListing($category[1]);
+        return response()->json($listPlace);
+    }
+
+    public function storeRestOfPlace(Request $request){
+        //cat chuoi
+        $category = $request->category;
+        $cat = explode('%',$category);
+        //tim placeID vua them
+        $placeID = \DB::table('place')->where('placeName','=',$request->placeName)
+                                      ->orderBy('placeID','desc')
+                                      ->limit(1)
+                                      ->select('placeID')
+                                      ->first();
+        //request list
+        $list = $request->list;
+        //them phan tu vao dau mang
+        if(!is_array($list)){
+            $listRow = [$placeID,$list];
+        }else{
+            array_unshift($list,$placeID->placeID);
+            //xoa tat ca chi muc
+             $listRow = array_values($list);
+        }
+//        return response()->json($listRow);
+        //select column cua table
+        $listColumn = \DB::getSchemaBuilder()->getColumnListing($cat[1]);
+        //noi chuoi
+        $listRest = array_combine($listColumn,$listRow);
+        $categoryName = strtolower($cat[1]);
+        $rest = \DB::table($categoryName)->insert($listRest);
+        return response()->json($rest);
+    }
 }
