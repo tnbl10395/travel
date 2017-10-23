@@ -116,9 +116,10 @@
                             <div class="control-label col-sm-4">
                                 <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
                             </div>
+                            
+                            
                             <div class="col-sm-8">
-                            <textarea name="description" id="pagedownMe"  class="form-control" rows="5">
-                            </textarea>
+                                <textarea rows="5" cols="20" name="description" id="pagedownMe"></textarea>
                             </div>
                         </div>
                       </div>
@@ -207,8 +208,7 @@
                           <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
                           </div>
                           <div class="col-sm-8">
-                            <textarea id="pagedownMe"  class="form-control" rows="5">
-                            </textarea>
+                            <textarea rows="5" cols="20" name="description" id="pagedownMe"></textarea>
                           </div>
                         </div>
 

@@ -1,9 +1,8 @@
 @extends('template.header')
-
 @section('content')
-
         <div class="content-area blog-page padding-top-40" style="background-color: #FCFCFC; padding-bottom: 55px;">
             <div class="container">
+                 
                 <div class="row">
                     <div class="blog-lst col-md-12 pl0">
                         <section id="id-100" class="post single">
@@ -18,13 +17,7 @@
                                     <div class="col-sm-6">
                                         <p class="author-category">
                                             Rating: 
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <span class="rateit" data-rateit-mode="font" style="margin-left: 40px;font-size:30px;"></span>
                                         </p>
                                     </div>
                                     <div class="col-sm-6 right" >
@@ -100,15 +93,22 @@
 
                                 <h3>Please vote now</h3>
 
-                                <p class="author-category">
-                                        Rating: 
-                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        <a href=""><i class="fa fa-star" aria-hidden="true"></i></a>   
-                                    </p>
 
+                                <p class="author-category">
+                                    Rating: 
+                                    <div class="rateit" id="rateit6" data-rateit-mode="font" data-rateit-min="0">
+                                    </div>
+                                    <div>
+                                        <span id="value6"></span>
+                                        <span id="hover6"></span>
+                                    </div>
+                                     
+                                    
+                                   <!-- <div class="rateit" data-rateit-mode="font" style="margin-left: 40px;font-size:30px;"></div>
+ -->
+                                </p>
                             </div>
+                            
                         </section> 
                         <section id="comments" class="comments wow fadeInRight animated"> 
                             <h4 class="text-uppercase wow fadeInLeft animated">3 comments</h4>
@@ -144,6 +144,8 @@
                             <h4 class="text-uppercase wow fadeInLeft animated">Leave comment</h4>
                                 <textarea placeholder="What do you think ?" id="txtedit"></textarea>
                                 <br>
+
+
                                 <div class="row wow fadeInLeft animated">
                                     <div class="col-sm-12 text-right">
                                         <button class="btn btn-primary"><i class="fa fa-comment-o"></i> Post comment</button>
@@ -156,6 +158,7 @@
                 </div>
 
             </div>
+
         </div>
 
         
@@ -178,6 +181,41 @@
                     }
                 });
                 $('#txtedit').Editor();
+                $("#rateit6").bind('rated', function (event, value) {
+                $('#value6').text('You\'ve rated it: ' + value); 
+                alert('You\'ve rated it: ' + value);
+                });
+
+                
+                $("#rateit6").bind('over', function (event, value) {
+                $('#hover6').text(); });
+                value.rateit('readonly', true);
+             //     $.ajax({
+             //         url: 'ekjjhh.php', //your server side script
+             //         data: { id: productID, value: value }, //our data
+             //         type: 'POST',
+             //         success: function (data) {
+             //             $('#response').append('<li>' + data + '</li>');
+         
+             //         },
+             //         error: function (jxhr, msg, err) {
+             //             $('#response').append('<li style="color:red">' + msg + '</li>');
+             //         }
+             //     });
+             // });
+                // $('#ratings').rating(function(vote, event){
+                    
+                //     $.ajax({
+                //         method:'post',
+                //         url:'#',
+
+                //        data: {vote: vote};  
+                //     }).done(function(infor){
+                //         $('.infor').html("Your vote:<b>"+infor+"</b>")
+                //     })
+                    
+                // });
+                 
             });
 </script>
 
