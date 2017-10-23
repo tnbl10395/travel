@@ -28,6 +28,8 @@
         <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
         <link rel="stylesheet" href="{{asset('css/lightslider.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/editor.css')}}">
+        <link rel="stylesheet" href="{{asset('css/rateit.css')}}">
+        
     </head>
     <body>
           <nav class="navbar navbar-default ">
@@ -149,27 +151,25 @@
             </div>
 
         </div>
-
+        <script src="{{asset('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')}}"></script>
         <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
-
         <script src="{{asset('js/jquery-1.10.2.min.js')}}"></script> 
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
         <script src="{{asset('js/bootstrap-hover-dropdown.js')}}"></script>
         <script src="{{asset('js/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('js/jquery.rateit.min.js')}}"></script>
         <script src="{{asset('js/easypiechart.min.js')}}"></script>
         <script src="{{asset('js/jquery.easypiechart.min.js')}}"></script>
         <script src="{{asset('js/jqueryValidate.js')}}"></script>
         <script src="{{asset('js/owl.carousel.min.js')}}"></script>
         <script src="{{asset('js/wow.js')}}"></script>
-
         <script src="{{asset('js/icheck.min.js')}}"></script>
         <script src="{{asset('js/price-range.js')}}"></script>
-
         <script src="{{asset('js/main.js')}}"></script>
         <script src="{{asset('js/editor.js')}}"></script>
+        <script src="{{asset('js/jquery.rateit.js')}}"></script>        
         <script type="text/javascript" src="{{asset('js/lightslider.min.js')}}"></script>
-
         @yield('script')
     </body>
 </html>
