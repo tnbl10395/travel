@@ -44,7 +44,7 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        return response()->json($comment,404);
+        return response()->json($comment);
     }
 
     /**
@@ -74,6 +74,12 @@ class CommentController extends Controller
     public function destroy(Comment $comment)
     {
         $comment->delete();
-        return response()->json($comment,404);
+        return response()->json($comment);
+    }
+
+    public function accept(Request $request,$id)
+    {
+        $comment = Comment::findOrFall($id)->update(['status'=>$request->status])->save();
+        return response()->json('successfully');
     }
 }

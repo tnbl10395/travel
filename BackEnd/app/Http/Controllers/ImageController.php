@@ -77,4 +77,24 @@ class ImageController extends Controller
         $image->delete();
         return response()->json(null,204);
     }
+
+    public function storeImages(Request $request)
+    {
+        $image = new Image();
+        $file = new uploadFileLibrary();
+        $placeID = \DB::table('place')->where('placeName','=',$request->placeName)
+                                      ->orderBy('placeID','desc')
+                                      ->limit(1)
+                                      ->select('placeID')
+                                      ->first();
+//        return response()->json($placeID->placeID);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture1)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture2)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture3)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture4)]);
+
+
+        $images = $image->where('placeID','=',$placeID->placeID)->get();
+        return response()->json($images,201);
+    }
 }

@@ -93,8 +93,8 @@
                             <select name="dataType[]" id='selectDataType' class="custom-select-sm col-sm-3">
                                 <option value="varchar">Varchar</option>
                                 <option value="text">Text</option>
-                                <option value="integer">Integer</option>
-                                <option value="float">Float</option>
+                                {{--<option value="integer">Integer</option>--}}
+                                {{--<option value="float">Float</option>--}}
                             </select>
                             <input type="text" name="length[]" class="col-sm-3" placeholder="Length...">
                         </div>
@@ -239,8 +239,8 @@
                     html += "<select name='dataType[]' id='selectDataType' class='custom-select-sm col-sm-3'>";
                     html += "<option value='varchar'>Varchar</option>";
                     html += "<option value='text'>Text</option>";
-                    html += "<option value='integer'>Integer</option>";
-                    html += "<option value='float'>Float</option>";
+//                    html += "<option value='integer'>Integer</option>";
+//                    html += "<option value='float'>Float</option>";
                     html += "</select>";
                     html += "  ";
                     html += "<input type='text' name='length[]' id='length' class='col-sm-3' placeholder='Length...'>";

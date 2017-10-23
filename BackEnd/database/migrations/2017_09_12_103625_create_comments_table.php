@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->text('content');
             $table->integer('amountOfLike');
             $table->integer('amountOfDisLike');
+            $table->integer('status');
             $table->timestamps();
 
 //            $table->foreign('placeID')->references('placeID')->on('place')->onDelete('cascade');
