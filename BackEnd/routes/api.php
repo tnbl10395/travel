@@ -32,6 +32,8 @@ Route::group(['middleware' => 'jwt.auth'], function (){
 Route::get('location','LocationController@index');
 Route::get('location/{location}','LocationController@show');
 Route::get('location-name','LocationController@getNameLocation');
+Route::get('location-all','LocationController@getAllLocation');
+Route::get('location-one/{id}','LocationController@getOneLocation');
 Route::post('location','LocationController@store');
 Route::put('location/{location}','LocationController@update');
 Route::delete('location/{location}','LocationController@destroy');
@@ -50,6 +52,9 @@ Route::get('place','PlaceController@index');
 Route::get('place/{place}','PlaceController@show');
 Route::get('place-table/{name}','PlaceController@createPlaceTable');
 Route::get('place-get/{name}','PlaceController@getPlaceBasedOnCategory');
+Route::get('place-show/{location}','PlaceController@getListPlaceWithLocation');
+Route::get('place-get-image/{location}','PlaceController@getOneImageOfPlace');
+Route::get('place-moreinfo/{id}','PlaceController@getMoreInfo');
 Route::post('store-rest-place','PlaceController@storeRestOfPlace');
 Route::post('place','PlaceController@store');
 Route::put('place/{place}','PlaceController@update');
@@ -59,6 +64,8 @@ Route::delete('place/{place}','PlaceController@destroy');
 //--------------------------------------------------------------------------------------------------
 Route::get('comment','CommentController@index');
 Route::get('comment/{comment}','CommentController@show');
+Route::get('comment-get-place/{id}','CommentController@getCommentOfPlace');
+Route::get('comment-count/{id}','CommentController@count');
 Route::put('comment/{comment}','CommentController@update');
 Route::delete('comment/{comment}','CommentController@destroy');
 Route::put('comment-accept/{id}','CommentController@accept');
@@ -79,6 +86,7 @@ Route::delete('profile/{profile}','ProfileController@destroy');
 //--------------------------------------------------------------------------------------------------
 Route::get('image','ImageController@index');
 Route::get('image/{image}','ImageController@show');
+Route::get('image-place/{id}','ImageController@getImageOfPlace');
 Route::post('image','ImageController@store');
 Route::put('image/{image}','ImageController@update');
 Route::delete('image/{image}','ImageController@destroy');

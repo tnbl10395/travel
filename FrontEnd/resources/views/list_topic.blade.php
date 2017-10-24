@@ -9,21 +9,29 @@
 
                             <div class="post-header single">
                                 <div class="">
-                                    <h2 class="wow fadeInLeft animated">ASIA PARK</h2>
+                                    @if($onePlace!=null)
+                                    <h2 class="wow fadeInLeft animated" style="font-weight: bold;color: #FDC600;">{{$onePlace->placeName}}</h2>
+                                    @endif
                                     <div class="title-line wow fadeInRight animated"></div>
                                 </div>
                                 <br>
                                 <div class="row wow fadeInRight animated">
                                     <div class="col-sm-6">
                                         <p class="author-category">
-                                            Rating: 
-                                            <span class="rateit" data-rateit-mode="font" style="margin-left: 40px;font-size:30px;"></span>
+                                            Rating:
+                                            <div class="rateit" data-rateit-value="0.5" data-rateit-mode="font" data-rateit-readonly="true"></div>
                                         </p>
                                     </div>
                                     <div class="col-sm-6 right" >
                                         <p class="date-comments">
-                                            <a href="single.html"><i class="fa fa-calendar-o"></i> Sep 20, 2017</a>
-                                            <a href="single.html"><i class="fa fa-comment-o"></i> 8 Comments</a>
+                                            @if($onePlace!=null)
+                                            <a href="javascript:void(0);"><i class="fa fa-calendar-o"></i>   {{$onePlace->updated_at}}</a>
+                                            @endif
+                                            @if($count==null)
+                                            <a href=""><i class="fa fa-comment-o"></i>  No Comments</a>
+                                            @else
+                                            <a href=""><i class="fa fa-comment-o"></i>  {{$count}} Comments</a>
+                                            @endif
                                         </p>
                                     </div>
                                 </div>
@@ -34,112 +42,82 @@
                                 <div class="row">
                                     <div class="light-slide-item">            
                                         <div class="clearfix">
-
                                             <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                                <li data-thumb="{{asset('img/property-1/property1.jpg')}}"> 
-
-                                                    <img src="{{asset('img/property-1/property1.jpg')}}" />
-                                                </li>
-                                                <li data-thumb="{{asset('img/property-1/property2.jpg')}}"> 
-                                                    <img src="{{asset('img/property-1/property3.jpg')}}" />
-                                                </li>
-                                                <li data-thumb="{{asset('img/property-1/property3.jpg')}}"> 
-                                                    <img src="{{asset('img/property-1/property3.jpg')}}" />
-                                                </li>
-                                                <li data-thumb="{{asset('img/property-1/property4.jpg')}}"> 
-                                                    <img src="{{asset('img/property-1/property4.jpg')}}" />
-                                                </li>                                         
+                                                @if($getImage!=null)
+                                                    @foreach($getImage as $image)
+                                                    <li data-thumb="{{$image->imageName}}">
+                                                        <img style="max-height: 500px; max-width: 1000px;" src="{{$image->imageName}}" />
+                                                    </li>
+                                                    @endforeach
+                                                @endif
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            
                             </div>
                             <div id="post-content" class="post-body single wow fadeInLeft animated">
-                                <p>
-                                    Asia Park bao gồm ba khu vực chính: công viên giải trí ngoài trời hiện đại, công viên văn hóa với các công trình kiến trúc và nghệ thuật thu nhỏ mang tính biểu trưng của 10 quốc gia châu Á, và khu Sun Wheel - nơi giao thoa giữa nét hiện đại và truyền thống.
-                            Công viên văn hóa tại Asia Park mở ra một không gian phương Đông kỳ thú qua từng nét văn hóa đa dạng, các công trình kiến trúc lịch sử và những hoạt động nghệ thuật, ẩm thực độc đáo của 10 quốc gia Châu Á: Nhật Bản, Indonesia, Singapore, Hàn Quốc, Ấn Độ, Nepal, Thái Lan, Campuchia, Trung Quốc và Việt Nam.<br>
-                            <br>
-
-                            Bên cạnh đó, hàng loạt công trình tuyệt tác như Cổng Thành, Tháp Đồng hồ, Sun Wheel, Thuyền rồng, Tượng Phật… cũng là những điểm đến không thể bỏ qua tại Khu trung tâm của Asia Park. Tại đây, vòng quay Sun Wheel với độ cao ấn tượng 115m, thuộc top 5 vòng quay lớn nhất thế giới, được ví như một biểu tượng mới của thành phố Đà Nẵng.<br>
-                            <br>
-                            Không chỉ có các trò chơi và công trình kiến trúc, Asia Park còn là điểm đến của những hoạt động văn hóa sôi nổi như biểu diễn nghệ thuật, làm thủ công, trò chơi dân gian, cùng các lễ hội văn hóa đặc sắc.<br>
-                            <br>
-
-                            Hiện tại vé vào cổng của khu vui chơi giải trí Sunwheel là 100.000 đồng :<br><br>
-
-                            - Miễn phí trẻ em cao dưới 1m.<br>
-                            <br>
-                            - Giá vé trên đã bao gồm tham quan công viên, đi vòng quay Sun Wheel và vui chơi không giới hạn tại khu vui chơi giải trí ngoài trời.<br><br>
-                            - Quý khách vui chơi tại khu vui chơi FEC, nằm tại tầng trệt Sun Wheel có thể mua vé cho mỗi trò chơi.<br><br>
-                                <p>
-                                    <img src="{{asset('img/blog10.jpg')}}" class="img-responsive" alt="Example blog post alt">
-                                </p>
-
-                                <h2>Header Level 2</h2>
-                                <ol>
-                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                    <li>Aliquam tincidunt mauris eu risus.</li>
-                                </ol>
-
-                                <blockquote>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
-                                        tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-                                    </p>
-                                </blockquote>
-
-                                <h3>Please vote now</h3>
-
-
+                                <p style="font-size: 20px;">
+                                    @if($onePlace!=null)
+                                        {{$onePlace->detail}}
+                                    @endif
+                                <h4>More Information</h4>
+                                <ul>
+                                    @if($moreInfo!=null)
+                                        @foreach($moreInfo as $key => $value)
+                                        <li><p>{{$key}}: {{$value}}</p></li>
+                                        @endforeach
+                                    @endif
+                                </ul>
+                                @if(Session::has('user'))
+                                <h3>Please vote</h3>
                                 <p class="author-category">
-                                    Rating: 
+                                    Rating:
                                     <div class="rateit" id="rateit6" data-rateit-mode="font" data-rateit-min="0">
                                     </div>
                                     <div>
                                         <span id="value6"></span>
                                         <span id="hover6"></span>
                                     </div>
-                                     
-                                    
-                                   <!-- <div class="rateit" data-rateit-mode="font" style="margin-left: 40px;font-size:30px;"></div>
- -->
                                 </p>
+                                @endif
                             </div>
                             
                         </section> 
-                        <section id="comments" class="comments wow fadeInRight animated"> 
-                            <h4 class="text-uppercase wow fadeInLeft animated">3 comments</h4>
+                        <section id="comments" class="comments wow fadeInRight animated">
+                            @if($count!=null)
+                                <h4 class="text-uppercase wow fadeInLeft animated">{{$count}} comments</h4>
+                            @else
+                                <h4 class="text-uppercase wow fadeInLeft animated">No comments</h4>
+                            @endif
+                            @if($getComment!=null)
+                                @foreach($getComment as $listComment)
                             <div class="row comment">
                                 <div class="col-sm-3 col-md-2 text-center-xs">
                                     <p>
-                                        <img src="{{asset('img/client-face1.png')}}" class="img-responsive img-circle" alt="">
+                                        <img src="{{$listComment->avatar}}}" class="img-responsive img-circle" alt="">
                                     </p>
                                 </div>
                                 <div class="col-sm-9 col-md-10">
-                                    <h5 class="text-uppercase">Julie Alma</h5>
-                                    <p class="posted"><i class="fa fa-clock-o"></i> September 23, 2011 at 12:00 am</p>
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                                        Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                    <h5 class="text-uppercase">{{$listComment->fullname}}</h5>
+                                    <p class="posted"><i class="fa fa-clock-o"></i> {{$listComment->updated_at}}</p>
+                                    <p>{{$listComment->content}}</p>
                                     <div class="col-sm-6"> 
                                         <div class="col-sm-4">
-                                            <span class="col-sm-1">5</span>
+                                            <span class="col-sm-1">{{$listComment->amountOfLike}}</span>
                                             <a href="#"><i class="fa fa-thumbs-up"></i> Like</a>
                                         </div> 
                                         <div class="col-sm-4">
-                                             <span class="col-sm-1">9</span>
+                                             <span class="col-sm-1">{{$listComment->amountOfDisLike}}</span>
                                            <a href="#"><i class="fa fa-thumbs-down"></i> Dislike</a>
-                                        </div>         
-                                           
-                                           
+                                        </div>
                                     </div>
-                                    
                                 </div>
                             </div>
-                           
-                        </section>         
+                                @endforeach
+                             @endif
+                        </section>
+                        @if(Session::has('user'))
                         <section id="comment-form" class="add-comments">
                             <h4 class="text-uppercase wow fadeInLeft animated">Leave comment</h4>
                                 <textarea placeholder="What do you think ?" id="txtedit"></textarea>
@@ -153,6 +131,7 @@
                                 </div>
                             <!-- </form> -->
                         </section>
+                        @endif
 
                     </div>                                 
                 </div>
@@ -173,7 +152,7 @@
                     item: 1,
                     thumbItem: 9,
                     slideMargin: 0,
-                    speed: 500,
+                    speed: 1500,
                     auto: true,
                     loop: true,
                     onSliderLoad: function () {

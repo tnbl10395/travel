@@ -10,37 +10,38 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('locations', function(){
-	return view('locations');
-});
+Route::get('/','IndexController@index');
+Route::get('locations','LocationController@index');
+Route::get('detail-location/{id}','LocationController@detailPage');
+Route::get('detail-place/{id}','PlaceController@detailPage');
+//Route::get('/', function () {
+//    return view('index');
+//});
+//Route::get('locations', function(){
+//	return view('locations');
+//});
 Route::get('place', function(){
 	return view('place');
 });
-Route::get('contact', function(){
-	return view('contact');
-});
+
 Route::get('register', function(){
 	return view('register');
 });
 // Route::get('submit', function(){
 // 	return view('submit-property');
 // });
-Route::get('grid_layout', function(){
-	return view('grid_layout');
-});
-Route::get('detail_location', function(){
-	return view('detail_location');
-});
-Route::get('blog',function(){
-	return view('blog');
-});
-Route::get('list_topic', function(){
-	return view('list_topic');
-});
+//Route::get('grid_layout', function(){
+//	return view('grid_layout');
+//});
+//Route::get('detail_location', function(){
+//	return view('detail_location');
+//});
+//Route::get('blog',function(){
+//	return view('blog');
+//});
+//Route::get('list_topic', function(){
+//	return view('list_topic');
+//});
 Route::get('user_profile',function(){
 	return view ('user-profile');
 });

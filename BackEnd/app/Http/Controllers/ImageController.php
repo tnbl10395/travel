@@ -88,13 +88,20 @@ class ImageController extends Controller
                                       ->select('placeID')
                                       ->first();
 //        return response()->json($placeID->placeID);
-        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture1)]);
-        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture2)]);
-        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture3)]);
-        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>$file->upload($request->picture4)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>'http://localhost:8000/upload/'.$file->upload($request->picture1)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>'http://localhost:8000/upload/'.$file->upload($request->picture2)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>'http://localhost:8000/upload/'.$file->upload($request->picture3)]);
+        $image->insert(['placeID'=>$placeID->placeID,'imageName'=>'http://localhost:8000/upload/'.$file->upload($request->picture4)]);
 
 
         $images = $image->where('placeID','=',$placeID->placeID)->get();
         return response()->json($images,201);
+    }
+
+    public function getImageOfPlace($placeId)
+    {
+        $image = new Image();
+        $listImage = $image->where('placeID','=',$placeId)->get();
+        return response()->json($listImage);
     }
 }
