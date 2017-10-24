@@ -50,14 +50,14 @@ class PlaceController extends Controller
 
     public function store(Request $request){
         $restOfObject = $request->except(['location','category','placeName','_token',
-            'address','map','description','detail','submit',
+            'address','waypoint','description','detail','submit',
             'picture1','picture2','picture3','picture4']);
         $locationID = $request->location;
         $category = explode('%',$request->category);
         $categoryID = $category[0];
         $placeName = $request->placeName;
         $address = $request->address;
-        $map = $request->map;
+        $waypoint  = $request->waypoint;
         $description = $request->description;
         $detail = $request->detail;
         $client = new Client();
@@ -67,7 +67,7 @@ class PlaceController extends Controller
                 'categoryID'=>$categoryID,
                 'placeName'=>$placeName,
                 'address'=>$address,
-                'map'=>$map,
+                'waypoint'=>$waypoint,
                 'description'=>$description,
                 'detail'=>$detail,
             ]

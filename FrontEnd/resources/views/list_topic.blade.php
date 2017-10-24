@@ -1,5 +1,6 @@
 @extends('template.header')
 @section('content')
+
         <div class="content-area blog-page padding-top-40" style="background-color: #FCFCFC; padding-bottom: 55px;">
             <div class="container">
                 <div class="row">
@@ -51,8 +52,8 @@
                                             </div>
                                         </div>
                                         <div class="dealer-widget col-sm-4">
-                                           
-                                            <iframe width="350" height="450" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
+
+                                            <div id="mymap" style=" margin-left : 4px; width: 305px; height: 380px;"></div>
                                             
                                         </div>
                                     </div>
@@ -84,7 +85,6 @@
                                 </p>
                                 @endif
                             </div>
-                            
                         </section> 
                         <section id="comments" class="comments wow fadeInRight animated">
                             @if($count!=null)
@@ -200,5 +200,114 @@
                  
             });
 </script>
+<script async defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOiNCULeeGLt_n_J6smNM_5xX7gf_YoXA"></script>
+<script type="text/javascript">
 
+    function initMap() {
+        var map, infoWindow;
+
+//        map = new google.maps.Map(document.getElementById('mymap'), {
+//            center: {lat: 16.062, lng: 108.152},
+//            zoom: 13,
+//            mapTypeId: google.maps.MapTypeId.ROADMAP
+//        });
+        infoWindow = new google.maps.InfoWindow;
+
+        //get location destination
+        var locations = <?php print_r(json_encode($address)) ?>;
+        var way = locations[0].waypoint;
+        var dlat = (way.split(",",2))[0];
+        var dlng = (way.split(",",2))[1];
+
+        var pointB = new google.maps.LatLng(dlat,dlng );
+
+        // Try HTML5 geolocation.
+
+        if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+        };
+
+        // infoWindow.setPosition(pos);
+        // infoWindow.setContent("you are here");
+        // infoWindow.open(map);
+        //map.setCenter(pos);
+
+
+
+        //tao duong di
+
+        var pointA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
+        myOptions = {
+        zoom: 13,
+        center: pointA
+        },
+        map = new google.maps.Map(document.getElementById('mymap'), myOptions),
+        // Instantiate a directions service.
+        directionsService = new google.maps.DirectionsService,
+        directionsDisplay = new google.maps.DirectionsRenderer({
+        map: map
+        });
+        // markerA = new google.maps.Marker({
+        // position: pointA,
+        // title: "point A",
+        // map: map
+        // }),
+        // markerB = new google.maps.Marker({
+        // position: pointB,
+        // title: "point B",
+        // map: map
+        // });
+
+        // get route from A to B
+        calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
+
+        }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+        }	);
+
+        } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+        }
+
+
+
+        }
+
+
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+        }
+
+        //ham tinh khoang cach va hien thi map
+        function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB) {
+        directionsService.route({
+        origin: pointA,
+        destination: pointB,
+        avoidTolls: true,
+        avoidHighways: false,
+        travelMode: google.maps.TravelMode.DRIVING
+        }, function (response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
+        } else {
+        window.alert('Directions request failed due to ' + status);
+        }
+        });
+
+    }
+
+    initMap();
+
+
+</script>
 @endsection

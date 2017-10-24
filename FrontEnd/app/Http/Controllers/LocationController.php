@@ -22,7 +22,8 @@ class LocationController extends Controller
         $requestLocation = $client->get('http://localhost:8000/api/location-one/'.$id);
         $requestCategory = $client->get('http://localhost:8000/api/category');
         $requestPlace = $client->get('http://localhost:8000/api/place-show/'.$id);
-//        $requestImage = $client->get('http://localhost:8000/api/place-get-image/'.$id);
+        $requestPlaceMap = $client->get('http://localhost:8000/api/place-map/'.$id);
+        $responsePlaceMap = json_decode($requestPlaceMap->getBody());
         $responseLocationAll = json_decode($requestLocationAll->getBody());
         $responseLocation = json_decode($requestLocation->getBody());
         $responseCategory = json_decode($requestCategory->getBody());
@@ -32,6 +33,7 @@ class LocationController extends Controller
         return view('detail_location')->with(['oneLocation'=>$responseLocation,
                                               'listCategory'=>$responseCategory,
                                               'listPlace'=>$responsePlace,
-                                              'listLocation'=>$responseLocationAll]);
+                                              'listLocation'=>$responseLocationAll,
+                                               'listWaypoint'=>$responsePlaceMap]);
     }
 }
