@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="dealer-widget col-sm-4">
 
-                                            <div id="mymap" style=" margin-left : 4px; width: 305px; height: 380px;"></div>
+                                            <div id="mymap" style=" margin-left : 1px; width: 375px; height: 446px;"></div>
                                             
                                         </div>
                                     </div>
