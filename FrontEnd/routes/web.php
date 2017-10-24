@@ -16,15 +16,19 @@ Route::get('detail-location/{id}','LocationController@detailPage');
 Route::get('detail-place/{id}','PlaceController@detailPage');
 Route::get('profile/{token}','ProfileController@index');
 Route::post('upProfile/{id}','ProfileController@upProfile');
+Route::get('place','PlaceController@index');
+Route::post('comment','PlaceController@sendComment');
+Route::get('evaluate','PlaceController@sendRating');
+Route::post('search','IndexController@search');
 //Route::get('/', function () {
 //    return view('index');
 //});
 //Route::get('locations', function(){
 //	return view('locations');
 //});
-Route::get('place', function(){
-	return view('place');
-});
+//Route::get('place', function(){
+//	return view('place');
+//});
 
 Route::get('register', function(){
 	return view('register');

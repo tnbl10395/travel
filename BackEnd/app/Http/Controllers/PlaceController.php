@@ -174,20 +174,72 @@ class PlaceController extends Controller
                            ->get();
         return response()->json($listImage);
     }
+
     public function get_infor_from_address($id) {
         $place = new Place();
         $address = $place->where('place.locationID','=',$id)->join('locations','place.locationID','=','locations.locationID')
                             ->select(["placeID","placeName","place.description","waypoint","locations.map"])->get();
         return response()->json($address);
     }
+
     public function get_way_place($id){
         $place = new Place();
         $address = $place->where('place.placeID','=',$id)
             ->select(["placeID","placeName","place.description","waypoint"])->get();
         return response()->json($address);
+    }
 
-
+    public function getAll()
+    {
+        $place = new Place();
+        $getAll = $place->join('images','place.placeID','=','images.placeID')
+                        ->where('images.main','=',1)
+                        ->select(['place.*','images.imageName'])
+                        ->orderBy('placeName')
+                        ->get();
+        return response()->json($getAll);
 
     }
 
+    public function get4TopPlace()
+    {
+        $place = new Place();
+        $top = $place->join('images','place.placeID','=','images.placeID')
+                        ->where('images.main','=',1)
+                        ->orderBy('place.rating','desc')
+                        ->limit(4)
+                        ->get();
+        return response()->json($top);
+    }
+
+    public function search(Request $request)
+    {
+        if($request->search!=""&&$request->locationID!=""){
+            $place = new Place();
+            $list = $place->join('images','place.placeID','=','images.placeID')
+                ->where('images.main','=',1)
+                ->where('place.locationID','=',$request->locationID)
+                ->whereRaw('placeName LIKE "%'.$request->search.'"')
+                ->select(['place.*','images.imageName'])
+                ->get();
+        }else if($request->search==""&&$request->locationID!=""){
+            $place = new Place();
+            $list = $place->join('images','place.placeID','=','images.placeID')
+                ->where('images.main','=',1)
+                ->where('place.locationID','=',$request->locationID)
+//                ->whereRaw('placeName LIKE "%'.$request->search.'"')
+                ->select(['place.*','images.imageName'])
+                ->get();
+        }else {
+            $place = new Place();
+            $list = $place->join('images','place.placeID','=','images.placeID')
+                ->where('images.main','=',1)
+//                ->where('place.locationID','=',$request->locationID)
+                ->whereRaw("place.placeName LIKE '%".$request->search."%'")
+                ->select(['place.*','images.imageName'])
+                ->get();
+        }
+        return response()->json($list);
+
+    }
 }
