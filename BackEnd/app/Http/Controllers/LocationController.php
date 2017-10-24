@@ -92,4 +92,21 @@ class LocationController extends Controller
                          ->get();
         return response()->json($list);
     }
+
+    public function getAllLocation(){
+        $location = new Location();
+        $list = $location->join('district','locations.districtID','=','district.districtID')
+                         ->select(['*','districtName'])
+                         ->get();
+        return response()->json($list);
+    }
+
+    public function getOneLocation($id){
+        $location = new Location();
+        $list = $location->where('locationID','=',$id)
+            ->join('district','locations.districtID','=','district.districtID')
+            ->select(['*','districtName'])
+            ->get();
+        return response()->json($list);
+    }
 }

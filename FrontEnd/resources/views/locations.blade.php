@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">List Locations In Da Nang</h1>               
+                        <h1 class="page-title">List of Locations In Da Nang</h1>
                     </div>
                 </div>
             </div>
@@ -39,13 +39,11 @@
                                             <div class="col-xs-12">
 
                                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your Location">
-
-                                                    <option>Hải Châu</option>
-                                                    <option>Liên Chiểu</option>
-                                                    <option>Thanh Khê</option>
-                                                    <option>Sơn Trà</option>
-                                                    <option>Ngũ Hành Sơn</option>
-                                                    <option>Hòa Vang</option>
+                                                    @if($listLocation!=null)
+                                                        @foreach($listLocation as $objectLocation)
+                                                            <option value="0{{$objectLocation->locationID}}">{{$objectLocation->districtName}}</option>
+                                                        @endforeach
+                                                    @endif
                                                 </select>
                                             </div>
                                             
@@ -89,23 +87,25 @@
                         </div><!--/ .layout-switcher-->
                     </div>
 
-                    <div class="col-md-12 clear"> 
-                        <div id="list-type" class="proerty-th">
-
-                            <div class="col-sm-6 col-md-4 p0">
+                    <div class="col-md-12 clear">
+                        @if($listLocation!=null)
+                            @foreach($listLocation as $objectLocation)
+                            <div id="list-type" class="proerty-th">
+                                <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="detail_location" ><img src="{{asset('img/demo/bap.jpg')}}"></a>
+                                            <a href="detail-location/0{{$objectLocation->locationID}}" ><img src="{{$objectLocation->picture}}"></a>
                                         </div>
-
                                         <div class="item-entry overflow">
-                                            <h5><a href="detail_location"> Hải Châu </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Update :</b> 20/09/2017 </span>
+                                            <h5><a href="detail-location/0{{$objectLocation->locationID}}"> {{$objectLocation->districtName}} </a></h5>
+                                        <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Update :</b> {{$objectLocation->updated_at}} </span>
                                         </div>
                                     </div>
-                                </div> 
-                        </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        @endif
                     </div>
                     
                     <div class="col-md-12"> 

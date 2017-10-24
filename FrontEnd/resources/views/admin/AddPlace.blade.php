@@ -79,7 +79,7 @@
         $(document).ready(function () {
            $('#category').change(function () {
               var val = $('#category').val();
-              $('#inputPlus').remove();
+              $('.inputsPlus').remove();
               if(val!==null){
                   $.ajax({
                      url: '/admin/place-get/'+val,
@@ -90,7 +90,7 @@
                           $.each(result, function (key,item) {
                               console.log(item);
                              var html  = '';
-                                 html += '<div class="form-group" id="inputPlus">';
+                                 html += '<div class="form-group inputsPlus" id="inputPlus">';
                                  html += '<h5>';
                                  html += item;
                                  html += '</h5>';

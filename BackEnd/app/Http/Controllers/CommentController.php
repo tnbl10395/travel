@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\Image;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -81,5 +82,24 @@ class CommentController extends Controller
     {
         $comment = Comment::findOrFall($id)->update(['status'=>$request->status])->save();
         return response()->json('successfully');
+    }
+
+    public function getCommentOfPlace($placeId)
+    {
+        $comment = new Comment();
+        $listComment = $comment->where('placeID','=',$placeId)
+                               ->join('profile','comments.userID','=','profile.userID')
+                               ->select(['comments.*','profile.fullname','profile.avatar'])->get();
+        return response()->json($listComment);
+    }
+
+    public function count($placeId)
+    {
+        $comment = new Comment();
+        $count = $comment->where('placeID','=',$placeId)
+                         ->count();
+        return response()->json($count);
+
+
     }
 }
