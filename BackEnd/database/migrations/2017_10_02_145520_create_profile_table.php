@@ -19,7 +19,7 @@ class CreateProfileTable extends Migration
             $table->unsignedInteger('age')->nullable();
             $table->text('address')->nullable();
             $table->text('avatar')->nullable();
-            $table->unsignedInteger('phone')->nullable();
+            $table->varchar('phone',20)->nullable();
             $table->integer('rating')->nullable();
             $table->timestamps();
             $table->foreign('userID')->references('userID')->on('users')->onDelete('cascade');

@@ -25,6 +25,7 @@ Route::group(['middleware' => 'jwt.auth'], function (){
     Route::get('evaluate/{evaluate}','EvaluateController@show');
     Route::post('evaluate','EvaluateController@store');
     Route::put('evaluate/{evaluate}','EvaluateController@update');
+
 });
 //--------------------------------------------------------------------------------------------------
 //location                                                                                         |
@@ -60,6 +61,7 @@ Route::post('place','PlaceController@store');
 Route::put('place/{place}','PlaceController@update');
 Route::delete('place/{place}','PlaceController@destroy');
 Route::get('place-map/{id}','PlaceController@get_infor_from_address');
+Route::get('place-way/{id}','PlaceController@get_way_place');
 //--------------------------------------------------------------------------------------------------
 //comment                                                                                         |
 //--------------------------------------------------------------------------------------------------
@@ -76,8 +78,8 @@ Route::put('comment-accept/{id}','CommentController@accept');
 Route::get('profile','ProfileController@index');
 Route::get('profile/{profile}','ProfileController@show');
 Route::post('profile','ProfileController@store');
-Route::put('profile/{profile}','ProfileController@update');
 Route::delete('profile/{profile}','ProfileController@destroy');
+Route::put('profile/{profile}','ProfileController@update');
 //--------------------------------------------------------------------------------------------------
 //evaluate                                                                                         |
 //--------------------------------------------------------------------------------------------------

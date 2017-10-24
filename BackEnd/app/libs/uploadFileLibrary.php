@@ -13,16 +13,32 @@ namespace App\libs;
 
         public function reload($newFile, $oldFile)
         {
-            $nameOldFile = strstr($oldFile, 'pic-');
-            if($newFile!=null) {
-                unlink('upload/' . $nameOldFile);
-                $nameNewFile = 'pic-' . $newFile->getClientOriginalName();
-                $newFile->move('upload', $nameNewFile);
-                $nameFile = $nameNewFile;
-            }else {
-                $nameFile = $nameOldFile;
+            if($oldFile!=null)
+            {
+                $nameOldFile = strstr($oldFile, 'pic-');
+                if($newFile!=null) {
+                    unlink('upload/' . $nameOldFile);
+                    $nameNewFile = 'http://localhost:8000/upload/pic-' . $newFile->getClientOriginalName();
+                    $newFile->move('upload', $nameNewFile);
+                    $nameFile = $nameNewFile;
+                    return $nameFile;
+                }else {
+                    $nameFile = $oldFile;
+                    return $nameFile;
+                }
+
+            }elseif($oldFile==null){
+                if($newFile!=null){
+                    $nameNewFile = 'http://localhost:8000/upload/pic-' . $newFile->getClientOriginalName();
+                    $newFile->move('upload', $nameNewFile);
+                    $nameFile = $nameNewFile;
+                    return $nameFile;
+                }else{
+                    $nameFile = null;
+                    return $nameFile;
+                }
+
             }
-            return $nameFile;
         }
         public function deleteFile($file)
         {

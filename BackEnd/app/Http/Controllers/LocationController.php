@@ -30,6 +30,7 @@ class LocationController extends Controller
      */
     public function store(Request $request)
     {
+//        return response()->json($request);
         $location = new Location();
         $file = new uploadFileLibrary();
         $location->locationID = $request->locationID;

@@ -39,32 +39,21 @@
                                     @endif
                                 </div>
                             </div>
-                            @if($listCategory!=null&&$listPlace!=null)
-                                <h2 style="font-weight: bold;" class="s-property-title">List of Places in {{$oneLocation[0]->districtName}}</h2>
-                                    @foreach($listCategory as $objectCategory)
-                                        @foreach($listPlace as $objectPlace)
-                                            @if($objectCategory->categoryID==$objectPlace->categoryID)
-                                            <div class="col-md-12 clear">
-                                                <h4 class="s-property-title">{{$objectCategory->categoryName}}</h4>
-                                                <div id="list-type" class="proerty-th">
-                                                    <div class="col-sm-6 col-md-4 p0">
-                                                        <div class="box-two proerty-item">
-                                                            <div class="item-thumb">
-                                                                <a href="/detail-place/{{$objectPlace->placeID}}" ><img src="{{$objectPlace->imageName}}"></a>
-                                                            </div>
-                                                            <div class="item-entry overflow">
-                                                                <h5><a href="/detail-place/{{$objectPlace->placeID}}"> {{$objectPlace->placeName}} </a></h5>
-                                                                <div class="dot-hr"></div>
-                                                                <span class="pull-left"><b> Update :</b> {{$objectPlace->updated_at}} </span>
-                                                            </div>
-                                                        </div>
+                            <h2 style="font-weight: bold;" class="s-property-title">List of Places in {{$oneLocation[0]->districtName}}</h2>
+                                @if($listPlace!=null)
+                                    @foreach($listPlace as $key => $cate)
+                                            <a class="col-md-12 clear">
+                                                <h4 class="s-property-title"><a class="" href="javascript:void(0);">{{$key}}<span class="caret"></span></a></h4>
+                                                @foreach($cate as $objectPlace)
+                                                    <div id="list-type" class="proerty-th">
+                                                            <ul>
+                                                               <a style="color:#000000;" href="/detail-place/{{$objectPlace->placeID}}"><li>{{$objectPlace->placeName}}</li></a>
+                                                            </ul>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        @endif
+                                                @endforeach
+                                            </a>
                                     @endforeach
-                                @endforeach
-                            @endif
+                                 @endif
                         </div>
 
                             <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">

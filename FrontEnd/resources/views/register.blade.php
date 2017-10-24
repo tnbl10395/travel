@@ -22,7 +22,7 @@
                     <div class="box-for overflow">
                         <div class="col-md-12 col-xs-12 register-blocks">
                             <h2>New account : </h2> 
-                            <form action="{{url('register')}}" method="post" id="registerForm">
+                            <form action="/register" method="post" id="registerForm">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="name">Username</label>
@@ -52,7 +52,7 @@
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>Login : </h2> 
-                            <form action="login-user" method="post"  id="loginForm">
+                            <form action="/login-user" method="post"  id="loginForm">
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="username">Username</label>
@@ -90,10 +90,8 @@
                             <a class="login-social" href="#"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>  
                             </p>  -->
                         </div>
-                        
                     </div>
                 </div>
-
             </div>
         </div>      
 
