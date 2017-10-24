@@ -1,4 +1,4 @@
-@extends('template.header')
+    @extends('template.header')
 
 @section('content')
 
@@ -18,9 +18,10 @@
                         <h2 id="test_bla">Danang - The Livable City</h2>
                         <p></p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
-                            <form action="" class="form-inline">
+                            <form action="/search" method="post" class="form-inline">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">                                   
-                                    <select id="lunchBegins" class="selectpicker" title="Select your location">
+                                    <select id="lunchBegins" name="location" class="selectpicker" title="Select your location">
                                         {{--<option>Please select Locations</option>--}}
                                         @if($listLocation!=null)
                                             @foreach($listLocation as $objectLocation)
@@ -30,7 +31,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="TouristAttractions">
+                                    <input type="text" name="search" class="form-control" placeholder="Search your favoroute place!">
                                 </div>
                                 <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
                             </form>
@@ -52,24 +53,25 @@
                 </div>
                 <div class="row">
                     <div class="proerty-th">
+                        @if($listTopPlace!=null)
+                            @foreach($listTopPlace as $topPlace)
                         <div class="col-sm-6 col-md-3 p0">
                             <div class="box-two proerty-item">
                                 <div class="item-thumb">
-                                    <a href="property-1.html" ><img src="{{asset('img/demo/property-1.jpg')}}"></a>
+                                    <a href="/detail-place/{{$topPlace->placeID}}" ><img src="{{$topPlace->imageName}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Furama Resort DN </a></h5>
+                                    <h6><a href="/detail-place/{{$topPlace->placeID}}" >{{$topPlace->placeName}}</a></h6>
                                     <div class="dot-hr"></div>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">8 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
+                                    <div class="bigstars col-sm-6">
+                                        <div class="rateit" data-rateit-value="{{$topPlace->rating}}" data-rateit-mode="font" data-rateit-readonly="true" ></div>
+                                    </div>
+                                    {{--<span class="proerty-price pull-right">8 <i class="fa fa-comment-o" aria-hidden="true"></i></span>--}}
                                 </div>
                             </div>
                         </div>
+                        @endforeach
+                    @endif
                     </div>
                 </div>
             </div>

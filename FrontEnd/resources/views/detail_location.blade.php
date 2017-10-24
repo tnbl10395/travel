@@ -78,7 +78,11 @@
                     <div class="col-md-4 p0">
                         <aside class="sidebar sidebar-property blog-asside-right">
                             <div class="dealer-widget">
+
+                                {{--<div id="mymap" style=" width: 350px; height: 380px;"></div>--}}
+
                                 <div id="mymap" style=" width: 350px; height: 440px;"></div>
+
 
                             </div>
                             <br/>
@@ -173,7 +177,7 @@
             					  });
             					google.maps.event.addListener(marker, 'click', (function(marker) {
             						return function() {
-            						  infowindow.setContent('<p><a href= "/place/' + value.placeID+'">'+value.placeName+ ' </a><br/>'+value.description+'</p>');
+            						  infowindow.setContent('<p style="color:#000000;"><a href= "/detail-place/' + value.placeID+'">'+value.placeName+ ' </a><br/>'+value.description+'</p>');
             						  infowindow.open(map, marker);
             						}
             					  })(marker));

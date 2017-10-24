@@ -62,6 +62,9 @@ Route::put('place/{place}','PlaceController@update');
 Route::delete('place/{place}','PlaceController@destroy');
 Route::get('place-map/{id}','PlaceController@get_infor_from_address');
 Route::get('place-way/{id}','PlaceController@get_way_place');
+Route::get('place-all','PlaceController@getAll');
+Route::get('place-top','PlaceController@get4TopPlace');
+Route::post('place-search','PlaceController@search');
 //--------------------------------------------------------------------------------------------------
 //comment                                                                                         |
 //--------------------------------------------------------------------------------------------------

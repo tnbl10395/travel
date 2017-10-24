@@ -17,7 +17,7 @@ class EvaluateController extends Controller
     public function index()
     {
         $evalute = new Evaluate();
-        return response()->json($evalute::all(),404);
+        return response()->json($evalute::all());
     }
 
     /**
@@ -28,13 +28,26 @@ class EvaluateController extends Controller
      */
     public function store(Request $request)
     {
-        $evaluate = new Evaluate();
-        $evaluate->userID = $request->userID;
-        $evaluate->placeID = $request->placeID;
-        $evaluate->rating = $request->rating;
-        $evaluate->save();
-        $this->calculatorRating($request->placeID);
-        return response()->json($evaluate,201);
+        $user = \JWTAuth::toUser($request->token);
+//        return response()->json($user);
+        if($user!=null){
+            $evaluate = new Evaluate();
+            $evaluateID = $evaluate->where('userID','=',$user->userID)
+                                ->where('placeID','=',$request->placeID)
+                                ->select('evaluateID')
+                                ->first();
+            if($evaluateID==null){
+                $evaluate->userID = $user->userID;
+                $evaluate->placeID = $request->placeID;
+                $evaluate->rating = $request->rating;
+                $evaluate->save();
+                $this->calculatorRating($request->placeID);
+                return response()->json($request->rating,201);
+            }else{
+                $this->update($request,$evaluateID);
+                return response()->json($request->rating);
+            }
+        }
     }
 
     /**
@@ -43,9 +56,19 @@ class EvaluateController extends Controller
      * @param  \App\Evaluate  $evaluate
      * @return \Illuminate\Http\Response
      */
-    public function show(Evaluate $evaluate)
+    public function show(Request $request,$id)
     {
-        return response()->json($evaluate,404);
+        $user = \JWTAuth::toUser($request->token);
+        if($user!=null)
+        {
+            $evaluate = new Evaluate();
+            $rating = $evaluate->where('placeID','=',$id)
+                                ->where('userID','=',$user->userID)
+                                ->select('rating')
+                                ->get();
+            return response()->json($rating);
+        }
+
     }
 
     /**
@@ -57,12 +80,13 @@ class EvaluateController extends Controller
      */
     public function update(Request $request, Evaluate $evaluate)
     {
-        $evaluate->userID = $request->userID;
+        $user = \JWTAuth::toUser($request->token);
+        $evaluate->userID = $user->userID;
         $evaluate->placeID = $request->placeID;
         $evaluate->rating = $request->rating;
         $evaluate->save();
         $this->calculatorRating($request->placeID);
-        return response()->json($evaluate,200);
+//        return response()->json($evaluate,200);
     }
     /**
      * Calculator of Rating and save place table

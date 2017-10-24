@@ -27,14 +27,18 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        $comment = new Comment();
-        $comment->userID = $request->userID;
-        $comment->placeID = $request->placeID;
-        $comment->content = $request->content;
-        $comment->amountOfLike = $request->amountOfLike;
-        $comment->amountOfDisLike = $request->amountOfDisLike;
-        $comment->save();
-        return response()->json($comment,201);
+        $user = \JWTAuth::toUser($request->token);
+        if($user!=null){
+            $comment = new Comment();
+            $comment->userID = $user['userID'];
+            $comment->placeID = $request->placeID;
+            $comment->content = $request->content;
+            $comment->amountOfLike = 0;
+            $comment->amountOfDisLike = 0;
+            $comment->status = 0;
+            $comment->save();
+            return response()->json($comment,201);
+        }
     }
 
     /**

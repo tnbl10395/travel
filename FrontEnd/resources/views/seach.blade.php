@@ -22,11 +22,11 @@
                                 <h3 class="panel-title">Smart search</h3>
                             </div>
                             <div class="panel-body search-widget">
-                                <form action="" class=" form-inline"> 
+                                <form action="/search" method="post" class=" form-inline">
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <input type="text" class="form-control" placeholder="Key word">
+                                                <input type="text" name="search" class="form-control" placeholder="Key word">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -60,11 +60,9 @@
                     <div class="col-md-12 clear"> 
                         <div class="col-xs-10 page-subheader sorting pl0">
                             <ul class="sort-by-list">
-                                <li class="active">
-                                    <a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC">
-                                        Location Date <i class="fa fa-sort-amount-asc"></i>					
-                                    </a>
-                                </li>
+                                {{--<li class="active">--}}
+                                    {{--<a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC"><i class="fa fa-sort-amount-asc"></i></a>--}}
+                                {{--</li>--}}
                             </ul>
                         </div>
                         <div class="col-xs-2 layout-switcher">
@@ -75,8 +73,8 @@
                     <div class="col-md-12 clear"> 
                         <div id="list-type" class="proerty-th">
                             <!-- foreach -->
-                            @if($listPlace!=null)
-                                @foreach($listPlace as $objectPlace)
+                            @if($result!=null)
+                                @foreach($result as $objectPlace)
                                     <div class="col-sm-6 col-md-4 p0">
                                         <div class="box-two proerty-item" >
                                             <div class="item-thumb">
@@ -87,7 +85,7 @@
                                                 <div class="dot-hr"></div>
                                                 <span class="pull-left"><b> Update :</b> {{$objectPlace->updated_at}} </span>
                                                 <div class="bigstars col-sm-6 col-sm-push-1">
-                                                    <div class="rateit" data-rateit-value="0.5" data-rateit-mode="font" data-rateit-readonly="true" ></div>
+                                                    <div class="rateit" data-rateit-value="{{$objectPlace->rating}}" data-rateit-mode="font" data-rateit-readonly="true" ></div>
                                                 </div>
                                             </div>
                                         </div>
