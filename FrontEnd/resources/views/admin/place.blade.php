@@ -57,6 +57,7 @@
 
 @endsection
 @section('script')
+
     <script>
         $(document).ready(function () {
             $('#selectCategory').change(function () {

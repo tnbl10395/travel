@@ -44,13 +44,50 @@
                             <h5>Place Name</h5>
                             <input type="text" class="form-control" name="placeName" placeholder="Place Name" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group"  >
                             <h5>Address</h5>
-                            <input type="text" class="form-control" name="address" placeholder="Address" required>
+                            <input type="text" id = "address" class="form-control" name="address" placeholder="Address" onchange="initMap();" required>
                         </div>
-                        <div class="form-group" id="point">
-                            <h5>Map</h5>
-                            <input type="text" class="form-control" name="map" placeholder="Map" required>
+                        <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOiNCULeeGLt_n_J6smNM_5xX7gf_YoXA&callback=initMap"></script>
+                        <script async >
+                            function initMap() {
+
+                                <!-- var map = new google.maps.Map(document.getElementById('map'), { -->
+                                <!-- zoom: 13, -->
+                                <!-- center: {lat: -34.397, lng: 150.644} -->
+                                <!-- }); -->
+                                var geocoder = new google.maps.Geocoder();
+                                    if(document.getElementById('address').value){
+
+                                        geocodeAddress(geocoder);
+                                    }else {
+
+                                        return;
+                                    }
+                            }
+                            function geocodeAddress(geocoder) {
+                                var address = document.getElementById('address').value;
+                                var point;
+                                geocoder.geocode({'address': address}, function(results, status) {
+                                    if (status === 'OK') {
+                                        //point = results[0].geometry.location.lat();
+                                        if(results[0]){
+                                            point = (results[0].geometry.location.lat()) + ',' + (results[0].geometry.location.lng());
+                                            //alert(point);
+                                            document.getElementById('waypoint').value = point ;
+                                        }else{
+                                            alert('Can not find your address');
+                                        }
+
+                                    } else {
+                                        alert('Can not find your address: ' + status);
+
+                                    }
+                                });
+                            }
+                        </script>
+                        <div class="form-group" >
+                            <input type="hidden" id="waypoint" class="form-control" name="waypoint"  placeholder="Waypoint" required >
                         </div>
                         <div class="form-group">
                             <h5>Description</h5>
@@ -67,7 +104,7 @@
                             <input type="file" name="picture3" class="form-control" required>
                             <input type="file" name="picture4" class="form-control" required>
                         </div>
-                        <input type="submit" class="btn btn-success pull-right" name="submit" value="Submit">
+                        <input type="submit" id = "submit" class="btn btn-success pull-right" name="submit" value="Submit">
                     </form>
                 </div>
             </div>
@@ -75,6 +112,7 @@
     </div>
 @endsection
 @section('script')
+
     <script>
         $(document).ready(function () {
            $('#category').change(function () {
@@ -96,7 +134,7 @@
                                  html += '</h5>';
                                  html += '<input type="text" class="form-control" name="'+item+'" placeholder="'+item+'">';
                                  html += '</div>';
-                                 $('#point').after(html);
+                                 $('#waypoint').after(html);
                           });
                       }
                   });

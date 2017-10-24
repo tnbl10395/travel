@@ -59,6 +59,7 @@ Route::post('store-rest-place','PlaceController@storeRestOfPlace');
 Route::post('place','PlaceController@store');
 Route::put('place/{place}','PlaceController@update');
 Route::delete('place/{place}','PlaceController@destroy');
+Route::get('place-map/{id}','PlaceController@get_infor_from_address');
 //--------------------------------------------------------------------------------------------------
 //comment                                                                                         |
 //--------------------------------------------------------------------------------------------------

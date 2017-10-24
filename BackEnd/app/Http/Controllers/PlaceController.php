@@ -36,8 +36,7 @@ class PlaceController extends Controller
         $place->description = $request->description;
         $place->detail = $request->detail;
         $place->address = $request->address;
-        $place->map = $request->map;
-        $place->waypoint = '102,100';
+        $place->waypoint = $request->waypoint;
         $place->rating = 0;
         $place->save();
         return response()->json($place,201);
@@ -190,5 +189,11 @@ class PlaceController extends Controller
                            ->select('placeID','imageName')
                            ->get();
         return response()->json($listImage);
+    }
+    public function get_infor_from_address($id) {
+        $place = new Place();
+        $address = $place->where('place.locationID','=',$id)->join('locations','place.locationID','=','locations.locationID')
+                            ->select(["placeID","placeName","place.description","waypoint","locations.map"])->get();
+        return response()->json($address);
     }
 }
