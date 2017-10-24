@@ -2,43 +2,118 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Validator;
-use Mockery\Exception;
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function index(){
-
+    public function index($token)
+    {
         $client = new Client();
-        $req = $client->get('http://localhost:8000/api/allUsers');
-        $response = json_decode($req->getBody());
-        return view('admin.accounts')->with(['listUser'=>$response]);
-    }
-    public function updateAccount(Request $request){
-    	$firtsname = $request->firstname;
-    	$lastname = $request->lastname;
-    	$email = $request->email;
-        $phone = $request->phone;
-        $address = $request->address;
-        $age = $request->age;
-        $client = new Client();
-        $req = $client->post('http://localhost:8000/api/profile',[
-            'json' => [
-                'firtsname'=>$firtsname,
-                'lastname'=>$lastname,
-                'email'=>$email,
-                'phone'=>$phone,
-                'address'=>$address,
-                'age'=>$age, 
+        $requestProfile = $client->get('http://localhost:8000/api/user-info/',[
+            'json'=>[
+                'token' => $token
             ]
         ]);
-       $response = json_decode($req->getBody());
-       return \Redirect::back()->with('message', 'Successfully!');
-
-
+        $responseProfile = json_decode($requestProfile->getBody());
+        return view('user-profile')->with(['profile'=>$responseProfile]);
     }
-    
+
+    public function upProfile(Request $request, $id)
+    {
+//        dd($request->picture);
+        $client = new Client();
+        $picture = $request->picture;
+        if($picture!=null){
+            $requestProfile = $client->post('http://localhost:8000/api/profile/'.$id,[
+                'multipart'=>[
+                    [
+                        'name'=>'fullname',
+                        'contents'=>$request->fullname
+                    ],
+                    [
+                        'name'=>'age',
+                        'contents'=>$request->age
+                    ],
+                    [
+                        'name'=>'address',
+                        'contents'=>$request->address
+                    ],
+                    [
+                        'name'=>'picture',
+                        'contents'=>@fopen($picture->getRealPath(),'r'),
+                        'filename'=>$picture->getClientOriginalName()
+                    ],
+                    [
+                        'name'=>'phone',
+                        'contents'=>$request->phone
+                    ],
+                    [
+                        'name'=>'token',
+                        'contents'=>$request->token
+                    ],
+                    [
+                        'name'=>'oldPicture',
+                        'contents'=>$request->oldPicture
+                    ],
+                    [
+                        'name'=>'rating',
+                        'contents'=>$request->rating
+                    ],
+                    [
+                        'name'=>'_method',
+                        'contents'=>'PUT'
+                    ]
+                ]
+            ]);
+        }else{
+            $requestProfile = $client->post('http://localhost:8000/api/profile/'.$id,[
+                'multipart'=>[
+                    [
+                        'name'=>'fullname',
+                        'contents'=>$request->fullname
+                    ],
+                    [
+                        'name'=>'age',
+                        'contents'=>$request->age
+                    ],
+                    [
+                        'name'=>'address',
+                        'contents'=>$request->address
+                    ],
+                    [
+                        'name'=>'picture',
+                        'contents'=>null
+                    ],
+                    [
+                        'name'=>'phone',
+                        'contents'=>$request->phone
+                    ],
+                    [
+                        'name'=>'token',
+                        'contents'=>$request->token
+                    ],
+                    [
+                        'name'=>'oldPicture',
+                        'contents'=>$request->oldPicture
+                    ],
+                    [
+                        'name'=>'rating',
+                        'contents'=>$request->rating
+                    ],
+                    [
+                        'name'=>'_method',
+                        'contents'=>'PUT'
+                    ]
+                ]
+            ]);
+
+        }
+        $response = json_decode($requestProfile->getBody());
+//        dd($response);
+        if($response!=null){
+            return redirect()->back()->with('message','Completely!');
+        }
+    }
 }
