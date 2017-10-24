@@ -47,6 +47,8 @@
                                             <div class="col-md-12 clear">
                                                 <h4 class="s-property-title">{{$objectCategory->categoryName}}</h4>
                                                 <div id="list-type" class="proerty-th">
+
+
                                                     <div class="col-sm-6 col-md-4 p0">
                                                         <div class="box-two proerty-item">
                                                             <div class="item-thumb">
@@ -58,7 +60,11 @@
                                                                 <span class="pull-left"><b> Update :</b> {{$objectPlace->updated_at}} </span>
                                                             </div>
                                                         </div>
+                                                        <hr>
                                                     </div>
+                                                    
+
+
                                                 </div>
                                             </div>
                                         @endif
@@ -140,21 +146,5 @@
             </div>
         </div>
 
-        <script>
-            $(document).ready(function () {
-
-                $('#image-gallery').lightSlider({
-                    gallery: true,
-                    item: 1,
-                    thumbItem: 9,
-                    slideMargin: 0,
-                    speed: 500,
-                    auto: true,
-                    loop: true,
-                    onSliderLoad: function () {
-                        $('#image-gallery').removeClass('cS-hidden');
-                    }
-                });
-            });
-        </script>
+        
 @endsection

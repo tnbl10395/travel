@@ -16,11 +16,8 @@
                                 </div>
                                 <br>
                                 <div class="row wow fadeInRight animated">
-                                    <div class="col-sm-6">
-                                        <p class="author-category">
-                                            Rating:
-                                            <div class="rateit" data-rateit-value="0.5" data-rateit-mode="font" data-rateit-readonly="true"></div>
-                                        </p>
+                                    <div class="bigstars col-sm-6">   
+                                            <div class="rateit" data-rateit-value="0.5" data-rateit-mode="font" data-rateit-readonly="true" ></div>
                                     </div>
                                     <div class="col-sm-6 right" >
                                         <p class="date-comments">
@@ -39,25 +36,30 @@
                             <br>
                             <div>
                                 <div class="single-property-content prp-style-2">
-                                <div class="row">
-                                    <div class="light-slide-item">            
-                                        <div class="clearfix">
-                                            <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                                @if($getImage!=null)
-                                                    @foreach($getImage as $image)
-                                                    <li data-thumb="{{$image->imageName}}">
-                                                        <img style="max-height: 500px; max-width: 1000px;" src="{{$image->imageName}}" />
-                                                    </li>
-                                                    @endforeach
-                                                @endif
-                                            </ul>
+                                    <div class="row">
+                                        <div class="light-slide-item col-sm-8">            
+                                            <div class="clearfix">
+                                                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                                    @if($getImage!=null)
+                                                        @foreach($getImage as $image)
+                                                        <li data-thumb="{{$image->imageName}}">
+                                                            <img style="max-height: 500px; max-width: 1000px;" src="{{$image->imageName}}" />
+                                                        </li>
+                                                        @endforeach
+                                                    @endif
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="dealer-widget col-sm-4">
+                                           
+                                            <iframe width="350" height="450" frameborder="0" style="border:0" src="" allowfullscreen></iframe>
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            </div>
                             <div id="post-content" class="post-body single wow fadeInLeft animated">
-                                <p style="font-size: 20px;">
+                                <p style="font-size: 17px;">
                                     @if($onePlace!=null)
                                         {{$onePlace->detail}}
                                     @endif
@@ -104,12 +106,12 @@
                                     <p>{{$listComment->content}}</p>
                                     <div class="col-sm-6"> 
                                         <div class="col-sm-4">
-                                            <span class="col-sm-1">{{$listComment->amountOfLike}}</span>
-                                            <a href="#"><i class="fa fa-thumbs-up"></i> Like</a>
+                                            <span class="like1 col-sm-1">{{$listComment->amountOfLike}}</span>
+                                            <a id="like" href="javascript:void(0);" style="color: #8B8989"><i class="fa fa-thumbs-up"></i> Like</a>    
                                         </div> 
                                         <div class="col-sm-4">
-                                             <span class="col-sm-1">{{$listComment->amountOfDisLike}}</span>
-                                           <a href="#"><i class="fa fa-thumbs-down"></i> Dislike</a>
+                                             <span class="dislike1 col-sm-1">{{$listComment->amountOfDisLike}}</span>
+                                           <a id="dislike" href="javascript:void(0);" style="color: #8B8989"><i class="fa fa-thumbs-down"></i> Dislike</a>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +170,8 @@
                 
                 $("#rateit6").bind('over', function (event, value) {
                 $('#hover6').text(); });
-                value.rateit('readonly', true);
+                value.rateit('readonly', true);               
+                
              //     $.ajax({
              //         url: 'ekjjhh.php', //your server side script
              //         data: { id: productID, value: value }, //our data
