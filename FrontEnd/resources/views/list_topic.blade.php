@@ -51,7 +51,13 @@
                                             </div>
                                         </div>
                                         <div class="dealer-widget col-sm-4">
-                                            <div id="mymap" style=" margin-left : 6px; width: 365px; height: 460px;"></div>
+
+                                            {{--<div id="mymap" style=" margin-left : 6px; width: 365px; height: 460px;"></div>--}}
+
+
+                                            <div id="mymap" style=" margin-left : 1px; width: 375px; height: 446px;"></div>
+                                            
+
                                         </div>
                                     </div>
                                 </div>

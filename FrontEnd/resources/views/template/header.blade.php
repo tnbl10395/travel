@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 wow fadeInRight animated">
-                            <div class="single-footer news-letter">
+                            <div class="single-footer">
                                 <h4>Stay in touch</h4>
                                 <div class="footer-title-line"></div>
                                 <p>Đà Nẵng là một thành phố tuyệt đẹp và văn minh - Một thành phố trẻ rất năng động và phát triển từng ngày, các dịch vụ du lịch Đà Nẵng và hạ tầng du lịch Đà Nẵng phát triển mạnh mẽ đang thu hút khách du lịch đến ngày một đông hơn</p>
@@ -143,7 +143,7 @@
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Location</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Place</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Login</a></li>
+                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Login</a></li>
                             </ul> 
                         </div>
                     </div>
