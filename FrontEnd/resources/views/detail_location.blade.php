@@ -78,7 +78,7 @@
                     <div class="col-md-4 p0">
                         <aside class="sidebar sidebar-property blog-asside-right">
                             <div class="dealer-widget">
-                                <div id="mymap" style=" width: 285px; height: 380px;"></div>
+                                <div id="mymap" style=" width: 350px; height: 440px;"></div>
 
                             </div>
                             <br/>
