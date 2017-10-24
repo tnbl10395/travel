@@ -6,7 +6,9 @@
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">Welcome Hải Châu </h1>               
+                        @if($oneLocation[0]!=null)
+                        <h1 class="page-title">Welcome {{$oneLocation[0]->districtName}} </h1>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -15,68 +17,65 @@
 
         <!-- property area -->
         <div class="content-area single-property" style="background-color: #FCFCFC;">&nbsp;
-            <div class="container">   
-
+            <div class="container">
                 <div class="clearfix padding-top-40" >
-
                     <div class="col-md-8 single-property-content prp-style-1 ">
                         <div class="row">
                             <div class="light-slide-item">            
                                 <div class="clearfix">
-                                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                        
-                                        <li data-thumb="{{asset('img/property-1/property2.jpg')}}"> 
-                                            <img src="{{asset('img/property-1/property3.jpg')}}" />
-                                        </li>
-                                                                               
-                                    </ul>
+                                    @if($oneLocation[0]!=null)
+                                        <img src="{{$oneLocation[0]->picture}}" />
+                                    @endif
                                 </div>
                             </div>
                         </div>
-
                         <div class="single-property-wrapper">
                             <div class="section">
                                 <br>
                                 <h4 class="s-property-title">Description</h4>
                                 <div class="s-property-content">
-                                    <p>Là khu vực trung tâm của thành phố Đà Nẵng,nằm sát với trục giao thông Bắc Nam và của ngỏ ra vào Biển Đông. Với hệ thống hạ tầng phát triển mạnh, cùng với cảng hàng không quốc tế lớn nhất khu vực miền Trung.
-                                    Đến nơi đây quý khách sẽ được chiêm ngưỡng những cây cầu nỗi tiếng nhất Đà Nẵng. Bên cạnh đó còn có thể du lịch Asia Park, là khu tổ hợp vui chơi giải trí lớn bậc nhất ở Đà Nẵng, với 3 hạng mục chính là công viên vui chơi giải trí, khu Sun Wheel (vòng quay mặt trời) và khu vui chơi trong nhà. Những trò chơi cực kỳ vui nhộn như bắn banh Sun Blaster, Soft Play, Canival Game…ở khu vui chơi giải trí trong nhà sẽ khiến bạn cảm thấy vô cùng phấn khích.
-
-                                    </p>
+                                    @if($oneLocation[0]!=null)
+                                    <p>{{$oneLocation[0]->description}}</p>
+                                    @endif
                                 </div>
                             </div>
+                            @if($listCategory!=null&&$listPlace!=null)
+                                <h2 style="font-weight: bold;" class="s-property-title">List of Places in {{$oneLocation[0]->districtName}}</h2>
+                                    @foreach($listCategory as $objectCategory)
+                                        @foreach($listPlace as $objectPlace)
+                                            @if($objectCategory->categoryID==$objectPlace->categoryID)
+                                            <div class="col-md-12 clear">
+                                                <h4 class="s-property-title">{{$objectCategory->categoryName}}</h4>
+                                                <div id="list-type" class="proerty-th">
 
-                            <div class="col-md-12 clear"> 
-                                <br>
-                                <h4 class="s-property-title">Location Details</h4>
-                        <div id="list-type" class="proerty-th">
-                            <div class="col-sm-6 col-md-4 p0">
 
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="detail_location" ><img src="{{asset('img/demo/bap.jpg')}}"></a>
-                                        </div>
+                                                    <div class="col-sm-6 col-md-4 p0">
+                                                        <div class="box-two proerty-item">
+                                                            <div class="item-thumb">
+                                                                <a href="/detail-place/{{$objectPlace->placeID}}" ><img src="{{$objectPlace->imageName}}"></a>
+                                                            </div>
+                                                            <div class="item-entry overflow">
+                                                                <h5><a href="/detail-place/{{$objectPlace->placeID}}"> {{$objectPlace->placeName}} </a></h5>
+                                                                <div class="dot-hr"></div>
+                                                                <span class="pull-left"><b> Update :</b> {{$objectPlace->updated_at}} </span>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                    </div>
+                                                    
 
-                                        <div class="item-entry overflow">
-                                            <h5><a href="detail_location"> Place </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Update :</b> 20/09/2017 </span> 
-                                            
-                                        </div>
-                                    </div>
-                                </div>                                
-                            </div> 
+
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                @endforeach
+                            @endif
                         </div>
-                    </div>
 
                             <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
-                                
                                 <div class="panel-body recent-property-widget">
-                                        
                                 </div>
-                                                     
-
-
                             <div class="section property-share"> 
                                 <h4 class="s-property-title">Share width your friends </h4> 
                                 <div class="roperty-social">
@@ -91,138 +90,15 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End video area  -->
-                         <!--    <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Detail Location</h3>
-                                </div>
-                                <div class="panel-body recent-property-widget">
-                                        <ul>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{asset('img/demo/small-property-2.jpg')}}"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="blog">TouristAttractions </a></h6>
-                                                <div class="property-icon">
-                                                    <img src="{{asset('img/icon/picine.png')}}">|
-                                                    <img src="{{asset('img/icon/cars.png')}}">  
-                                                </div>
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{asset('img/demo/small-property-1.jpg')}}"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="blog">Restaurants </a></h6>
-                                                <div class="property-icon">
-                                                    <img src="{{asset('img/icon/picine.png')}}">|
-                                                    <img src="{{asset('img/icon/cars.png')}}">  
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{asset('img/demo/small-property-3.jpg')}}"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="blog">Hotels </a></h6>
-                                                <div class="property-icon">
-                                                    <img src="{{asset('img/icon/picine.png')}}">|
-                                                    <img src="{{asset('img/icon/cars.png')}}">  
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
-
-
                     <div class="col-md-4 p0">
                         <aside class="sidebar sidebar-property blog-asside-right">
                             <div class="dealer-widget">
-                                <iframe width="350" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJxb5s9rYZQjER3pLhr7FXD7w&key=AIzaSyApsIS5WZA_vfjQLENB4Lb-KA-QJIMofgA" allowfullscreen></iframe>
+                                @if($oneLocation[0]!=null)
+                                <iframe width="350" height="450" frameborder="0" style="border:0" src="{{$oneLocation[0]->map}}" allowfullscreen></iframe>
+                                @endif
                             </div>
-
-                            <!-- <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Detail Location</h3>
-                                </div>
-                                <div class="panel-body recent-property-widget">
-                                        <ul>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{asset('img/demo/small-property-2.jpg')}}"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="blog">TouristAttractions </a></h6>
-                                                <div class="property-icon">
-                                                    <img src="{{asset('img/icon/picine.png')}}">|
-                                                    <img src="{{asset('img/icon/cars.png')}}">  
-                                                </div>
-
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{asset('img/demo/small-property-1.jpg')}}"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="blog">Restaurants </a></h6>
-                                                <div class="property-icon">
-                                                    <img src="{{asset('img/icon/picine.png')}}">|
-                                                    <img src="{{asset('img/icon/cars.png')}}">  
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{asset('img/demo/small-property-3.jpg')}}"></a>
-                                                <span class="property-seeker">
-                                                    <b class="b-1">A</b>
-                                                    <b class="b-2">S</b>
-                                                </span>
-                                            </div>
-                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="blog">Hotels </a></h6>
-                                                <div class="property-icon">
-                                                    <img src="{{asset('img/icon/picine.png')}}">|
-                                                    <img src="{{asset('img/icon/cars.png')}}">  
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    </ul>
-                                </div>
-                            </div> -->                          
-
-                          
-
                            <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
                             <div class="panel-heading">
                                 <h3 class="panel-title">Smart search</h3>
@@ -242,13 +118,11 @@
                                             <div class="col-xs-12">
 
                                                 <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your Location">
-
-                                                    <option>Hải Châu</option>
-                                                    <option>Liên Chiểu</option>
-                                                    <option>Thanh Khê</option>
-                                                    <option>Sơn Trà</option>
-                                                    <option>Ngũ Hành Sơn</option>
-                                                    <option>Hòa Vang</option>
+                                                    @if($listLocation!=null)
+                                                        @foreach($listLocation as $list)
+                                                        <option value="0{{$list->locationID}}">{{$list->districtName}}</option>
+                                                        @endforeach
+                                                    @endif
                                                 </select>
                                             </div>
                                         </div>
@@ -272,21 +146,5 @@
             </div>
         </div>
 
-        <script>
-            $(document).ready(function () {
-
-                $('#image-gallery').lightSlider({
-                    gallery: true,
-                    item: 1,
-                    thumbItem: 9,
-                    slideMargin: 0,
-                    speed: 500,
-                    auto: true,
-                    loop: true,
-                    onSliderLoad: function () {
-                        $('#image-gallery').removeClass('cS-hidden');
-                    }
-                });
-            });
-        </script>
+        
 @endsection

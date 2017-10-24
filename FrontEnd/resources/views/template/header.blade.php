@@ -56,8 +56,8 @@
                     </div>
                     <ul class="main-nav nav navbar-nav navbar-right">
                         <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="/" class="">Home</a></li>
-                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="locations">Location</a></li>
-                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="place">Place</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="/locations">Location</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="/place">Place</a></li>
                     </ul>
                 </div>
             </div>

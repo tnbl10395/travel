@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Evaluate;
+use App\Image;
 use App\Place;
 use Illuminate\Http\Request;
 
@@ -49,7 +51,7 @@ class PlaceController extends Controller
      */
     public function show(Place $place)
     {
-        return response()->json($place,404);
+        return response()->json($place);
     }
 
     /**
@@ -112,10 +114,10 @@ class PlaceController extends Controller
                                       ->select('placeID')
                                       ->first();
         //request list
-        $list = $request->list;
+        $list = array_reverse($request->list);
         //them phan tu vao dau mang
         if(!is_array($list)){
-            $listRow = [$placeID,$list];
+            $listRow = [$placeID->placeID,$list];
         }else{
             array_unshift($list,$placeID->placeID);
             //xoa tat ca chi muc
@@ -129,5 +131,64 @@ class PlaceController extends Controller
         $categoryName = strtolower($cat[1]);
         $rest = \DB::table($categoryName)->insert($listRest);
         return response()->json($rest);
+    }
+
+    public function getListPlaceWithLocation($locationId){
+//        $place = new Place();
+//        $listPlace = $place->where('locationID','=',$locationId)->get();
+//        return response()->json($listPlace);
+        $place = new Place();
+        $listPlace = $place->join('images','place.placeID','=','images.placeID')
+            ->where('place.locationID','=',$locationId)
+            ->select(['place.*','images.imageName'])
+//            ->groupBy(['place.placeID'])
+            ->get();
+//        dump($listPlace);
+//        $listPlace = $listPlace;
+//        array_unique($listPlace);
+//        $listPlace = $listPlace[]->
+//        get_object_vars($listPlace);
+//        foreach ($listPlace as $list){
+//            for($i = 0;$i<count($list)-1;$i++){
+//                get_object_vars($list)
+//            }
+//            return response()->json($list);
+//        }
+//        $listPlace = Place::select(['SELECT * FROM place
+//                                          INNER JOIN images ON place.placeID = images.placeID
+//                                          WHERE place.locationID ='.$locationId.' GROUP BY place.placeID']);
+        return response()->json($listPlace);
+    }
+
+    public function getMoreInfo($placeId)
+    {
+        $place = new Place();
+        $categoryID = $place->where('placeID','=',$placeId)
+                    ->select('categoryID')
+                    ->first();
+        $category = new Category();
+        $categoryName = $category->where('categoryID','=',$categoryID->categoryID)
+                                ->select('categoryName')
+                                ->first();
+        $getColumn = \DB::getSchemaBuilder()->getColumnListing($categoryName->categoryName);
+        array_shift($getColumn);
+        $restOfField = \DB::table($categoryName->categoryName)
+                            ->where($categoryName->categoryName.'ID','=',$placeId)
+                            ->select('*')
+                            ->first();
+        foreach ($restOfField as $object){
+            $getRow[] = $object;
+        }
+        array_shift($getRow);
+        $getMoreInfo = array_combine($getColumn,$getRow);
+        return response()->json($getMoreInfo);
+    }
+
+    public function getOneImageOfPlace($locationId){
+        $image = new Image();
+        $listImage = $image->groupBy(['placeID'])
+                           ->select('placeID','imageName')
+                           ->get();
+        return response()->json($listImage);
     }
 }

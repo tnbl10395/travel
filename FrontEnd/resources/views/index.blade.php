@@ -15,20 +15,18 @@
             <div class="slider-content">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-sm-12">
-                        <h2 id="test_bla">Searching Just Got So Easy</h2>
+                        <h2 id="test_bla">Danang - The Livable City</h2>
                         <p></p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
-
                             <form action="" class="form-inline">
                                 <div class="form-group">                                   
                                     <select id="lunchBegins" class="selectpicker" title="Select your location">
-
-                                        <option>Ngũ Hành Sơn</option>
-                                        <option>Liên Chiểu</option>
-                                        <option>Hải Châu</option>
-                                        <option>Hòa Vang</option>
-                                        <option>Sơn Trà</option>
-                                        <option>Thanh Khê</option>
+                                        {{--<option>Please select Locations</option>--}}
+                                        @if($listLocation!=null)
+                                            @foreach($listLocation as $objectLocation)
+                                                <option value="0{{$objectLocation->locationID}}">{{$objectLocation->districtName}}</option>
+                                            @endforeach
+                                        @endif
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -52,7 +50,6 @@
                         <p> </p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="proerty-th">
                         <div class="col-sm-6 col-md-3 p0">
@@ -70,73 +67,6 @@
                                     <i class="fa fa-star" aria-hidden="true"></i>
                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
                                     <span class="proerty-price pull-right">8 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-2.html" ><img src="{{asset('img/demo/property-2.jpg')}}"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-2.html" >Sơn Tra Resort & Spa</a></h5>
-                                    <div class="dot-hr"></div>
-
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">10 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-3.html" ><img src="{{asset('img/demo/property-3.jpg')}}"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-3.html" >MELIA Đa Nang </a></h5>
-                                    <div class="dot-hr"></div>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">20 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-
-
-                        
-
-                        
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="property-1.html" ><img src="{{asset('img/demo/property-3.jpg')}}"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="property-1.html" >Asian Park </a></h5>
-                                    <div class="dot-hr"></div>
-
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <span class="proerty-price pull-right">9 <i class="fa fa-comment-o" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                         </div>

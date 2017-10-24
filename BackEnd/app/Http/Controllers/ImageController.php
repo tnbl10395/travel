@@ -97,4 +97,11 @@ class ImageController extends Controller
         $images = $image->where('placeID','=',$placeID->placeID)->get();
         return response()->json($images,201);
     }
+
+    public function getImageOfPlace($placeId)
+    {
+        $image = new Image();
+        $listImage = $image->where('placeID','=',$placeId)->get();
+        return response()->json($listImage);
+    }
 }
