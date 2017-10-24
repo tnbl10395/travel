@@ -35,6 +35,8 @@ class UserController extends Controller
             'role' => $request->get('role'),
             'status' => 1
         ]);
+        $getUserID = \DB::table('users')->where('username','=',$request->get('username'))->select('userID')->first();
+        $saveUserID = \DB::table('profile')->insert(['userID'=>$getUserID->userID]);
 
         return response()->json([
             'status' => 200,
@@ -72,7 +74,16 @@ class UserController extends Controller
 
     public function getUserInfo(Request $request){
         $user = \JWTAuth::toUser($request->token);
-        return response()->json(['result' => $user]);
+        if($user!=null){
+            $profile = new Profile();
+            $getProfile = $profile->where('userID','=',$user->userID)
+                                  ->select('*')
+                                  ->get();
+            return response()->json(['profile' => $getProfile]);
+        }else{
+            return response()->error('Error get profile!');
+        }
+
     }
     public function getAllUser(){
         $object = new User();

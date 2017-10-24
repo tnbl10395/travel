@@ -14,6 +14,8 @@ Route::get('/','IndexController@index');
 Route::get('locations','LocationController@index');
 Route::get('detail-location/{id}','LocationController@detailPage');
 Route::get('detail-place/{id}','PlaceController@detailPage');
+Route::get('profile/{token}','ProfileController@index');
+Route::post('upProfile/{id}','ProfileController@upProfile');
 //Route::get('/', function () {
 //    return view('index');
 //});

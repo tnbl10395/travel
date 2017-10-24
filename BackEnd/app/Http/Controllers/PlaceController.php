@@ -134,29 +134,13 @@ class PlaceController extends Controller
     }
 
     public function getListPlaceWithLocation($locationId){
-//        $place = new Place();
-//        $listPlace = $place->where('locationID','=',$locationId)->get();
-//        return response()->json($listPlace);
+
         $place = new Place();
-        $listPlace = $place->join('images','place.placeID','=','images.placeID')
-            ->where('place.locationID','=',$locationId)
-            ->select(['place.*','images.imageName'])
-//            ->groupBy(['place.placeID'])
-            ->get();
-//        dump($listPlace);
-//        $listPlace = $listPlace;
-//        array_unique($listPlace);
-//        $listPlace = $listPlace[]->
-//        get_object_vars($listPlace);
-//        foreach ($listPlace as $list){
-//            for($i = 0;$i<count($list)-1;$i++){
-//                get_object_vars($list)
-//            }
-//            return response()->json($list);
-//        }
-//        $listPlace = Place::select(['SELECT * FROM place
-//                                          INNER JOIN images ON place.placeID = images.placeID
-//                                          WHERE place.locationID ='.$locationId.' GROUP BY place.placeID']);
+        $listPlace = $place->join('category','place.categoryID','=','category.categoryID')
+                            ->where('place.locationID','=',$locationId)
+                           ->select(['placeID','placeName','categoryName'])
+                           ->orderBy('placeName')
+                           ->get()->groupBy('categoryName');
         return response()->json($listPlace);
     }
 
@@ -184,11 +168,11 @@ class PlaceController extends Controller
         return response()->json($getMoreInfo);
     }
 
-    public function getOneImageOfPlace($locationId){
-        $image = new Image();
-        $listImage = $image->groupBy(['placeID'])
-                           ->select('placeID','imageName')
-                           ->get();
-        return response()->json($listImage);
-    }
+//    public function getOneImageOfPlace($locationId){
+//        $image = new Image();
+//        $listImage = $image->groupBy(['placeID'])
+//                           ->select('placeID','imageName')
+//                           ->get();
+//        return response()->json($listImage);
+//    }
 }

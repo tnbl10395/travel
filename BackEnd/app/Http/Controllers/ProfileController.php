@@ -48,7 +48,7 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        return response()->json($profile,404);
+        return response()->json($profile);
     }
 
     /**
@@ -58,18 +58,18 @@ class ProfileController extends Controller
      * @param  \App\Profile  $profile
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Profile $profile)
+    public function update(Request $request,Profile $profile)
     {
+//        return response()->json($request);
         $file = new uploadFileLibrary();
-        $profile->firstName = $request->firstName;
-        $profile->lastName = $request->lastName;
+        $profile->fullName = $request->fullname;
         $profile->age = $request->age;
         $profile->address = $request->address;
-        $profile->avatar = $file->reload()($request->avatar, $request->oldAvatar);
+        $profile->avatar = $file->reload($request->picture, $request->oldPicture);
         $profile->phone = $request->phone;
         $profile->rating = $request->rating;
         $profile->save();
-        return response()->json($profile,200);
+        return response()->json($profile);
     }
 
     /**

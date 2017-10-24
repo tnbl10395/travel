@@ -25,6 +25,7 @@ Route::group(['middleware' => 'jwt.auth'], function (){
     Route::get('evaluate/{evaluate}','EvaluateController@show');
     Route::post('evaluate','EvaluateController@store');
     Route::put('evaluate/{evaluate}','EvaluateController@update');
+
 });
 //--------------------------------------------------------------------------------------------------
 //location                                                                                         |
@@ -75,8 +76,8 @@ Route::put('comment-accept/{id}','CommentController@accept');
 Route::get('profile','ProfileController@index');
 Route::get('profile/{profile}','ProfileController@show');
 Route::post('profile','ProfileController@store');
-Route::put('profile/{profile}','ProfileController@update');
 Route::delete('profile/{profile}','ProfileController@destroy');
+Route::put('profile/{profile}','ProfileController@update');
 //--------------------------------------------------------------------------------------------------
 //evaluate                                                                                         |
 //--------------------------------------------------------------------------------------------------
