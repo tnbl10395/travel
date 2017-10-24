@@ -17,7 +17,7 @@
                                     <div class="col-sm-6">
                                         <p class="author-category">
                                             Rating: 
-                                            <span class="rateit" data-rateit-mode="font" style="margin-left: 40px;font-size:30px;"></span>
+                                            <div class="rateit" data-rateit-value="0.5" data-rateit-mode="font" data-rateit-readonly="true"></div>
                                         </p>
                                     </div>
                                     <div class="col-sm-6 right" >
