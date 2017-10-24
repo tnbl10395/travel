@@ -23,6 +23,7 @@ class PlaceController extends Controller
         $responseMoreInformation = json_decode($requestMoreInformation->getBody());
         $responseCountComment = json_decode($requestCountComment->getBody());
         $responseComment = json_decode($requestComment->getBody());
+        // dd($responseComment);
         $responseImage = json_decode($requestImage->getBody());
         $responsePlace = json_decode($requestPlace->getBody());
         return view('list_topic')->with(['onePlace'=>$responsePlace,

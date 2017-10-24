@@ -3091,6 +3091,25 @@ color: #fff;
 .slider-content .search-form .form-inline .btn {
         margin-bottom: 10px;
     }
+#comments span {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+#comments .col-sm-6 ,#comments .col-sm-4{
+    padding-left: 0px;
+}
+
+ 
+ #comment-form .btn-default {
+    background-color: #EEEEEE;
+}
+.bigstars .rateit-font {
+                font-size: 40px;
+                
+                padding: 0px;
+            }
+
+
 @media (width: 360px){
     .search-form .form-inline .form-group {
     margin-left: 0px;
@@ -3141,50 +3160,11 @@ color: #fff;
 }
 
 
-#comments span {
-    margin-left: 0px;
-    padding-left: 0px;
-}
-#comments .col-sm-6 ,#comments .col-sm-4{
-    padding-left: 0px;
-}
- #comment-form .btn-default {
-    background-color: #EEEEEE;
-}
 
-/*div.bigstars div.rateit-range
-{
-    background: url(star-white32.png);
-    height: 32px;
-}
- 
-div.bigstars div.rateit-hover
-{
-    background: url(star-gold32.png);
-}
- 
-div.bigstars div.rateit-selected
-{
-    background: url(star-red32.png);
-}
- 
-div.bigstars div.rateit-reset
-{
-    background: url(star-black32.png);
-    width: 32px;
-    height: 32px;
-}
- 
-div.bigstars div.rateit-reset:hover
-{
-    background: url(star-white32.png);
-}*/
-           /* fieldset, label { margin: 0; padding: 0; }
-            body{ margin: 20px; }
-            h1 { font-size: 1.5em; margin: 10px; }
-*/
+
+
          
-/*@media (width: 400px){
+@media (width: 400px){
     .search-form .form-inline .form-group {
     margin-left: 2px;
     }
@@ -3207,7 +3187,7 @@ div.bigstars div.rateit-reset:hover
     .slider-content .search-form .form-inline .btn {
         margin-bottom: 0px;
     }
-}*/
+}
 /*.search-btn {
     width: 120px;
 }
