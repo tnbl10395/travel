@@ -23,6 +23,7 @@
                             </div>
                             <div class="panel-body search-widget">
                                 <form action="/search" method="post" class=" form-inline">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">
@@ -91,6 +92,8 @@
                                         </div>
                                     </div>
                                 @endforeach
+                            @else
+                                <div class="alert alert-danger"><h3>Error: </h3>The place is not found!</div>
                             @endif
                             <!-- end -->
                         </div>

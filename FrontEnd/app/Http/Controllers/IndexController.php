@@ -25,12 +25,14 @@ class IndexController extends Controller
             $request = $client->post('http://localhost:8000/api/place-search',[
                 'json'=>[
                     'locationID'=>$request->location,
-                    'key'=>$request->search
+                    'search'=>$request->search
                 ]
             ]);
             $requestLocation = $client->get('http://localhost:8000/api/location-name');
-
         $response = json_decode($request->getBody());
+        if($response=='[]'){
+            return view('seach')->with(['message'=>'Not Found']);
+        }
         $responseLocation = json_decode($requestLocation->getBody());
         return view('seach')->with(['result'=>$response,
                                      'listLocation'=>$responseLocation]);

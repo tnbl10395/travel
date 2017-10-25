@@ -56,7 +56,7 @@ Route::get('user_profile',function(){
 // ------------------------------------------------------------------------------------------------------------
 Route::post('login-user','AuthController@login');
 Route::get('logout','AuthController@logout');
-Route::post('register','AuthController@register');
+Route::post('registered','AuthController@register');
 Route::get('get-info','InfoUserController@getInfo');
 // ------------------------------------------------------------------------------------------------------------
 // Controller check email

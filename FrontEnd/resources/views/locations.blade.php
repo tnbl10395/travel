@@ -25,11 +25,12 @@
                                 <h3 class="panel-title">Smart search</h3>
                             </div>
                             <div class="panel-body search-widget">
-                                <form action="" class=" form-inline"> 
+                                <form action="/search" method="post" class=" form-inline">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <input type="text" class="form-control" placeholder="Key word">
+                                                <input type="text" name="search" class="form-control" placeholder="Key word">
                                             </div>
                                         </div>
                                     </fieldset>
@@ -37,8 +38,7 @@
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">
-
-                                                <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your Location">
+                                                <select id="lunchBegins" name="location" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your Location">
                                                     @if($listLocation!=null)
                                                         @foreach($listLocation as $objectLocation)
                                                             <option value="0{{$objectLocation->locationID}}">{{$objectLocation->districtName}}</option>

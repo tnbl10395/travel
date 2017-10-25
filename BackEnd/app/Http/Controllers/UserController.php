@@ -87,7 +87,7 @@ class UserController extends Controller
     }
     public function getAllUser(){
         $object = new User();
-        $user = $object->leftJoin('profile','users.userID','=','profile.userID')
+        $user = $object->join('profile','users.userID','=','profile.userID')
                        ->select(['users.userID','users.username','users.status','fullname',
                                  'email','phone', 'avatar','rating'])
                        ->get();

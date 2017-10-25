@@ -23,7 +23,7 @@
                         <div class="col-md-12 col-xs-12 register-blocks">
                             <h2>New account : </h2> 
                             <form action="/register" method="post" id="registerForm">
-                                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                {{--<input type="hidden" name="_token" value="{{csrf_token()}}">--}}
                                 <div class="form-group">
                                     <label for="name">Username</label>
                                     <input type="text" class="form-control" name="username" id="username">
@@ -93,6 +93,6 @@
                     </div>
                 </div>
             </div>
-        </div>      
-
+        </div>
 @endsection
+

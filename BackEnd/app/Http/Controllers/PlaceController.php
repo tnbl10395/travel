@@ -90,7 +90,7 @@ class PlaceController extends Controller
 //        return response()->json($cat);
         $place = new Place();
         $listPlace = $place->join($category[1],'place.placeID','=',$category[1].'.'.$category[1].'ID')
-                           ->select(['place.placeID','locationID','placeName','description',$category[1].'.*','rating'])
+                           ->select(['place.placeID','locationID','placeName','waypoint','rating',$category[1].'.*'])
                             ->get();
         return response()->json($listPlace);
     }
@@ -214,12 +214,13 @@ class PlaceController extends Controller
 
     public function search(Request $request)
     {
+//        return response()->json($request);
         if($request->search!=""&&$request->locationID!=""){
             $place = new Place();
             $list = $place->join('images','place.placeID','=','images.placeID')
                 ->where('images.main','=',1)
                 ->where('place.locationID','=',$request->locationID)
-                ->whereRaw('placeName LIKE "%'.$request->search.'"')
+                ->where('place.placeName' ,'LIKE', $request->search.'%"')
                 ->select(['place.*','images.imageName'])
                 ->get();
         }else if($request->search==""&&$request->locationID!=""){
@@ -235,7 +236,7 @@ class PlaceController extends Controller
             $list = $place->join('images','place.placeID','=','images.placeID')
                 ->where('images.main','=',1)
 //                ->where('place.locationID','=',$request->locationID)
-                ->whereRaw("place.placeName LIKE '%".$request->search."%'")
+                ->where('placeName' ,'LIKE', '%'.$request->search.'%')
                 ->select(['place.*','images.imageName'])
                 ->get();
         }

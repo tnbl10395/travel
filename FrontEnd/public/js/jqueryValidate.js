@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    // jQuery.validator.setDefaults({
-    //     debug:true,
-    //     success:'valid'
-    // });
+    jQuery.validator.setDefaults({
+        debug:true,
+        success:'valid'
+    });
     $.validator.addMethod("regex", function(value, element) {
-        return this.optional(element) || /^[a-z0-9\_]+$/i.test(value);
+        return this.optional(element) || /^[a-z0-9\ ]+$/i.test(value);
     });
     $('#registerForm').validate({
         rules:{

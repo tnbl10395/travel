@@ -7,8 +7,9 @@
                 @foreach($key as $column => $value)
                     <th>{{$column}}</th>
                 @endforeach
+                @break
             @endforeach
-            <th>Picture</th>
+            {{--<th>Picture</th>--}}
             <th>Actions</th>
         </tr>
     </thead>
@@ -29,7 +30,7 @@
             @foreach($key as $row)
             <td>{{$row}}</td>
             @endforeach
-            <td><a href="javascript:void(0);" data-id="{{$key->placeID}}" data-toggle='modal' title='Update Location' data-target='#seePicture'>Click to see!</a></td>
+            {{--<td><a href="javascript:void(0);" data-id="{{$key->placeID}}" data-toggle='modal' title='Update Location' data-target='#seePicture'>Click to see!</a></td>--}}
             <td>
                 <button style="color: red; border: 0; background:none;" data-id="{{$key->placeID}}" data-toggle='modal' title='Update Location' data-target='#update'><b><i class="fa fa-pencil-square-o"></i></b></button>
                 <button style="color: red; border: 0; background:none;" data-id="{{$key->placeID}}" data-toggle='modal' title='delete' data-target='#deletePlace'><b><i class="fa fa-trash"></i></b></button>
