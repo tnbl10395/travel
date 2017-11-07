@@ -101,18 +101,18 @@
                                     <h5 class="text-uppercase">{{$listComment->fullname}}</h5>
                                     <p class="posted"><i class="fa fa-clock-o"></i> {{$listComment->updated_at}}</p>
                                     <p>{{$listComment->content}}</p>
-                                    {{--<div class="col-sm-6"> --}}
-                                        {{--<div class="col-sm-4" id="divlike">--}}
-                                            {{--<span class="like1 col-sm-1">{{$listComment->amountOfLike}}</span>--}}
-                                            {{--<input type="hidden" id="amountLike" value="{{$listComment->amountOfLike}}">--}}
-                                            {{--<a id="like" href="javascript:void(0);" style="color: #8B8989"><i class="fa fa-thumbs-up"></i> Like</a>    --}}
-                                        {{--</div> --}}
-                                        {{--<div class="col-sm-4">--}}
-                                            {{--<span class="dislike1 col-sm-1">{{$listComment->amountOfDisLike}}</span>--}}
-                                            {{--<input type="hidden" id="amountDisLike" value="{{$listComment->amountOfDisLike}}">--}}
-                                            {{--<a id="dislike" href="javascript:void(0);" style="color: #8B8989"><i class="fa fa-thumbs-down"></i> Dislike</a>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
+                                    <div class="col-sm-6">
+                                        <div class="col-sm-4" id="divlike">
+                                            <span class="like1 col-sm-1">{{$listComment->amountOfLike}}</span>
+                                            <input type="hidden" id="amountLike" value="{{$listComment->amountOfLike}}">
+                                            <a id="like" href="javascript:void(0);" style="color: #8B8989"><i class="fa fa-thumbs-up"></i> Like</a>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <span class="dislike1 col-sm-1">{{$listComment->amountOfDisLike}}</span>
+                                            <input type="hidden" id="amountDisLike" value="{{$listComment->amountOfDisLike}}">
+                                            <a id="dislike" href="javascript:void(0);" style="color: #8B8989"><i class="fa fa-thumbs-down"></i> Dislike</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                                 @endforeach
@@ -174,29 +174,29 @@
                         }
                     });
                 });
-//                var like = parseInt($('#amountLike').val());
-//                var dislike = parseInt($('#amountDisLike').val());
-//                    $('#like').on('click',function (e) {
-//                        ++like;
-//                        $('.like1').remove();
-//                        $('#amountLike').before('<span class="like1 col-sm-1">'+like+'</span>');
-//                        $('#like').css('color','BLUE');
-//                        --dislike;
-//                        $('.dislike1').remove();
-//                        $('#amountDisLike').before('<span class="dislike1 col-sm-1">'+dislike+'</span>');
-//                        $('#dislike').css('color','BLACK');
-//
-//                    });
-//                    $('#dislike').on('click',function (e) {
-//                        ++dislike;
-//                        $('.dislike1').remove();
-//                        $('#amountDisLike').before('<span class="dislike1 col-sm-1">'+dislike+'</span>');
-//                        $('#dislike').css('color','BLUE');
-//                        --like;
-//                        $('.like1').remove();
-//                        $('#amountLike').before('<span class="like1 col-sm-1">'+like+'</span>');
-//                        $('#like').css('color','BLACK');
-//                    });
+                var like = parseInt($('#amountLike').val());
+                var dislike = parseInt($('#amountDisLike').val());
+                    $('#like').on('click',function (e) {
+                        ++like;
+                        $('.like1').remove();
+                        $('#amountLike').before('<span class="like1 col-sm-1">'+like+'</span>');
+                        $('#like').css('color','BLUE');
+                        --dislike;
+                        $('.dislike1').remove();
+                        $('#amountDisLike').before('<span class="dislike1 col-sm-1">'+dislike+'</span>');
+                        $('#dislike').css('color','BLACK');
+
+                    });
+                    $('#dislike').on('click',function (e) {
+                        ++dislike;
+                        $('.dislike1').remove();
+                        $('#amountDisLike').before('<span class="dislike1 col-sm-1">'+dislike+'</span>');
+                        $('#dislike').css('color','BLUE');
+                        --like;
+                        $('.like1').remove();
+                        $('#amountLike').before('<span class="like1 col-sm-1">'+like+'</span>');
+                        $('#like').css('color','BLACK');
+                    });
             });
 </script>
 <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

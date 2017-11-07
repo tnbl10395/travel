@@ -106,25 +106,24 @@
                                 <div class="footer-title-line"></div>
                                 <p>Đà Nẵng là một thành phố tuyệt đẹp và văn minh - Một thành phố trẻ rất năng động và phát triển từng ngày, các dịch vụ du lịch Đà Nẵng và hạ tầng du lịch Đà Nẵng phát triển mạnh mẽ đang thu hút khách du lịch đến ngày một đông hơn</p>
 
-                                <form>
-                                    <div class="input-group">
-                                        <input class="form-control" type="text" placeholder="E-mail ... ">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
-                                        </span>
-                                    </div>
-                                    <!-- /input-group -->
-                                </form> 
+                                {{--<form>--}}
+                                    {{--<div class="input-group">--}}
+                                        {{--<input class="form-control" type="text" placeholder="E-mail ... ">--}}
+                                        {{--<span class="input-group-btn">--}}
+                                            {{--<button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>--}}
+                                        {{--</span>--}}
+                                    {{--</div>--}}
+                                {{--</form> --}}
 
-                                <div class="social pull-right"> 
-                                    <ul>
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
-                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
-                                    </ul> 
-                                </div>
+                                {{--<div class="social pull-right"> --}}
+                                    {{--<ul>--}}
+                                        {{--<li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/"><i class="fa fa-twitter"></i></a></li>--}}
+                                        {{--<li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>--}}
+                                        {{--<li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>--}}
+                                        {{--<li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>--}}
+                                        {{--<li><a class="wow fadeInUp animated" href="https://www.facebook.com/groups/1941871702741858/" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>--}}
+                                    {{--</ul> --}}
+                                {{--</div>--}}
                             </div>
                         </div>
 
@@ -136,14 +135,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="pull-left">
-                            <span> (C) <a href="http://www.KimaroTec.com">Hiếu Lê</a> , All rights reserved 2017  </span> 
+                            <span> (C) <a href="http://www.KimaroTec.com">Team</a> , All rights reserved 2017  </span>
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Location</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Place</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Login</a></li>
+                                <li><a class="wow fadeInUp animated" href="/" data-wow-delay="0.2s">Home</a></li>
+                                <li><a class="wow fadeInUp animated" href="/locations" data-wow-delay="0.3s">Location</a></li>
+                                <li><a class="wow fadeInUp animated" href="/place" data-wow-delay="0.2s">Place</a></li>
+                                {{--<li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Login</a></li>--}}
                             </ul> 
                         </div>
                     </div>

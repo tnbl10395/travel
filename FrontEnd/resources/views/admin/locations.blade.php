@@ -41,12 +41,12 @@
                   @foreach($listLocation as $objectLocation)
                 <tr>
                   <td>0{{$objectLocation->locationID}}</td>
-                  <td><a href="" data-target='#updateLocation' data-toggle='modal' >{{$objectLocation->districtName}}</a></td>
-                  <td>{{$objectLocation->picture}}</td>
-                  <td>{{$objectLocation->description}}</td>
+                  <td>{{$objectLocation->districtName}}</td>
+                  <td><img src="{{$objectLocation->picture}}" style="height: 50px; width: 80px;"></td>
+                  <td>{{substr($objectLocation->description,0,250)}} ... </td>
                   <td>
-                    <button style="color: red; border: 0; background:none;" data-id="{{$objectLocation->locationID}}" data-toggle='modal' title='Update Location' data-target='#updateLocation'><b><i class="fa fa-pencil-square-o"></i></b></button>
-                    <button style="color: red; border: 0; background:none;" data-id="{{$objectLocation->locationID}}" data-toggle='modal' title='delete' data-target='#DeleteLocation'><b><i class="fa fa-trash"></i></b></button>
+                    <a style="color: red; border: 0; background:none;" href="/admin/location-one/0{{$objectLocation->locationID}}"><b><i class="fa fa-pencil-square-o"></i></b></a>
+                    <button style="color: red; border: 0; background:none;" data-id="0{{$objectLocation->locationID}}" data-toggle='modal' title='delete' data-target='#DeleteLocation'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
                   @endforeach
@@ -71,8 +71,8 @@
       <i class="fa fa-angle-up"></i>
     </a>
 
-    <!-- ADD Location -->
-    <div class="modal fade" id="AddLocation" role="dialog">
+<!-- ADD Location -->
+<div class="modal fade" id="AddLocation" role="dialog">
       <div class="modal-dialog modal-lg" style="width:800px;">
          <!-- Modal content-->
          <div class="modal-content">
@@ -91,7 +91,6 @@
                         </div>
                         <div class="col-sm-8">
                           <div class="form-group">
-                           
                             <select class="form-control" id="sel1" name="cityID">
                               @if($listCity!=null)
                                   @foreach($listCity as $objectCity)
@@ -102,28 +101,7 @@
                           </div>
                         </div>
                       </div>
-                      <br>
-                      {{--<div class="row">--}}
-                        {{--<div class="control-label col-sm-4">--}}
-                          {{--<h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-sm-8">--}}
-                          {{--<input name="locationName" type="text" class="form-control">--}}
-                        {{--</div>--}}
-                      {{--</div>--}}
-                      <br>
-                        <div class="row">
-                            <div class="control-label col-sm-4">
-                                <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
-                            </div>
-                            
-                            
-                            <div class="col-sm-8">
-                                <textarea rows="5" cols="20" name="description" id="pagedownMe"></textarea>
-                            </div>
-                        </div>
-                      </div>
-
+                    </div>
                     <div class="col-sm-6">
                       <div class="row">
                         <div class="control-label col-sm-4">
@@ -146,12 +124,20 @@
                     </div>
                 </div>
                 <br>
+                    <div class="row">
+                        <div class="control-label col-sm-2">
+                            <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
+                        </div>
+                        <div class="col-sm-10">
+                            <textarea rows="5" class="form-control" name="description" id="pagedownMe"></textarea>
+                        </div>
+                    </div>
                  <div class="form-group">
                     <label for="addLocation"><b>Upload Picture</b></label>
                  </div>
-                 
                  <div class="row" style="margin-left:5px;">
-                  <input type="file" name="picture" id="addLocationFile">
+                  <input type="file" name="picture" class="form-control col-sm-5" id="addLocationFile">
+                  <img src="#" id="picture" style="height: 150px;">
                 </div>
              </div>
               <div class="modal-footer">
@@ -162,105 +148,11 @@
         </div>
       </div>
   </div>
-
-
-  <!-- UPDATE LOCATIONS -->
+<!-- UPDATE LOCATIONS -->
 <div class="modal fade" id="updateLocation" role="dialog">
-      <div class="modal-dialog modal-lg" style="width:750px;">
-         <!-- Modal content-->
-         <div class="modal-content">
-            <form id="formupdateLocation" method="get" action="" class="form-horizontal" >
-                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                <div class="modal-header">
-                <h4 class="modal-tittle">UPDATE LOCATION</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-               </div>
-               <div class="modal-body" style="margin: 10px;">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="row">
-                        <div class="control-label col-sm-4">
-                          <h7 style="font-size:16px; margin-top:5px;"><b>Thành Phố</b></h7>
-                        </div>
-                        <div class="col-sm-8">
-                          <div class="form-group">
-                            <select class="form-control" id="sel1">
-                              <option>Hải Châu</option>
-                              <option>i</option>
-                              <option>i</option>
-                              <option>i</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <br>
-                      <div class="row">
-                        <div class="control-label col-sm-4">
-                          <h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>
-                        </div>
-                        <div class="col-sm-8">
-                          <input name="fullname" type="text" class="form-control">
-                        </div>
-                      </div>
-                      <br>
-                      <div class="row">
-                        <div class="control-label col-sm-4">
-                          <h7 style="font-size:16px; margin-top:5px;"><b>Description</b></h7>
-                          </div>
-                          <div class="col-sm-8">
-                            <textarea rows="5" cols="20" name="description" id="pagedownMe"></textarea>
-                          </div>
-                        </div>
-
-                      </div>
-
-                    <div class="col-sm-6">
-                      <div class="row">
-                        <div class="control-label col-sm-4">
-                        <h7 style="margin-left:20px; font-size:16px; margin-top:5px;"><b>Quận/Huyện</b></h7>
-                        </div>
-                        <div class="col-sm-8">
-                          <div class="form-group">
-                           
-                            <select class="form-control" id="sel1">
-                              <option>Hải Châu</option>
-                              <option>i</option>
-                              <option>i</option>
-                              <option>i</option>
-                            </select>
-                          </div>
-                          <br>
-                        </div>
-                      </div> 
-                      <!-- <div class="row">
-                        <div class="control-label col-sm-4">
-                        <h7 style="margin-left:20px; font-size:16px; margin-top:5px;"><b>Address</b></h7>
-                        </div>
-                        <div class="col-sm-8">
-                          <input name="fullname" type="text" class="form-control">
-                          <br>
-                        </div>
-                      </div>  -->
-                    </div>
-                </div>
-                <br>
-                 <div class="form-group">
-                    <label for="updateLocation"><b>Upload Picture</b></label>
-                 </div>
-                 
-                 <div class="row" style="margin-left:5px;">
-                  <input type="file" name="file" id="updateLocationFile">
-                </div>
-             </div>
-           
-             <div class="modal-footer">
-                <input type="submit" id="btnupdateLocation" class="btn btn-success btnUpdate" value='Update'>
-                <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
-             </div>
-          </form>
-        </div>
-      </div>
-  </div>
+    <div class="modal-dialog modal-lg" style="width:750px;">
+    </div>
+</div>
 <!-- DELETE LOCATION -->
 <div class="modal fade" id="DeleteLocation" role="dialog">
       <div class="modal-dialog modal-lg" style="width:500px;">
@@ -289,78 +181,22 @@
 @endsection
 @section('script')
     <script>
-//       (function () {
-//   $("textarea#pagedownMe").pagedownBootstrap();
-// })();
-//  (function( $) ){
+        $(document).ready(function () {
+           $('#addLocationFile').change(function () {
+                readURL(this);
+           });
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
 
-//  $("textarea#pagedownMe").fn.pagedownBootstrap = function( options ) {
-//
-//    // Default settings
-//    var settings = $.extend( {
-//      'sanitize'        : true,
-//      'help'            : null,
-//      'hooks'           : Array()
-//    }, options);
-//
-//    return this.each(function() {
-//
-//      //Setup converter
-//      var converter = null;
-//      if(settings.sanitize)
-//      {
-//        converter = Markdown.getSanitizingConverter();
-//      } else {
-//        converter = new Markdown.Converter()
-//      }
-//
-//      //Register hooks
-//      for(var i in settings.hooks)
-//      {
-//        var hook = settings.hooks[i];
-//        if(typeof hook !== 'object' || typeof hook.event === 'undefined'
-//            || typeof hook.callback !== 'function')
-//        {
-//          //A bad hook object was given
-//          continue;
-//        }
-//
-//        converter.hooks.chain(hook.event, hook.callback);
-//
-//      }
-//
-//      //Try to find a valid id for this element
-//      var id = "wmd-input";
-//      var idAppend = 0;
-//      while($("#"+id+"-"+idAppend.toString()).length > 0)
-//      {
-//        idAppend++;
-//      }
-//
-//      //Assign the choosen id to the element
-//      $(this).attr('id', id+"-"+idAppend.toString());
-//
-//      //Wrap the element with the needed html
-//      $(this).wrap('<div class="wmd-panel" />');
-//      $(this).before('<div id="wmd-button-bar-'+idAppend+'" class="wmd-button-bar" />');
-//      $(this).after('<div id="wmd-preview-'+idAppend+'" class="wmd-preview" />');
-//      $(this).addClass('wmd-input');
-//
-//      //Setup help function
-//      help = null;
-//      if($.isFunction(settings.help))
-//      {
-//        help = { handler: settings.help };
-//      }
-//
-//      //Setup editor
-//      var editor = new Markdown.Editor(converter, "-"+idAppend.toString(), help);
-//      editor.run();
-//
-//    });
-//
-//  };
-//})( jQuery );
+                    reader.onload = function (e) {
+                        $('#picture').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        });
 
     </script>
 @endsection

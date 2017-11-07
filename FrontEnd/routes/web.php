@@ -79,13 +79,18 @@ Route::get('admin','Admin\AdminController@index');
  * */
 Route::get('admin/location-index','Admin\LocationController@index');
 Route::post('admin/location-add','Admin\LocationController@store');
+Route::get('admin/location-one/{id}','Admin\LocationController@getOne');
+Route::post('admin/location-edit/{id}','Admin\LocationController@edit');
 Route::get('admin/location-delete/{id}','Admin\LocationController@delete');
 /**
  * Category
 **/
 Route::get('admin/category-index','Admin\CategoryController@index');
 Route::post('admin/category-add','Admin\CategoryController@addCategory');
+Route::post('admin/category-edit/{id}','Admin\CategoryController@editCategory');
+Route::get('admin/category-one/{id}','Admin\CategoryController@getOne');
 Route::post('admin/category-delete/{id}','Admin\CategoryController@destroy');
+Route::get('admin/column-delete/{name}','Admin\CategoryController@deleteColumn');
 Route::post('admin/create-category','Admin\CreateCategoryAdminController@createTable');
 /**
  * Place

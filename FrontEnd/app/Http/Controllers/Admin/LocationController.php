@@ -70,4 +70,81 @@ class LocationController extends Controller
             return redirect()->back();
         }
     }
+
+    public function getOne($id){
+        $client = new Client();
+        $responseCity = $client->get('http://localhost:8000/api/city');
+        $responseDistrict = $client->get('http://localhost:8000/api/district');
+        $req = $client->get('http://localhost:8000/api/location-one/'.$id);
+        $listCity = json_decode($responseCity->getBody());
+        $listDistrict = json_decode($responseDistrict->getBody());
+        $response = json_decode($req->getBody());
+        return view('admin.edit-location')->with(['location'=>$response,
+                                                  'listCity'=>$listCity,
+                                                  'listDistrict'=>$listDistrict]);
+    }
+
+    public function edit(Request $request, $id){
+        $client = new Client();
+        $cityID = $request->cityID;
+        $districtID = $request->districtID;
+        $locationID = $cityID.$districtID;
+        if($request->picture!=null){
+            $req = $client->post('http://localhost:8000/api/location/'.$id,[
+                'multipart'=>[
+                    [
+                        'name'=>'locationID',
+                        'contents'=>$locationID
+                    ],
+                    [
+                        'name'=>'districtID',
+                        'contents'=>$request->districtID
+                    ],
+                    [
+                        'name'=>'oldPicture',
+                        'contents'=>$request->oldPicture
+                    ],
+                    [
+                        'name'=>'picture',
+                        'contents'=>@fopen($request->picture->getRealPath(),'r'),
+                        'filename'=>$request->picture->getClientOriginalName()
+                    ],
+                    [
+                        'name'=>'description',
+                        'contents'=>$request->description
+                    ],                    [
+                        'name'=>'_method',
+                        'contents'=>'PUT'
+                    ]
+                ]
+            ]);
+        }else{
+            $req = $client->post('http://localhost:8000/api/location/'.$id,[
+                'multipart'=>[
+                    [
+                        'name'=>'districtID',
+                        'contents'=>$request->districtID
+                    ],
+                    [
+                        'name'=>'picture',
+                        'contents'=>null
+                    ],
+                    [
+                        'name'=>'oldPicture',
+                        'contents'=>$request->oldPicture
+                    ],
+                    [
+                        'name'=>'description',
+                        'contents'=>$request->description
+                    ],
+                    [
+                        'name'=>'_method',
+                        'contents'=>'PUT'
+                    ]
+                ]
+            ]);
+        }
+        $response = json_decode($req->getBody());
+        return redirect()->back();
+    }
 }

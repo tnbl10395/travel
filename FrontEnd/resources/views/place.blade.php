@@ -22,7 +22,8 @@
                                 <h3 class="panel-title">Smart search</h3>
                             </div>
                             <div class="panel-body search-widget">
-                                <form action="" class=" form-inline"> 
+                                <form action="/search" method="post" class=" form-inline">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">
@@ -87,7 +88,7 @@
                                                 <div class="dot-hr"></div>
                                                 <span class="pull-left"><b> Update :</b> {{$objectPlace->updated_at}} </span>
                                                 <div class="bigstars col-sm-6 col-sm-push-1">
-                                                    <div class="rateit" data-rateit-value="0.5" data-rateit-mode="font" data-rateit-readonly="true" ></div>
+                                                    <div class="rateit" data-rateit-value="{{$objectPlace->rating}}" data-rateit-mode="font" data-rateit-readonly="true" ></div>
                                                 </div>
                                             </div>
                                         </div>

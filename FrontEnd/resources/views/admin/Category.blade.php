@@ -39,7 +39,7 @@
                   <td>{{$objectCategory->categoryID}}</td>
                   <td>{{$objectCategory->categoryName}}</td>
                   <td> 
-                    <button style="color: red; border: 0; background:none;" data-id="{{$objectCategory->categoryID}}" data-toggle='modal' title='update' data-target='#UpdateCategory'><b><i class="fa fa-pencil-square-o"></i></b></button>
+                    <a style="color: red; border: 0; background:none;" href="/admin/category-one/{{$objectCategory->categoryID}}"><b><i class="fa fa-pencil-square-o"></i></b></a>
                     <button style="color: red; border: 0; background:none;" data-id="{{$objectCategory->categoryID}}" data-toggle='modal' title='delete' data-target='#DeleteCategory'><b><i class="fa fa-trash"></i></b></button>
                   </td>
                 </tr>
@@ -123,79 +123,6 @@
         </div>
       </div>
   </div>
-
-<!--update Categoy-->
-    <div class="modal fade" id="UpdateCategory" role="dialog">
-      <div class="modal-dialog modal-lg" style="width:500px;">
-         <!-- Modal content-->
-         <div class="modal-content">
-            <form id="formUpdateCategory" method="post" action="/admin/category-update/@if($list!=null){{$objectCategory->categoryID}}@endif" class="form-horizontal" >
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <div class="modal-header">
-                  <h4 class="modal-tittle">UPDATE CATEGORY</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" style="margin: 10px;">
-                  <div class="row">
-                    <div class="col-sm-12"> 
-                        <div class="row">
-                          <div class="control-label col-sm-3">
-                            <h7 style="font-size:16px; margin-top:5px;"><b>Name</b></h7>
-                          </div>
-                          <div class="col-sm-8">
-                            <input name="" type="text" class="form-control" value="">
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                  <br>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="row">
-                                <div class="control-label col-sm-8">
-                                    <h7 style="font-size:16px; margin-top:5px;"><b>Do you want to edit fields in table?</b></h7>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class=" row">
-                        <div class=" col-sm-12" id="divColumn">
-                            <div class="form-group" id="form-column">
-                                <input type="text" name="field[]" class="col-sm-5" placeholder="Input field..." required>
-                                <select name="dataType[]" id='selectDataType' class="custom-select-sm col-sm-3">
-                                    <option value="varchar">Varchar</option>
-                                    <option value="text">Text</option>
-                                    <option value="integer">Integer</option>
-                                    <option value="float">Float</option>
-                                </select>
-                                <input type="text" name="length[]" class="col-sm-3" placeholder="Length...">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-sm-12"> 
-                      <div class="row">
-                          <div class="control-label col-sm-1">
-                              <a style="color: red; border: 0; background:none;font-size:20px;"  title='Add' id="addColumn" href="javascript:void(0);"><b><i class="fa fa-plus"></i></b></a>
-                          </div>
-                        <div class="col-sm-8">
-                            <h7 style="font-size:16px; margin-top:5px;"><b>Edit Items</b></h7>
-                       </div>
-                      </div>
-                    </div>
-                    <br>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" id="btnUpdateCategory" class="btn btn-success btnAdd" value='UPDATE'>
-                    <button class="btn btn-default btn-close-popup" data-dismiss="modal">Cancel</button>
-                </div>
-          </form>
-        </div>
-      </div>
-  </div>
-
 <!--Delete Categoy-->
    <div class="modal fade" id="DeleteCategory" role="dialog">
       <div class="modal-dialog modal-lg" style="width:500px;">

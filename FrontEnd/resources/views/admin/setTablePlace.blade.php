@@ -19,8 +19,8 @@
                 @foreach($key as $column => $value)
                     <th>{{$column}}</th>
                 @endforeach
+                @break
             @endforeach
-            <th>Picture</th>
             <th>Actions</th>
         </tr>
     </tfoot>

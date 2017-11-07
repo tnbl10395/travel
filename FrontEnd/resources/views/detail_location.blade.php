@@ -59,20 +59,20 @@
                             <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
                                 <div class="panel-body recent-property-widget">
                                 </div>
-                            <div class="section property-share"> 
-                                <h4 class="s-property-title">Share width your friends </h4> 
-                                <div class="roperty-social">
-                                    <ul> 
-                                        <li><a title="Share this on dribbble " href="#"><img src="{{asset('img/social_big/dribbble_grey.png')}}"></a></li>                                         
-                                        <li><a title="Share this on facebok " href="#"><img src="{{asset('img/social_big/facebook_grey.png')}}"></a></li> 
-                                        <li><a title="Share this on delicious " href="#"><img src="{{asset('img/social_big/delicious_grey.png')}}"></a></li> 
-                                        <li><a title="Share this on tumblr " href="#"><img src="{{asset('img/social_big/tumblr_grey.png')}}"></a></li> 
-                                        <li><a title="Share this on digg " href="#"><img src="{{asset('img/social_big/digg_grey.png')}}"></a></li> 
-                                        <li><a title="Share this on twitter " href="#"><img src="{{asset('img/social_big/twitter_grey.png')}}"></a></li> 
-                                        <li><a title="Share this on linkedin " href="#"><img src="{{asset('img/social_big/linkedin_grey.png')}}"></a></li>                                        
-                                    </ul>
-                                </div>
-                            </div>
+                            {{--<div class="section property-share"> --}}
+                                {{--<h4 class="s-property-title">Share width your friends </h4> --}}
+                                {{--<div class="roperty-social">--}}
+                                    {{--<ul> --}}
+                                        {{--<li><a title="Share this on dribbble " href="#"><img src="{{asset('img/social_big/dribbble_grey.png')}}"></a></li>                                         --}}
+                                        {{--<li><a title="Share this on facebok " href="#"><img src="{{asset('img/social_big/facebook_grey.png')}}"></a></li> --}}
+                                        {{--<li><a title="Share this on delicious " href="#"><img src="{{asset('img/social_big/delicious_grey.png')}}"></a></li> --}}
+                                        {{--<li><a title="Share this on tumblr " href="#"><img src="{{asset('img/social_big/tumblr_grey.png')}}"></a></li> --}}
+                                        {{--<li><a title="Share this on digg " href="#"><img src="{{asset('img/social_big/digg_grey.png')}}"></a></li> --}}
+                                        {{--<li><a title="Share this on twitter " href="#"><img src="{{asset('img/social_big/twitter_grey.png')}}"></a></li> --}}
+                                        {{--<li><a title="Share this on linkedin " href="#"><img src="{{asset('img/social_big/linkedin_grey.png')}}"></a></li>                                        --}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                         </div>
                     </div>
                     <div class="col-md-4 p0">
@@ -91,7 +91,8 @@
                                 <h3 class="panel-title">Smart search</h3>
                             </div>
                             <div class="panel-body search-widget">
-                                <form action="" class=" form-inline"> 
+                                <form action="/search" method="post" class="form-inline">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <fieldset>
                                         <div class="row">
                                             <div class="col-xs-12">

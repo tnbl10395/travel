@@ -24,7 +24,6 @@ class CategoryController extends Controller
     public function addCategory(Request $request)
     {
         $data = $request->all();
-//        dd($data);
         $categoryName = $data['categoryName'];
         $field = $data['field'];
         $dataType = $data['dataType'];
@@ -40,7 +39,7 @@ class CategoryController extends Controller
             ]
         ]);
         $response = $req->getBody();
-//        dd(json_decode($response));
+        dd(json_decode($response));
         return redirect('admin/category-index');
     }
 
@@ -51,4 +50,31 @@ class CategoryController extends Controller
         return redirect()->back();
     }
 
+    public function getOne($id){
+        $client = new Client();
+        $req = $client->get('http://localhost:8000/api/category-column/'.$id);
+        $response = json_decode($req->getBody());
+//        dd($response);
+        return view('admin.edit-category')->with(['column'=>$response]);
+    }
+
+    public function editCategory(Request $request, $id){
+        $data = $request->all();
+        $client = new Client();
+        $req = $client->post('http://localhost:8000/api/category/'.$id,[
+            'json'=>[
+                'data'=>$data,
+                '_method'=>'PUT'
+            ],
+        ]);
+        $response = json_decode($req->getBody());
+//        dd($response);
+        return redirect()->back();
+    }
+
+    public function deleteColumn($name){
+        $client = new Client();
+        $req = $client->get('http://localhost:8000/api/delete-column/'.$name);
+        return redirect()->back();
+    }
 }
