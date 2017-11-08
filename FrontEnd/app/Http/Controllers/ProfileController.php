@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
-
+use App\libs\Prefix;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function index($token)
     {
         $client = new Client();
-        $requestProfile = $client->get('http://localhost:8000/api/user-info/',[
+        $requestProfile = $client->get($this->link().'api/user-info/',[
             'json'=>[
                 'token' => $token
             ]
@@ -26,7 +32,7 @@ class ProfileController extends Controller
         $client = new Client();
         $picture = $request->picture;
         if($picture!=null){
-            $requestProfile = $client->post('http://localhost:8000/api/profile/'.$id,[
+            $requestProfile = $client->post($this->link().'api/profile/'.$id,[
                 'multipart'=>[
                     [
                         'name'=>'fullname',
@@ -68,7 +74,7 @@ class ProfileController extends Controller
                 ]
             ]);
         }else{
-            $requestProfile = $client->post('http://localhost:8000/api/profile/'.$id,[
+            $requestProfile = $client->post($this->link().'api/profile/'.$id,[
                 'multipart'=>[
                     [
                         'name'=>'fullname',

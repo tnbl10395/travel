@@ -60,16 +60,20 @@ class LocationController extends Controller
      * @param  \App\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Location $location)
+    public function update(Request $request,$id)
     {
         $file = new uploadFileLibrary();
-        $location->locationID = $request->locationID;
-        $location->districtID = $request->districtID;
-        $location->picture = 'http://localhost:8000/upload/'.$file->reload($request->picture,$request->oldPicture);
-        $location->description = $request->description;
-        $location->map = $request->map;
-        $location->save();
-        return response()->json($location,200);
+        $pic = $file->reload($request->picture,$request->oldPicture);
+//        return response()->json($pic);
+        $location = Location::where('locationID','=',$id)
+                           ->update(['districtID'=>$request->districtID,
+                                     'picture'=>$pic,
+                                     'description'=>$request->description]);
+
+
+//        $location->description = $request->description;
+//        $location->save();
+        return response()->json($location);
     }
 
     /**

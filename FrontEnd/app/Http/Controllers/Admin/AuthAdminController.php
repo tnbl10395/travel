@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\MessageBag;
+use App\libs\Prefix;
 
 class AuthAdminController extends Controller
 {
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
 
     public function showLoginForm(){
         return view('admin.login');
@@ -18,7 +24,7 @@ class AuthAdminController extends Controller
         $username = $request->username;
         $password = $request->password;
         $client = new Client();
-        $req = $client->post("http://localhost:8000/api/auth/login",[
+        $req = $client->post($this->link()."api/auth/login",[
             "json"=>[
                 'username'=>$username,
                 'password'=>$password,

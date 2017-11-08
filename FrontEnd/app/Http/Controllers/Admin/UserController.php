@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\libs\Prefix;
 
 class UserController extends Controller
 {	
@@ -12,11 +13,17 @@ class UserController extends Controller
     {
         $this->middleware('admin');
     }
-   
+
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function index(){
 
         $client = new Client();
-        $req = $client->get('http://localhost:8000/api/allUsers');
+        $req = $client->get($this->link().'api/allUsers');
         $response = json_decode($req->getBody());
         return view('admin.accounts')->with(['listUser'=>$response]);
     }
@@ -29,7 +36,7 @@ class UserController extends Controller
             $status = 1;
         }
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/user-un-lock/'.$str['0'],[
+        $req = $client->post($this->link().'api/user-un-lock/'.$str['0'],[
             'json'=>[
                 'status'=>$status,
                 '_method'=>'PUT'

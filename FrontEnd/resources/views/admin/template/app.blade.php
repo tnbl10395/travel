@@ -8,23 +8,18 @@
   <meta name="author" content="">
   @yield('title')
 
-
     <!-- Bootstrap core CSS -->
-    <link href="{{ URL::asset("vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ asset("vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
     <!-- Custom fonts for this template -->
-    <link href="{{ URL::asset("vendor/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css">
-    <link href="{{ URL::asset("css/jquery.pagedown-bootstrap.css") }} rel="stylesheet">
-
+    <link href="{{ asset("vendor/font-awesome/css/font-awesome.min.css") }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset("css/jquery.pagedown-bootstrap.css") }}" rel="stylesheet">
     <!-- Plugin CSS -->
-    <link href="{{ URL::asset("vendor/datatables/dataTables.bootstrap4.css") }}" rel="stylesheet">
-
+    <link href="{{ asset("vendor/datatables/dataTables.bootstrap4.css") }}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="{{ URL::asset("css/sb-admin.css") }}" rel="stylesheet">
+    <link href="{{ asset("css/sb-admin.css") }}" rel="stylesheet">
     <!-- CSRF Token -->
-    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
-
     <!-- <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script> -->
-    <!-- <link href="{{ URL::asset("loading/dist/loading.min.css") }}" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="{{ asset("loading/dist/loading.min.css") }}" rel="stylesheet" type="text/css"> -->
   <!-- Page level plugin CSS-->
 </head>
 
@@ -127,24 +122,24 @@
     </div>
   </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ URL::asset("vendor/jquery/jquery.min.js") }}"></script>
-    <script src="{{ URL::asset("vendor/popper/popper.min.js") }}"></script>
-    <script src="{{ URL::asset("vendor/bootstrap/js/bootstrap.min.js") }}"></script>
+    <script src="{{ asset("vendor/jquery/jquery.min.js") }}"></script>
+    <script src="{{ asset("vendor/popper/popper.min.js") }}"></script>
+    <script src="{{ asset("vendor/bootstrap/js/bootstrap.min.js") }}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="{{ URL::asset("vendor/jquery-easing/jquery.easing.min.js") }}"></script>
-{{--    <script src="{{ URL::asset("vendor/chart.js/Chart.min.js") }}"></script>--}}
-    <script src="{{ URL::asset("vendor/datatables/jquery.dataTables.js") }}"></script>
-    <script src="{{ URL::asset("vendor/datatables/dataTables.bootstrap4.js") }}"></script>
-    <!-- <script src="{{ URL::asset("admin/js/sb-admin.min.js") }}"></script> -->
+    <script src="{{ asset("vendor/jquery-easing/jquery.easing.min.js") }}"></script>
+{{--    <script src="{{ asset("vendor/chart.js/Chart.min.js") }}"></script>--}}
+    <script src="{{ asset("vendor/datatables/jquery.dataTables.js") }}"></script>
+    <script src="{{ asset("vendor/datatables/dataTables.bootstrap4.js") }}"></script>
+    <!-- <script src="{{ asset("admin/js/sb-admin.min.js") }}"></script> -->
 
-    <!-- <script src="{{ URL::asset("http://code.jquery.com/jquery-1.12.4.min.js") }}"></script>
-    <script src="{{ URL::asset("loading/dist/jquery.loading.min.js") }}"></script> -->
+    <!-- <script src="{{ asset("http://code.jquery.com/jquery-1.12.4.min.js") }}"></script>
+    <script src="{{ asset("loading/dist/jquery.loading.min.js") }}"></script> -->
     <!-- Custom scripts for all pages-->
-    <script src="{{ URL::asset("js/sb-admin.min.js") }}"></script>
-{{--    <script  src="{{URL::asset("js/jquery.pagedown-bootstrap.combined.min.js")}}"></script>--}}
-    <script src="{{ URL::asset("js/sb-admin-datatables.min.js") }}"></script>
-{{--    <script src="{{ URL::asset("js/sb-admin-charts.min.js") }}"></script>--}}
+    <script src="{{ asset("js/sb-admin.min.js") }}"></script>
+{{--    <script  src="{{asset("js/jquery.pagedown-bootstrap.combined.min.js")}}"></script>--}}
+    <script src="{{ asset("js/sb-admin-datatables.min.js") }}"></script>
+{{--    <script src="{{ asset("js/sb-admin-charts.min.js") }}"></script>--}}
     @yield('script')
 </body>
 

@@ -1,35 +1,30 @@
 <!DOCTYPE html>
     <head>
+        <title>Travel | Home page</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Travel | Home page</title>
-        <meta name="description" content="GARO is a real-estate template">
-        <meta name="author" content="Kimarotec">
-        <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme , bootstrap template">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        {{--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">--}}
-        {{--<link rel="icon" href="favicon.ico" type="image/x-icon">--}}
-        <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
-        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/fontello.css')}}">
-        <link href="{{asset('fonts/icon-7-stroke/css/pe-icon-7-stroke.css')}}" rel="stylesheet">
-        <link href="{{asset('fonts/icon-7-stroke/css/helper.css')}}" rel="stylesheet">
-        <link href="{{asset('css/animate.css')}}" rel="stylesheet" media="screen">
-        <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}"> 
-        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/icheck.min_all.css')}}">
-        <link rel="stylesheet" href="{{asset('css/price-range.css')}}">
-        <link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">  
-        <link rel="stylesheet" href="{{asset('css/owl.theme.css')}}">
-        <link rel="stylesheet" href="{{asset('css/owl.transitions.css')}}">
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
-        <link rel="stylesheet" href="{{asset('css/lightslider.min.css')}}">
-        <link rel="stylesheet" href="{{asset('css/editor.css')}}">
-        <link rel="stylesheet" href="{{asset('css/rateit.css')}}">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{asset('css/normalize.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/font-awesome.min.css',true)}}">
+        <link rel="stylesheet" href="{{ asset('css/fontello.css',true)}}">
+        <link href="{{asset('fonts/icon-7-stroke/css/pe-icon-7-stroke.css',true)}}" rel="stylesheet">
+        <link href="{{asset('fonts/icon-7-stroke/css/helper.css',true)}}" rel="stylesheet">
+        <link href="{{asset('css/animate.css',true)}}" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/icheck.min_all.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/price-range.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/owl.carousel.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/owl.theme.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/owl.transitions.css',true)}}">
+        <link rel="stylesheet" href="{{asset("css/style.css",true)}}">
+        <link rel="stylesheet" href="{{asset('css/responsive.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/lightslider.min.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/editor.css',true)}}">
+        <link rel="stylesheet" href="{{asset('css/rateit.css',true)}}">
     </head>
     <body>
           <nav class="navbar navbar-default ">
@@ -135,7 +130,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="pull-left">
-                            <span> (C) <a href="http://www.KimaroTec.com">Team</a> , All rights reserved 2017  </span>
+                            <span> (C) <a href="">Team</a> , All rights reserved 2017  </span>
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
@@ -150,25 +145,25 @@
             </div>
 
         </div>
-        <script src="{{asset('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')}}"></script>
-        <script src="{{asset('js/modernizr-2.6.2.min.js')}}"></script>
-        <script src="{{asset('js/jquery-1.10.2.min.js')}}"></script> 
-        <script src="{{asset('js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('js/bootstrap-select.min.js')}}"></script>
-        <script src="{{asset('js/bootstrap-hover-dropdown.js')}}"></script>
-        <script src="{{asset('js/jquery.validate.min.js')}}"></script>
-        <script src="{{asset('js/jquery.rateit.min.js')}}"></script>
-        <script src="{{asset('js/easypiechart.min.js')}}"></script>
-        <script src="{{asset('js/jquery.easypiechart.min.js')}}"></script>
-        <script src="{{asset('js/jqueryValidate.js')}}"></script>
-        <script src="{{asset('js/owl.carousel.min.js')}}"></script>
-        <script src="{{asset('js/wow.js')}}"></script>
-        <script src="{{asset('js/icheck.min.js')}}"></script>
-        <script src="{{asset('js/price-range.js')}}"></script>
-        <script src="{{asset('js/main.js')}}"></script>
-        <script src="{{asset('js/editor.js')}}"></script>
-        <script src="{{asset('js/jquery.rateit.js')}}"></script>        
-        <script type="text/javascript" src="{{asset('js/lightslider.min.js')}}"></script>
+{{--        <script src="{{asset('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')}}"></script>--}}
+        <script src="{{asset('js/modernizr-2.6.2.min.js',true)}}"></script>
+        <script src="{{asset('js/jquery-1.10.2.min.js',true)}}"></script>
+        <script src="{{asset('js/bootstrap.min.js',true)}}"></script>
+        <script src="{{asset('js/bootstrap-select.min.js',true)}}"></script>
+        <script src="{{asset('js/bootstrap-hover-dropdown.js',true)}}"></script>
+        <script src="{{asset('js/jquery.validate.min.js',true)}}"></script>
+        <script src="{{asset('js/jquery.rateit.min.js',true)}}"></script>
+        <script src="{{asset('js/easypiechart.min.js',true)}}"></script>
+        <script src="{{asset('js/jquery.easypiechart.min.js',true)}}"></script>
+        <script src="{{asset('js/jqueryValidate.js',true)}}"></script>
+        <script src="{{asset('js/owl.carousel.min.js',true)}}"></script>
+        <script src="{{asset('js/wow.js',true)}}"></script>
+        <script src="{{asset('js/icheck.min.js',true)}}"></script>
+        <script src="{{asset('js/price-range.js',true)}}"></script>
+        <script src="{{asset('js/main.js',true)}}"></script>
+        <script src="{{asset('js/editor.js',true)}}"></script>
+        <script src="{{asset('js/jquery.rateit.js',true)}}"></script>
+        <script type="text/javascript" src="{{asset('js/lightslider.min.js',true)}}"></script>
         @yield('script')
     </body>
 </html>

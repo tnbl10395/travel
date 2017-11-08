@@ -44,6 +44,8 @@ Route::delete('location/{location}','LocationController@destroy');
 Route::get('category','CategoryController@index');
 Route::get('category/{category}','CategoryController@show');
 Route::post('category','CategoryController@store');
+Route::get('delete-column/{name}','CategoryController@deleteColumn');
+Route::get('category-column/{category}','CategoryController@showColumn');
 Route::put('category/{category}','CategoryController@update');
 Route::delete('category/{category}','CategoryController@destroy');
 //--------------------------------------------------------------------------------------------------

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
+use App\libs\Prefix;
 
 class ImageController extends Controller
 {
@@ -12,9 +13,16 @@ class ImageController extends Controller
     {
         $this->middleware('admin');
     }
+
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function index(){
     	$client = new Client();
-    	$req = $client->get('http://localhost:8000/api/image');
+    	$req = $client->get($this->link().'api/image');
     	$img = json_decode($req->getBody());
         return view('admin.Img')->with(['data'=>$img]);
     }
@@ -22,7 +30,7 @@ class ImageController extends Controller
     public function store(Request $request){
         $picture = $request->all();
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/image',[
+        $req = $client->post($this->link().'api/image',[
             'multipart'=>[
                 [
                     'name'=>'picture0',

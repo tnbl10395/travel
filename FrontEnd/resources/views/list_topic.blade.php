@@ -200,7 +200,7 @@
             });
 </script>
 <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC0dZtFV8duB7TVyioYcv31LUH5nJdaGJ4"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0dZtFV8duB7TVyioYcv31LUH5nJdaGJ4"></script>
 <script type="text/javascript">
 
     function initMap() {

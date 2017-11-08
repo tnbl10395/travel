@@ -5,14 +5,21 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
+use App\libs\Prefix;
 
 class LocationController extends Controller
 {
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function index(){
         $client = new Client();
-        $responseLocation = $client->get('http://localhost:8000/api/location');
-        $responseCity = $client->get('http://localhost:8000/api/city');
-        $responseDistrict = $client->get('http://localhost:8000/api/district');
+        $responseLocation = $client->get($this->link().'api/location');
+        $responseCity = $client->get($this->link().'api/city');
+        $responseDistrict = $client->get($this->link().'api/district');
         $listLocation = json_decode($responseLocation->getBody());
         $listCity = json_decode($responseCity->getBody());
         $listDistrict = json_decode($responseDistrict->getBody());
@@ -29,7 +36,7 @@ class LocationController extends Controller
         $picture = $request->picture;
         $map = 'not thing!';
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/location',[
+        $req = $client->post($this->link().'api/location',[
             'multipart'=>[
                 [
                     'name'=>'locationID',
@@ -64,7 +71,7 @@ class LocationController extends Controller
     public function delete($id){
 //        dd($id);
         $client = new Client();
-        $req = $client->delete('http://localhost:8000/api/location/'.$id);
+        $req = $client->delete($this->link().'api/location/'.$id);
         $response = json_decode($req->getBody());
         if($response!=null){
             return redirect()->back();
@@ -73,9 +80,9 @@ class LocationController extends Controller
 
     public function getOne($id){
         $client = new Client();
-        $responseCity = $client->get('http://localhost:8000/api/city');
-        $responseDistrict = $client->get('http://localhost:8000/api/district');
-        $req = $client->get('http://localhost:8000/api/location-one/'.$id);
+        $responseCity = $client->get($this->link().'api/city');
+        $responseDistrict = $client->get($this->link().'api/district');
+        $req = $client->get($this->link().'api/location-one/'.$id);
         $listCity = json_decode($responseCity->getBody());
         $listDistrict = json_decode($responseDistrict->getBody());
         $response = json_decode($req->getBody());
@@ -90,7 +97,7 @@ class LocationController extends Controller
         $districtID = $request->districtID;
         $locationID = $cityID.$districtID;
         if($request->picture!=null){
-            $req = $client->post('http://localhost:8000/api/location/'.$id,[
+            $req = $client->post($this->link().'api/location/'.$id,[
                 'multipart'=>[
                     [
                         'name'=>'locationID',
@@ -119,7 +126,7 @@ class LocationController extends Controller
                 ]
             ]);
         }else{
-            $req = $client->post('http://localhost:8000/api/location/'.$id,[
+            $req = $client->post($this->link().'api/location/'.$id,[
                 'multipart'=>[
                     [
                         'name'=>'districtID',

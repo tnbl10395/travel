@@ -8,15 +8,22 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 use Mockery\Exception;
+use App\libs\Prefix;
 
 class AuthController extends Controller
 {
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function login(Request $request)
     {
         $username = $request->username;
         $password = $request->password;
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/auth/login',[
+        $req = $client->post($this->link().'api/auth/login',[
             'json' => [
                 'username' => $username,
                 'password' => $password,
@@ -46,7 +53,7 @@ class AuthController extends Controller
         $email = $request->email;
         $password = $request->password;
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/auth/register',[
+        $req = $client->post($this->link().'api/auth/register',[
             'json'=>[
                 'username'=>$username,
                 'email'=>$email,
@@ -63,5 +70,4 @@ class AuthController extends Controller
 
 
     }
-
 }

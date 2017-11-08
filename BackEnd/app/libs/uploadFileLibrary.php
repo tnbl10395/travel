@@ -18,7 +18,7 @@ namespace App\libs;
                 $nameOldFile = strstr($oldFile, 'pic-');
                 if($newFile!=null) {
                     unlink('upload/' . $nameOldFile);
-                    $nameNewFile = 'http://localhost:8000/upload/pic-' . $newFile->getClientOriginalName();
+                    $nameNewFile = 'https://travellingdn.herokuapp.com/upload/pic-' . $newFile->getClientOriginalName();
                     $newFile->move('upload', $nameNewFile);
                     $nameFile = $nameNewFile;
                     return $nameFile;

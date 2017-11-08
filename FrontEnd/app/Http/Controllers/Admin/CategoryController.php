@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
+use App\libs\Prefix;
 
 class CategoryController extends Controller
 {
@@ -13,10 +14,16 @@ class CategoryController extends Controller
         $this->middleware('admin');
     }
 
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function index()
     {
         $client = new Client();
-        $req = $client->get('http://localhost:8000/api/category');
+        $req = $client->get($this->link().'api/category');
         $category = json_decode($req->getBody());
         return view('admin.Category')->with(['list'=>$category]);
     }
@@ -32,7 +39,7 @@ class CategoryController extends Controller
             $column[] = array($field[$i],$dataType[$i],$length[$i]);
         }
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/category',[
+        $req = $client->post($this->link().'api/category',[
             'json'=>[
                 'categoryName' => $categoryName,
                 'column' => $column
@@ -45,14 +52,14 @@ class CategoryController extends Controller
 
     public function destroy($id){
         $client = new Client();
-        $req = $client->delete('http://localhost:8000/api/category/'.$id);
+        $req = $client->delete($this->link().'api/category/'.$id);
         $responese = json_decode($req->getBody());
         return redirect()->back();
     }
 
     public function getOne($id){
         $client = new Client();
-        $req = $client->get('http://localhost:8000/api/category-column/'.$id);
+        $req = $client->get($this->link().'api/category-column/'.$id);
         $response = json_decode($req->getBody());
 //        dd($response);
         return view('admin.edit-category')->with(['column'=>$response]);
@@ -61,7 +68,7 @@ class CategoryController extends Controller
     public function editCategory(Request $request, $id){
         $data = $request->all();
         $client = new Client();
-        $req = $client->post('http://localhost:8000/api/category/'.$id,[
+        $req = $client->post($this->link().'api/category/'.$id,[
             'json'=>[
                 'data'=>$data,
                 '_method'=>'PUT'
@@ -74,7 +81,7 @@ class CategoryController extends Controller
 
     public function deleteColumn($name){
         $client = new Client();
-        $req = $client->get('http://localhost:8000/api/delete-column/'.$name);
+        $req = $client->get($this->link().'api/delete-column/'.$name);
         return redirect()->back();
     }
 }

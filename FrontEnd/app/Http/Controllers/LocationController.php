@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\libs\Prefix;
 
 class LocationController extends Controller
 {
+    public function link(){
+        $prefix = new Prefix();
+        $link = $prefix->setPrefix();
+        return $link;
+    }
+
     public function index()
     {
         $client = new Client();
-        $requestLocation = $client->get('http://localhost:8000/api/location-all');
+        $requestLocation = $client->get($this->link().'api/location-all');
         $responseLocation = json_decode($requestLocation->getBody());
         return view('locations')->with(['listLocation'=>$responseLocation]);
     }
@@ -18,11 +25,11 @@ class LocationController extends Controller
     public function detailPage($id)
     {
         $client = new Client();
-        $requestLocationAll = $client->get('http://localhost:8000/api/location-all');
-        $requestLocation = $client->get('http://localhost:8000/api/location-one/'.$id);
-        $requestCategory = $client->get('http://localhost:8000/api/category');
-        $requestPlace = $client->get('http://localhost:8000/api/place-show/'.$id);
-        $requestPlaceMap = $client->get('http://localhost:8000/api/place-map/'.$id);
+        $requestLocationAll = $client->get($this->link().'api/location-all');
+        $requestLocation = $client->get($this->link().'api/location-one/'.$id);
+        $requestCategory = $client->get($this->link().'api/category');
+        $requestPlace = $client->get($this->link().'api/place-show/'.$id);
+        $requestPlaceMap = $client->get($this->link().'api/place-map/'.$id);
         $responsePlaceMap = json_decode($requestPlaceMap->getBody());
         $responseLocationAll = json_decode($requestLocationAll->getBody());
         $responseLocation = json_decode($requestLocation->getBody());
